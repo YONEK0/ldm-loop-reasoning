@@ -92,7 +92,7 @@ code/
   run_head_ablation.sh  决策模块四臂消融启动脚本
   run_warmup_ablation.sh warmup 单变量实验启动脚本
 docs/
-  hypotheses/           假说三态（PENDING / CONFIRMED / REFUTED）+ INDEX
+  hypotheses/           假说三态（PENDING / CONFIRMED / REFUTED）+ INDEX（H-001…H-029）
   notes/                判读报告与证据汇编
   plans/                预注册判据（跑前写定，不可事后改）
   errors/               事故与设计缺陷记录
@@ -180,7 +180,10 @@ r1 ≈ 0.71 → r2 ≈ 0.90 → r8 ≈ 0.93（7 个额外轮次共 +0.22，+0.19
 | 每轮层数 L=1/2/4 | 完全等价（H-021） |
 | 加宽 d×2（参数 ×3.9） | 零收益（H-008） |
 | EMA / 降 lr / 课程硬切换 / 课程回采 | 全无效（H-004/005/006/010/012） |
-| xattn 决策头 | 完全学不动，loss 不降（H-026 进行中） |
+| xattn 决策头 | 完全学不动，loss 精确停在 ln2（H-028） |
+| 邻接掩码"补评测后出现阶梯" | 证伪（H-026）：评测漏传确为真 bug，但补修后 r=3 即解 hop6=0.985，C3 泄漏 |
+| "每轮恰好 1 跳"掩码 | 阻断学习，loss 恒定（H-025） |
+| "≤t 跳可达"掩码 | 能学但泄漏（H-026） |
 
 ## 8. 昇腾 910B 迁移
 

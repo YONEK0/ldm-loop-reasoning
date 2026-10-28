@@ -1,0 +1,90 @@
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage_idx=0
+{"ts": "2026-10-27 23:17:23", "done": false, "action": "launch P12_adj seeds=[71, 17, 53] (3 started)", "summary": {"step": 48000.0, "h7": 0.7887500000000001, "h6": 0.855, "h8": 0.7424999999999999, "n": 4, "passed": 1, "pass_rate": 0.25, "max_h7": 0.84, "max_h6": 1.0, "n_ready": 4, "expect": 4}}
+{"ts": "2026-10-27 23:20:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:23:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:26:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:29:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:32:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:35:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:38:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:41:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:44:23", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-27 23:45:42", "agent": "dsh", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+{"ts": "2026-10-27 23:49:42", "agent": "dsh", "done": false, "action": "wait: 0/3 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 3}}
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=0 agent=dsh
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=0 agent=dsh
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=0 agent=dsh
+{"ts": "2026-10-27 23:56:27", "agent": "dsh", "done": true, "action": "[dsh] stop: P12无效:训练CE=0而dev≈0.5,评测未加掩码;先修eval再验浅hop", "summary": {"step": 48000.0, "h7": 0.7888, "h6": 0.855, "h8": 0.7425, "n": 4, "passed": 1, "pass_rate": 0.25, "max_h7": 0.84, "max_h6": 1.0, "n_ready": 4, "expect": 4}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=0 agent=dsh
+{"ts": "2026-10-27 23:58:00", "agent": "dsh", "done": true, "action": "[dsh] stop: P12评测漏掩码致dev假随机，先修eval再验", "summary": {"step": 48000.0, "h7": 0.7888, "h6": 0.855, "h8": 0.7425, "n": 4, "passed": 1, "pass_rate": 0.25, "max_h7": 0.84, "max_h6": 1.0, "n_ready": 4, "expect": 4}}
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:00:13", "agent": "dsh", "done": false, "action": "wait: 0/2 runs reached step>=6000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 2}}
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:01:04", "agent": "dsh", "done": false, "action": "wait: 0/2 runs reached step>=6000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 2}}
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:02:02", "agent": "dsh", "done": false, "action": "wait: 0/2 runs reached step>=6000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 2}}
+{"ts": "2026-10-28 10:07:02", "agent": "dsh", "done": false, "action": "wait: 0/2 runs reached step>=6000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 2}}
+{"ts": "2026-10-28 10:12:02", "agent": "dsh", "done": false, "action": "wait: 0/2 runs reached step>=6000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 2}}
+{"ts": "2026-10-28 10:18:31", "agent": "dsh", "done": true, "action": "[dsh] stop: P14未实现--adj-strict，冒烟作废，不上48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:19:11", "agent": "dsh", "done": true, "action": "[dsh] stop: 冒烟 0/2 通过且完全不学，严格掩码也未实现，不上 48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:20:13", "agent": "dsh", "done": true, "action": "[dsh] stop: 冒烟0/2未过;--adj-strict未实现,不上48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:21:53", "agent": "dsh", "done": true, "action": "[dsh] stop: 冒烟0/2；1跳掩码hop2全轮≈0.5不可学，停分支", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:23:20", "agent": "dsh", "done": true, "action": "[dsh] stop: 严格掩码未实现，P14冒烟作废；不上48k，先补码重跑", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:26:31", "agent": "dsh", "done": true, "action": "stop: H-027 严格掩码冒烟未两 seed 全过：先查漏点/可学性，不上 48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:29:41", "agent": "dsh", "done": true, "action": "stop: H-027 严格掩码冒烟未两 seed 全过：先查漏点/可学性，不上 48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:31:34", "agent": "dsh", "done": true, "action": "[dsh] stop: 冒烟0/2且评测未传严格掩码，先修再跑", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:33:34", "agent": "dsh", "done": true, "action": "[dsh] stop: 严格掩码未实现+评测漏传,训练恒ln2,不上48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:36:44", "agent": "dsh", "done": true, "action": "stop: H-027 严格掩码冒烟未两 seed 全过：先查漏点/可学性，不上 48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:39:54", "agent": "dsh", "done": true, "action": "stop: H-027 严格掩码冒烟未两 seed 全过：先查漏点/可学性，不上 48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+LOOP_EXIT_RESTART
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=1 agent=dsh
+{"ts": "2026-10-28 10:40:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 10:43:04", "agent": "dsh", "done": true, "action": "stop: H-027 严格掩码冒烟未两 seed 全过：先查漏点/可学性，不上 48k", "summary": {"step": 6000.0, "h2_r1": 0.4775, "h2_r2": 0.475, "h3_r1": 0.545, "h3_r2": 0.5425, "h4_r1": 0.48, "h4_r2": 0.4825, "h4_r3": 0.47, "h5_r1": 0.4975, "h5_r2": 0.495, "h5_r3": 0.48, "h5_r4": 0.4825, "h6_r1": 0.5325, "h6_r2": 0.5275, "h6_r3": 0.5325, "h6_r4": 0.53, "h6_r5": 0.5375, "r1": 0.5065, "n": 2, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 2, "expect": 2}}
+{"ts": "2026-10-28 10:45:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 10:50:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 10:55:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 11:00:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 11:05:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 11:10:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 11:15:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 11:20:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 11:25:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+{"ts": "2026-10-28 11:30:19", "agent": "dsh", "done": false, "action": "wait: 4/6 runs reached step>=6000", "summary": {"step": 6000.0, "h2": 0.4713, "r1": 0.4935, "r8": 0.4925, "n": 4, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 4, "expect": 6}}
+[auto_loop] spec=docs/plans/auto_loop_spec.json stage=0 agent=dsh
+{"ts": "2026-10-28 11:32:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 11:37:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 11:42:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 11:47:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 11:52:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 11:57:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:02:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:07:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:12:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:17:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:22:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:27:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:32:56", "agent": "dsh", "done": false, "action": "wait: 0/6 runs reached step>=48000", "summary": {"n": 0, "passed": 0, "pass_rate": 0.0, "max_h7": 0, "max_h6": 0, "n_ready": 0, "expect": 6}}
+{"ts": "2026-10-28 12:39:19", "agent": "dsh", "done": true, "action": "[dsh] stop: 5/6 seed 达 hop7≥0.80，配方可靠，可启动真实训练", "summary": {"step": 48000.0, "h7": 0.855, "h6": 0.905, "h8": 0.8158, "n": 6, "passed": 5, "pass_rate": 0.8333, "max_h7": 0.905, "max_h6": 1.0, "n_ready": 6, "expect": 6}}
