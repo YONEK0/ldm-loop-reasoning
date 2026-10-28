@@ -3,16 +3,13 @@
 *.pth
 *.lock
 
-# 数据（可用 code/s84_dual_task.py 重新生成，不随仓库分发）
-data/
-
 # 凭据（永不入库）
 .ldm_ssh_pwd
 .ms_token
 .dsh_env
 *.env
 
-# 本地日志
+# 本地日志与缓存
 *.log
 __pycache__/
 *.pyc
