@@ -97,7 +97,8 @@ docs/
   plans/                预注册判据（跑前写定，不可事后改）
   errors/               事故与设计缺陷记录
 data/ldm_mvtd2/        MVT-D v2 任务数据（train 10k / dev 1k / ood 400，15 MB）
-results/                330 个 run 的 JSON（不含 checkpoint）
+results/                325 个 run 的 JSON（不含 checkpoint）
+                        —— 权重单独归档，见 docs/notes/WEIGHTS_INDEX.md
 ```
 
 ## 5. 核心结论（都有数据支撑）
@@ -199,6 +200,21 @@ r1 ≈ 0.71 → r2 ≈ 0.90 → r8 ≈ 0.93（7 个额外轮次共 +0.22，+0.19
 2603.21676（depth-recurrent）、2605.30757、2512.02677、2604.07822、
 2609.33144、2510.18825、2502.12352。
 
-## 10. 许可
+## 10. 归档与获取
+
+| 内容 | 位置 | 说明 |
+|---|---|---|
+| 代码、文档、结果 JSON、任务数据 | **本仓库** | 447 个文件，~26 MB |
+| 19 个关键 checkpoint（108 MB） | 魔搭 `Yoneko/ldm-feasibility-testkit` → `transfer/ckpt/` | EMA 权重；每个对应一个结论，清单见 `docs/notes/WEIGHTS_INDEX.md` |
+| 中间 MILESTONE 与优化器状态 | 不归档 | 本地 6.6 GB；论文复现不需要 |
+
+`.gitignore` 排除 `*.pt` 是有意的：权重按"每个结论一份最终权重"归档，
+避免仓库被几百个中间档撑爆。魔搭仓同时充当**离线环境的传输通道**
+（GitHub 不可达的机器走 `transfer/`）。
+
+**已知缺口**：P19 五个 64k run 的权重（服务器关机时未取回）缺失，
+其 JSON 指标完整，仅缺"需要加载权重才能做"的分析（exit 分布、注意力模式）。
+
+## 11. 许可
 
 MIT（见 `LICENSE`）。
