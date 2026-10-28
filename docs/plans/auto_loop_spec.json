@@ -1,0 +1,67 @@
+{
+  "base_args": "--task mvtd --data-dir data/ldm_mvtd2 --pos none --ouro --step-sup --curriculum 2,3,4,5,6 --curriculum-step 8000 --steps 48000 --bs 64 --lr 1e-3 --r-max 8 --eval-every 4000",
+  "stages": [
+    {
+      "name": "A_seed_sweep_48k",
+      "glob": "P05_*",
+      "expect": 4,
+      "target_step": 48000,
+      "metric": {
+        "h7": "confirm_r6_by_hop.7",
+        "h6": "dev_r8_by_hop.6",
+        "h8": "confirm_r6_by_hop.8"
+      },
+      "pass_if": "h7 >= 0.80 and h7 >= h6 - 0.05",
+      "on_done": [
+        {
+          "if": "pass_rate >= 0.5",
+          "then": {
+            "type": "launch",
+            "tag": "P12_adj",
+            "seeds": [71, 17, 53],
+            "extra": "--adj-mask",
+            "next": "B_adjacency_mask"
+          }
+        },
+        {
+          "if": "pass_rate < 0.5",
+          "then": {
+            "type": "launch",
+            "tag": "P06_lr",
+            "seeds": [71, 11, 29],
+            "extra": "--curriculum-step 8000"
+          }
+        }
+      ]
+    },
+    {
+      "name": "B_adjacency_mask",
+      "glob": "P12_adj_*",
+      "expect": 3,
+      "target_step": 48000,
+      "metric": {
+        "h7": "confirm_r6_by_hop.7",
+        "h6": "dev_r8_by_hop.6",
+        "r1": "dev_r1",
+        "r8": "dev_r8"
+      },
+      "pass_if": "h7 >= 0.70",
+      "on_done": [
+        {
+          "if": "pass_rate >= 0.34",
+          "then": {
+            "type": "stop",
+            "reason": "邻接掩码下模型可学 → 阶梯可检验（H-025 有证据）"
+          }
+        },
+        {
+          "if": "pass_rate < 0.34",
+          "then": {
+            "type": "stop",
+            "reason": "邻接掩码阻断学习 → 该架构仅在压缩模式下可行（H-025 反证）"
+          }
+        }
+      ]
+    }
+  ]
+}

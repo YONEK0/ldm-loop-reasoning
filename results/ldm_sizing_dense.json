@@ -1,0 +1,33 @@
+{
+  "variant": "dense",
+  "rounds": 4,
+  "dense_mid": 2,
+  "d": 192,
+  "heads": 4,
+  "ffn": 768,
+  "bs": 8,
+  "seq_len": 59,
+  "depth_blocks": 4,
+  "params": {
+    "groups": {
+      "token_emb": 61440,
+      "prelude": 444864,
+      "mid(2 unique)": 889728,
+      "coda": 444864,
+      "ln_loop": 384,
+      "score": 193
+    },
+    "total": 1841473,
+    "core_params": 0,
+    "unrolled_equiv_params": null
+  },
+  "step_sec_mean": 0.1265,
+  "step_sec_all": [
+    0.3094,
+    0.0398,
+    0.0302
+  ],
+  "peak_rss_mb": 0.0,
+  "fwd_macs_est": 835190784,
+  "fwd_macs_note": "attn term\u672a\u8ba1; 4d^2\u4e3aqkv+proj, 2d*ffn\u4e3amlp"
+}

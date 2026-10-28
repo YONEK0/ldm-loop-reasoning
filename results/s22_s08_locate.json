@@ -1,0 +1,278 @@
+{
+  "spec": {
+    "ctx": 512,
+    "n_texts": 8,
+    "data": "wikitext-2 validation (dev only)",
+    "conventions": "s1a_dynamics_v2 (raw states, single final norm)"
+  },
+  "layer_types": [
+    "linear_attention",
+    "linear_attention",
+    "linear_attention",
+    "full_attention",
+    "linear_attention",
+    "linear_attention",
+    "linear_attention",
+    "full_attention",
+    "linear_attention",
+    "linear_attention",
+    "linear_attention",
+    "full_attention",
+    "linear_attention",
+    "linear_attention",
+    "linear_attention",
+    "full_attention",
+    "linear_attention",
+    "linear_attention",
+    "linear_attention",
+    "full_attention",
+    "linear_attention",
+    "linear_attention",
+    "linear_attention",
+    "full_attention"
+  ],
+  "attn_transition_positions": [
+    3,
+    7,
+    11,
+    15,
+    19,
+    23
+  ],
+  "dist_mean": [
+    0.87989,
+    0.18247,
+    0.2036,
+    0.17834,
+    0.163,
+    0.14687,
+    0.14093,
+    0.11843,
+    0.08102,
+    0.06701,
+    0.08342,
+    0.08731,
+    0.07672,
+    0.08523,
+    0.12009,
+    0.13916,
+    0.10489,
+    0.07792,
+    0.09065,
+    0.08446,
+    0.07561,
+    0.06426,
+    0.08199,
+    0.32466
+  ],
+  "logitlens_ce_mean": [
+    79.6604,
+    15.0453,
+    14.2423,
+    13.9634,
+    14.0471,
+    13.9662,
+    13.6875,
+    13.3945,
+    13.6831,
+    13.8593,
+    13.9277,
+    13.1674,
+    13.2475,
+    13.1098,
+    13.1766,
+    12.3538,
+    11.8301,
+    11.5796,
+    10.6742,
+    9.4113,
+    9.418,
+    8.3106,
+    6.8124,
+    5.3697,
+    2.9387
+  ],
+  "P1": {
+    "peaks_produced_by_layer": [
+      2
+    ],
+    "peak_spacings": [],
+    "autocorr_lag2_8": {
+      "2": 0.122,
+      "3": 0.084,
+      "4": 0.059,
+      "5": 0.029,
+      "6": 0.004,
+      "7": -0.018,
+      "8": -0.046
+    },
+    "attn_produced_transitions": [
+      3,
+      7,
+      11,
+      15,
+      19,
+      23
+    ],
+    "phase_lock_rate_mean_curve": 0.0,
+    "per_text_lock_rates": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "P3": {
+    "mean_lens_ce": [
+      79.66043,
+      15.0453,
+      14.242275,
+      13.963424,
+      14.047054,
+      13.966245,
+      13.687485,
+      13.394494,
+      13.683109,
+      13.859329,
+      13.927692,
+      13.167411,
+      13.247514,
+      13.109799,
+      13.176623,
+      12.3538,
+      11.830087,
+      11.579589,
+      10.67419,
+      9.411291,
+      9.418036,
+      8.310647,
+      6.812418,
+      5.369688,
+      2.938716
+    ],
+    "fits": {
+      "1_seg": {
+        "rss": 3433.51673,
+        "breaks_stage": [],
+        "bic": 129.499
+      },
+      "2_seg": {
+        "rss": 51.77768,
+        "breaks_stage": [
+          2
+        ],
+        "bic": 31.078
+      },
+      "3_seg": {
+        "rss": 4.78903,
+        "breaks_stage": [
+          2,
+          17
+        ],
+        "bic": -22.0
+      }
+    },
+    "best_fit": "3_seg",
+    "best_breaks_stage": [
+      2,
+      17
+    ],
+    "best_breaks_transition": [
+      1,
+      16
+    ],
+    "bootstrap_best_k": {
+      "3": 200
+    },
+    "bootstrap_breakpoint_top": [
+      [
+        2,
+        200
+      ],
+      [
+        17,
+        143
+      ],
+      [
+        18,
+        42
+      ],
+      [
+        16,
+        15
+      ]
+    ],
+    "attn_produced_transitions": [
+      3,
+      7,
+      11,
+      15,
+      19,
+      23
+    ],
+    "attn_transition_envelope": [
+      [
+        3,
+        0.178344
+      ],
+      [
+        7,
+        0.118428
+      ],
+      [
+        11,
+        0.087312
+      ],
+      [
+        15,
+        0.139158
+      ],
+      [
+        19,
+        0.084465
+      ],
+      [
+        23,
+        0.324656
+      ]
+    ],
+    "note": "break stage b = boundary between stage b-1 and b, i.e. at transition t_{b-1} (produced by layer b-1)"
+  },
+  "arbitration": {
+    "macro_breaks_stage": [
+      2,
+      17
+    ],
+    "seams": [
+      0,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      15,
+      16,
+      19,
+      20,
+      23
+    ],
+    "E_cut_nearest_seam": 3,
+    "D_cut_nearest_seam": 16,
+    "candidate_M": [
+      3,
+      16
+    ],
+    "candidate_M_full_attn_layers": [
+      3,
+      7,
+      11,
+      15
+    ],
+    "candidate_M_n_full": 4
+  }
+}

@@ -1,0 +1,46 @@
+{
+ "config": {
+  "model": "Qwen3.5-4B-Base (NF4 frozen)",
+  "items": "gsm8k/s08/validation[0:100]",
+  "shots": "train[0:4]",
+  "max_new": 384,
+  "stop": "EOS | '\\nQ:'"
+ },
+ "modes": {
+  "cot_on": {
+   "n": 100,
+   "strict": 75,
+   "finished": 98,
+   "eos_or_stop": 99,
+   "gen_mean": 114.2,
+   "gen_median": 105.5,
+   "gen_min": 51,
+   "gen_max": 384,
+   "arith_exprs_mean": 5.61,
+   "arith_exprs_zero_rate": 0.02,
+   "lines_mean": 4.5,
+   "sec_mean": 12.3
+  },
+  "cot_off": {
+   "n": 100,
+   "strict": 0,
+   "finished": 0,
+   "eos_or_stop": 100,
+   "gen_mean": 6.5,
+   "gen_median": 6.0,
+   "gen_min": 5,
+   "gen_max": 10,
+   "arith_exprs_mean": 0,
+   "arith_exprs_zero_rate": 1.0,
+   "lines_mean": 1,
+   "sec_mean": 1.8,
+   "strict_protocol_bug": 0,
+   "strict_rescored": 26,
+   "rescored_note": "prompt 以 #### 结尾时模型只输出数字，抽取器要求文本含 #### 导致 0；按\"首个数字\"口径重算 = 26/100（results/t11_cot_off_rescored.json）",
+   "number_present_rate": 1.0
+  }
+ },
+ "cot_length_delta": 107.7,
+ "note": "推理痕迹为启发式（算术表达式个数/换行数），仅作是否产生推理链的方向性判据；strict 为 GSM8K 严格抽取。",
+ "scoring_correction": "cot_off 的 strict=0 为评分口径 bug（非模型全错）：prompt 末尾已含 ####，生成文本无 #### 故 extract_gsm8k_v11 返回 None。重算 26/100。cot_on 不受影响（模型自行输出 ####）。"
+}

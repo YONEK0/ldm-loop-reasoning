@@ -1,0 +1,27 @@
+{
+ "mode": "fixed_d2",
+ "hook_segments": {
+  "prefill": {
+   "calls": 1440,
+   "tokens": 91800
+  },
+  "decode": {
+   "calls": 286560,
+   "tokens": 286560
+  },
+  "probe": {
+   "calls": 0,
+   "tokens": 0
+  }
+ },
+ "total_gen_tokens": 8000,
+ "decode_layer_calls": 286560,
+ "decode_calls_per_decode_step": 36.0,
+ "probe_layer_calls": 0,
+ "probe_note": "probe calls excluded from decode counts",
+ "formula_per_decode_step": 36,
+ "formula_per_decode_step_seq_adaptive": "12+12*d* per item; d* recorded in quality items",
+ "formula_note": "E4+M12*d+D8 = 12+12d; armA=24, d2=36, d8=108; first token comes from prefill so decode_steps = gen_tokens - n",
+ "probe_cost_note": "seq_adaptive probe = soft 8-loop prefill per item (formula cost 12+12*8=108 layer calls), counted separately",
+ "ts": "2026-10-20 11:59:37"
+}

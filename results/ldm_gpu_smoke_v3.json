@@ -1,0 +1,453 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 8000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.003,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 17,
+    "log_every": 1000,
+    "eval_every": 1000,
+    "arms": "loop:1,loop:4,dense:2",
+    "data_dir": "data/ldm_edge_action_v3",
+    "out_overfit": "E:\\develop\\project_files\\llm-test\\results\\ldm_gpu_overfit.json",
+    "out_curve": "results/ldm_gpu_smoke_v3.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 1,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 1855682
+      },
+      "final_dev": {
+        "acc": 0.265,
+        "n": 400,
+        "by_hop": {
+          "3": 0.25,
+          "4": 0.28
+        }
+      },
+      "hist": [
+        {
+          "step": 1000,
+          "loss": 1.3652,
+          "grad_norm": 0.0016,
+          "sec": 17.1,
+          "dev": {
+            "acc": 0.255,
+            "n": 400,
+            "by_hop": {
+              "3": 0.27,
+              "4": 0.24
+            }
+          }
+        },
+        {
+          "step": 2000,
+          "loss": 1.4026,
+          "grad_norm": 0.0143,
+          "sec": 35.3,
+          "dev": {
+            "acc": 0.2875,
+            "n": 400,
+            "by_hop": {
+              "3": 0.32,
+              "4": 0.255
+            }
+          }
+        },
+        {
+          "step": 3000,
+          "loss": 1.3362,
+          "grad_norm": 0.0174,
+          "sec": 54.7,
+          "dev": {
+            "acc": 0.265,
+            "n": 400,
+            "by_hop": {
+              "3": 0.27,
+              "4": 0.26
+            }
+          }
+        },
+        {
+          "step": 4000,
+          "loss": 1.3721,
+          "grad_norm": 0.1429,
+          "sec": 74.7,
+          "dev": {
+            "acc": 0.28,
+            "n": 400,
+            "by_hop": {
+              "3": 0.255,
+              "4": 0.305
+            }
+          }
+        },
+        {
+          "step": 5000,
+          "loss": 1.2819,
+          "grad_norm": 0.5306,
+          "sec": 95.2,
+          "dev": {
+            "acc": 0.285,
+            "n": 400,
+            "by_hop": {
+              "3": 0.245,
+              "4": 0.325
+            }
+          }
+        },
+        {
+          "step": 6000,
+          "loss": 1.1557,
+          "grad_norm": 0.562,
+          "sec": 115.7,
+          "dev": {
+            "acc": 0.2625,
+            "n": 400,
+            "by_hop": {
+              "3": 0.245,
+              "4": 0.28
+            }
+          }
+        },
+        {
+          "step": 7000,
+          "loss": 1.2238,
+          "grad_norm": 0.9015,
+          "sec": 136.5,
+          "dev": {
+            "acc": 0.26,
+            "n": 400,
+            "by_hop": {
+              "3": 0.235,
+              "4": 0.285
+            }
+          }
+        },
+        {
+          "step": 8000,
+          "loss": 1.0367,
+          "grad_norm": 0.9286,
+          "sec": 157.2,
+          "dev": {
+            "acc": 0.265,
+            "n": 400,
+            "by_hop": {
+              "3": 0.25,
+              "4": 0.28
+            }
+          }
+        }
+      ],
+      "train_sec": 157.4
+    },
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.2575,
+        "n": 400,
+        "by_hop": {
+          "3": 0.265,
+          "4": 0.25
+        }
+      },
+      "hist": [
+        {
+          "step": 1000,
+          "loss": 1.3652,
+          "grad_norm": 0.0014,
+          "sec": 52.0,
+          "dev": {
+            "acc": 0.2825,
+            "n": 400,
+            "by_hop": {
+              "3": 0.29,
+              "4": 0.275
+            }
+          }
+        },
+        {
+          "step": 2000,
+          "loss": 1.3978,
+          "grad_norm": 0.0122,
+          "sec": 104.2,
+          "dev": {
+            "acc": 0.29,
+            "n": 400,
+            "by_hop": {
+              "3": 0.31,
+              "4": 0.27
+            }
+          }
+        },
+        {
+          "step": 3000,
+          "loss": 1.3375,
+          "grad_norm": 0.0102,
+          "sec": 156.8,
+          "dev": {
+            "acc": 0.265,
+            "n": 400,
+            "by_hop": {
+              "3": 0.295,
+              "4": 0.235
+            }
+          }
+        },
+        {
+          "step": 4000,
+          "loss": 1.4161,
+          "grad_norm": 0.0594,
+          "sec": 209.4,
+          "dev": {
+            "acc": 0.26,
+            "n": 400,
+            "by_hop": {
+              "3": 0.27,
+              "4": 0.25
+            }
+          }
+        },
+        {
+          "step": 5000,
+          "loss": 1.2954,
+          "grad_norm": 0.1788,
+          "sec": 262.0,
+          "dev": {
+            "acc": 0.2475,
+            "n": 400,
+            "by_hop": {
+              "3": 0.27,
+              "4": 0.225
+            }
+          }
+        },
+        {
+          "step": 6000,
+          "loss": 1.3296,
+          "grad_norm": 0.2952,
+          "sec": 315.0,
+          "dev": {
+            "acc": 0.255,
+            "n": 400,
+            "by_hop": {
+              "3": 0.24,
+              "4": 0.27
+            }
+          }
+        },
+        {
+          "step": 7000,
+          "loss": 1.2902,
+          "grad_norm": 0.4325,
+          "sec": 368.0,
+          "dev": {
+            "acc": 0.265,
+            "n": 400,
+            "by_hop": {
+              "3": 0.27,
+              "4": 0.26
+            }
+          }
+        },
+        {
+          "step": 8000,
+          "loss": 1.1838,
+          "grad_norm": 0.46,
+          "sec": 421.0,
+          "dev": {
+            "acc": 0.2575,
+            "n": 400,
+            "by_hop": {
+              "3": 0.265,
+              "4": 0.25
+            }
+          }
+        }
+      ],
+      "train_sec": 421.3
+    },
+    {
+      "variant": "dense",
+      "depth": 2,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "mid(2 unique)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193
+        },
+        "total": 1841473,
+        "core_params": 0,
+        "unrolled_equiv_params": null
+      },
+      "final_dev": {
+        "acc": 0.305,
+        "n": 400,
+        "by_hop": {
+          "3": 0.31,
+          "4": 0.3
+        }
+      },
+      "hist": [
+        {
+          "step": 1000,
+          "loss": 1.3653,
+          "grad_norm": 0.0055,
+          "sec": 20.9,
+          "dev": {
+            "acc": 0.2825,
+            "n": 400,
+            "by_hop": {
+              "3": 0.295,
+              "4": 0.27
+            }
+          }
+        },
+        {
+          "step": 2000,
+          "loss": 1.3999,
+          "grad_norm": 0.0287,
+          "sec": 41.8,
+          "dev": {
+            "acc": 0.22,
+            "n": 400,
+            "by_hop": {
+              "3": 0.215,
+              "4": 0.225
+            }
+          }
+        },
+        {
+          "step": 3000,
+          "loss": 1.3275,
+          "grad_norm": 0.0159,
+          "sec": 62.8,
+          "dev": {
+            "acc": 0.27,
+            "n": 400,
+            "by_hop": {
+              "3": 0.28,
+              "4": 0.26
+            }
+          }
+        },
+        {
+          "step": 4000,
+          "loss": 1.4218,
+          "grad_norm": 0.0958,
+          "sec": 84.1,
+          "dev": {
+            "acc": 0.265,
+            "n": 400,
+            "by_hop": {
+              "3": 0.27,
+              "4": 0.26
+            }
+          }
+        },
+        {
+          "step": 5000,
+          "loss": 1.2274,
+          "grad_norm": 0.4459,
+          "sec": 105.0,
+          "dev": {
+            "acc": 0.3,
+            "n": 400,
+            "by_hop": {
+              "3": 0.275,
+              "4": 0.325
+            }
+          }
+        },
+        {
+          "step": 6000,
+          "loss": 1.32,
+          "grad_norm": 0.6888,
+          "sec": 126.2,
+          "dev": {
+            "acc": 0.3025,
+            "n": 400,
+            "by_hop": {
+              "3": 0.3,
+              "4": 0.305
+            }
+          }
+        },
+        {
+          "step": 7000,
+          "loss": 1.2891,
+          "grad_norm": 0.7629,
+          "sec": 147.3,
+          "dev": {
+            "acc": 0.29,
+            "n": 400,
+            "by_hop": {
+              "3": 0.285,
+              "4": 0.295
+            }
+          }
+        },
+        {
+          "step": 8000,
+          "loss": 1.0724,
+          "grad_norm": 0.8399,
+          "sec": 168.4,
+          "dev": {
+            "acc": 0.305,
+            "n": 400,
+            "by_hop": {
+              "3": 0.31,
+              "4": 0.3
+            }
+          }
+        }
+      ],
+      "train_sec": 168.6
+    }
+  ]
+}

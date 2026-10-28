@@ -1,0 +1,1961 @@
+{
+  "combos": {
+    "incremental_d2_patchon": {
+      "combo": "incremental_d2_patchon",
+      "status": "passed",
+      "reasons": [
+        "(info) bf16 tie-break flips=3"
+      ],
+      "flip_summary": {
+        "total": 3,
+        "semantic": 0,
+        "tie": 3
+      },
+      "mode": "incremental",
+      "depth": 2,
+      "patch": "on",
+      "n": 3,
+      "max_new": 16,
+      "tolerances": {
+        "max_logits_diff": 1.0,
+        "state_diff": 1.0
+      },
+      "armB_step": 2559,
+      "script_sha256": "129ca06846c2308b256ff1227020c4cb5965c8cb1902aebfd5aa6aad7690c163",
+      "layer_counts": {
+        "layer_calls": 5508,
+        "layer_tokens": 246564,
+        "M_layer_calls": 3672
+      },
+      "segments": {
+        "per_step_calls": 36,
+        "ref_tokens_total": 48,
+        "n_items": 3,
+        "formula_note": "measured = per item (1 prefill + G decode) x per_step; reference (gen + ref logits) excluded from measured counts below",
+        "measured_calls_formula": 5292,
+        "reference_fr_calls": 99
+      },
+      "expected_per_step_calls": 36,
+      "formula_check": null,
+      "gpu_gate": "median=14 min=14",
+      "items": [
+        {
+          "i": 0,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 10.875,
+              "margin_ref": 10.875
+            },
+            {
+              "step": 1,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 12.5,
+              "margin_ref": 12.5
+            },
+            {
+              "step": 2,
+              "max_diff": 0.28125,
+              "argmax_agree": 1,
+              "margin_inc": 10.5,
+              "margin_ref": 10.5
+            },
+            {
+              "step": 3,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 9.875,
+              "margin_ref": 10.0
+            },
+            {
+              "step": 4,
+              "max_diff": 0.375,
+              "argmax_agree": 1,
+              "margin_inc": 15.125,
+              "margin_ref": 15.125
+            },
+            {
+              "step": 5,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 13.875,
+              "margin_ref": 13.875
+            },
+            {
+              "step": 6,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 11.25,
+              "margin_ref": 11.25
+            },
+            {
+              "step": 7,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 0.625,
+              "margin_ref": 0.625
+            },
+            {
+              "step": 8,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 3.25,
+              "margin_ref": 3.25
+            },
+            {
+              "step": 9,
+              "max_diff": 0.1582,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 10,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 5.125,
+              "margin_ref": 5.125
+            },
+            {
+              "step": 11,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 1.875,
+              "margin_ref": 1.875
+            },
+            {
+              "step": 12,
+              "max_diff": 0.16406,
+              "argmax_agree": 0,
+              "margin_inc": 0.125,
+              "margin_ref": 0.0,
+              "flip_kind": "tie"
+            },
+            {
+              "step": 13,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 0.125,
+              "margin_ref": 0.125
+            },
+            {
+              "step": 14,
+              "max_diff": 0.20312,
+              "argmax_agree": 1,
+              "margin_inc": 0.125,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 15,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 6.5,
+              "margin_ref": 6.625
+            },
+            {
+              "step": 16,
+              "max_diff": 0.13281,
+              "argmax_agree": 1,
+              "margin_inc": 5.875,
+              "margin_ref": 5.875
+            }
+          ],
+          "argmax_flips": 1,
+          "semantic_flips": 0,
+          "tie_flips": 1,
+          "max_logits_diff": 0.375,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 75
+          },
+          "sec": 23.2
+        },
+        {
+          "i": 1,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 10.375,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 1,
+              "max_diff": 0.28125,
+              "argmax_agree": 1,
+              "margin_inc": 12.5,
+              "margin_ref": 12.5
+            },
+            {
+              "step": 2,
+              "max_diff": 0.26562,
+              "argmax_agree": 1,
+              "margin_inc": 10.125,
+              "margin_ref": 10.125
+            },
+            {
+              "step": 3,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 9.625,
+              "margin_ref": 9.75
+            },
+            {
+              "step": 4,
+              "max_diff": 0.35938,
+              "argmax_agree": 1,
+              "margin_inc": 15.75,
+              "margin_ref": 15.875
+            },
+            {
+              "step": 5,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 13.5,
+              "margin_ref": 13.625
+            },
+            {
+              "step": 6,
+              "max_diff": 0.22656,
+              "argmax_agree": 1,
+              "margin_inc": 11.5,
+              "margin_ref": 11.4375
+            },
+            {
+              "step": 7,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 0.625,
+              "margin_ref": 0.625
+            },
+            {
+              "step": 8,
+              "max_diff": 0.125,
+              "argmax_agree": 1,
+              "margin_inc": 3.375,
+              "margin_ref": 3.375
+            },
+            {
+              "step": 9,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 4.75,
+              "margin_ref": 4.625
+            },
+            {
+              "step": 10,
+              "max_diff": 0.14453,
+              "argmax_agree": 1,
+              "margin_inc": 7.0,
+              "margin_ref": 7.0
+            },
+            {
+              "step": 11,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 4.375,
+              "margin_ref": 4.25
+            },
+            {
+              "step": 12,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 2.875,
+              "margin_ref": 2.75
+            },
+            {
+              "step": 13,
+              "max_diff": 0.1875,
+              "argmax_agree": 0,
+              "margin_inc": 0.0,
+              "margin_ref": 0.125,
+              "flip_kind": "tie"
+            },
+            {
+              "step": 14,
+              "max_diff": 0.125,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 15,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 4.125,
+              "margin_ref": 4.125
+            },
+            {
+              "step": 16,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 1.375,
+              "margin_ref": 1.375
+            }
+          ],
+          "argmax_flips": 1,
+          "semantic_flips": 0,
+          "tie_flips": 1,
+          "max_logits_diff": 0.35938,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 75
+          },
+          "sec": 47.2
+        },
+        {
+          "i": 2,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 10.0,
+              "margin_ref": 10.0
+            },
+            {
+              "step": 1,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 11.0,
+              "margin_ref": 10.875
+            },
+            {
+              "step": 2,
+              "max_diff": 0.24414,
+              "argmax_agree": 1,
+              "margin_inc": 9.5,
+              "margin_ref": 9.5
+            },
+            {
+              "step": 3,
+              "max_diff": 0.375,
+              "argmax_agree": 1,
+              "margin_inc": 10.5,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.35156,
+              "argmax_agree": 1,
+              "margin_inc": 14.375,
+              "margin_ref": 14.125
+            },
+            {
+              "step": 5,
+              "max_diff": 0.32227,
+              "argmax_agree": 1,
+              "margin_inc": 13.375,
+              "margin_ref": 13.5
+            },
+            {
+              "step": 6,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 10.125,
+              "margin_ref": 10.25
+            },
+            {
+              "step": 7,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 0.5,
+              "margin_ref": 0.5
+            },
+            {
+              "step": 8,
+              "max_diff": 0.14062,
+              "argmax_agree": 0,
+              "margin_inc": 0.125,
+              "margin_ref": 0.0,
+              "flip_kind": "tie"
+            },
+            {
+              "step": 9,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 3.125,
+              "margin_ref": 3.125
+            },
+            {
+              "step": 10,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.0,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 11,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 2.5,
+              "margin_ref": 2.5
+            },
+            {
+              "step": 12,
+              "max_diff": 0.16406,
+              "argmax_agree": 1,
+              "margin_inc": 1.875,
+              "margin_ref": 1.875
+            },
+            {
+              "step": 13,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 1.625,
+              "margin_ref": 1.625
+            },
+            {
+              "step": 14,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 5.375,
+              "margin_ref": 5.5
+            },
+            {
+              "step": 15,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 4.625,
+              "margin_ref": 4.75
+            },
+            {
+              "step": 16,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.875,
+              "margin_ref": 1.875
+            }
+          ],
+          "argmax_flips": 1,
+          "semantic_flips": 0,
+          "tie_flips": 1,
+          "max_logits_diff": 0.375,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 75
+          },
+          "sec": 72.4
+        }
+      ],
+      "ts": "2026-10-18 18:00:34"
+    },
+    "full_recompute_d2_patchon": {
+      "combo": "full_recompute_d2_patchon",
+      "status": "passed",
+      "reasons": [],
+      "flip_summary": {
+        "total": 0,
+        "semantic": 0,
+        "tie": 0
+      },
+      "mode": "full_recompute",
+      "depth": 2,
+      "patch": "on",
+      "n": 3,
+      "max_new": 16,
+      "tolerances": {
+        "max_logits_diff": 1.0,
+        "state_diff": 1.0
+      },
+      "armB_step": 2559,
+      "script_sha256": "129ca06846c2308b256ff1227020c4cb5965c8cb1902aebfd5aa6aad7690c163",
+      "layer_counts": {
+        "layer_calls": 3564,
+        "layer_tokens": 230796,
+        "M_layer_calls": 2376
+      },
+      "segments": {},
+      "expected_per_step_calls": 36,
+      "formula_check": {
+        "hook_layer_calls": 3564,
+        "fr_calls_counted": 99,
+        "expected_per_step": 36,
+        "calls_per_step": 36.0
+      },
+      "gpu_gate": "median=14 min=14",
+      "items": [
+        {
+          "i": 0,
+          "ref_tokens": 16,
+          "note": "reference generation only"
+        },
+        {
+          "i": 1,
+          "ref_tokens": 16,
+          "note": "reference generation only"
+        },
+        {
+          "i": 2,
+          "ref_tokens": 16,
+          "note": "reference generation only"
+        }
+      ],
+      "ts": "2026-10-18 18:01:50"
+    },
+    "incremental_d2_patchoff": {
+      "combo": "incremental_d2_patchoff",
+      "status": "passed",
+      "reasons": [
+        "(info) bf16 tie-break flips=2"
+      ],
+      "flip_summary": {
+        "total": 2,
+        "semantic": 0,
+        "tie": 2
+      },
+      "mode": "incremental",
+      "depth": 2,
+      "patch": "off",
+      "n": 3,
+      "max_new": 16,
+      "tolerances": {
+        "max_logits_diff": 1.0,
+        "state_diff": 1.0
+      },
+      "armB_step": 2559,
+      "script_sha256": "129ca06846c2308b256ff1227020c4cb5965c8cb1902aebfd5aa6aad7690c163",
+      "layer_counts": {
+        "layer_calls": 5508,
+        "layer_tokens": 246564,
+        "M_layer_calls": 3672
+      },
+      "segments": {
+        "per_step_calls": 36,
+        "ref_tokens_total": 48,
+        "n_items": 3,
+        "formula_note": "measured = per item (1 prefill + G decode) x per_step; reference (gen + ref logits) excluded from measured counts below",
+        "measured_calls_formula": 5292,
+        "reference_fr_calls": 99
+      },
+      "expected_per_step_calls": 36,
+      "formula_check": null,
+      "gpu_gate": "median=14 min=14",
+      "items": [
+        {
+          "i": 0,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 10.875,
+              "margin_ref": 10.875
+            },
+            {
+              "step": 1,
+              "max_diff": 0.26562,
+              "argmax_agree": 1,
+              "margin_inc": 12.5,
+              "margin_ref": 12.5
+            },
+            {
+              "step": 2,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 10.625,
+              "margin_ref": 10.5
+            },
+            {
+              "step": 3,
+              "max_diff": 0.33203,
+              "argmax_agree": 1,
+              "margin_inc": 9.75,
+              "margin_ref": 10.0
+            },
+            {
+              "step": 4,
+              "max_diff": 0.39062,
+              "argmax_agree": 1,
+              "margin_inc": 15.25,
+              "margin_ref": 15.125
+            },
+            {
+              "step": 5,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 13.875,
+              "margin_ref": 13.875
+            },
+            {
+              "step": 6,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 11.125,
+              "margin_ref": 11.25
+            },
+            {
+              "step": 7,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.625,
+              "margin_ref": 0.625
+            },
+            {
+              "step": 8,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 3.25,
+              "margin_ref": 3.25
+            },
+            {
+              "step": 9,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 10,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 5.125,
+              "margin_ref": 5.125
+            },
+            {
+              "step": 11,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.75,
+              "margin_ref": 1.875
+            },
+            {
+              "step": 12,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.0,
+              "margin_ref": 0.0
+            },
+            {
+              "step": 13,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 0.125,
+              "margin_ref": 0.125
+            },
+            {
+              "step": 14,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 15,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 6.5,
+              "margin_ref": 6.625
+            },
+            {
+              "step": 16,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 5.75,
+              "margin_ref": 5.875
+            }
+          ],
+          "argmax_flips": 0,
+          "semantic_flips": 0,
+          "tie_flips": 0,
+          "max_logits_diff": 0.39062,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 75
+          },
+          "sec": 19.8
+        },
+        {
+          "i": 1,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 10.375,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 1,
+              "max_diff": 0.28125,
+              "argmax_agree": 1,
+              "margin_inc": 12.5,
+              "margin_ref": 12.5
+            },
+            {
+              "step": 2,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 10.125,
+              "margin_ref": 10.125
+            },
+            {
+              "step": 3,
+              "max_diff": 0.28125,
+              "argmax_agree": 1,
+              "margin_inc": 9.625,
+              "margin_ref": 9.75
+            },
+            {
+              "step": 4,
+              "max_diff": 0.51562,
+              "argmax_agree": 1,
+              "margin_inc": 15.75,
+              "margin_ref": 15.875
+            },
+            {
+              "step": 5,
+              "max_diff": 0.375,
+              "argmax_agree": 1,
+              "margin_inc": 13.375,
+              "margin_ref": 13.625
+            },
+            {
+              "step": 6,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 11.5625,
+              "margin_ref": 11.4375
+            },
+            {
+              "step": 7,
+              "max_diff": 0.13281,
+              "argmax_agree": 1,
+              "margin_inc": 0.625,
+              "margin_ref": 0.625
+            },
+            {
+              "step": 8,
+              "max_diff": 0.125,
+              "argmax_agree": 1,
+              "margin_inc": 3.375,
+              "margin_ref": 3.375
+            },
+            {
+              "step": 9,
+              "max_diff": 0.13672,
+              "argmax_agree": 1,
+              "margin_inc": 4.625,
+              "margin_ref": 4.625
+            },
+            {
+              "step": 10,
+              "max_diff": 0.13281,
+              "argmax_agree": 1,
+              "margin_inc": 7.0,
+              "margin_ref": 7.0
+            },
+            {
+              "step": 11,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 4.375,
+              "margin_ref": 4.25
+            },
+            {
+              "step": 12,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 2.75,
+              "margin_ref": 2.75
+            },
+            {
+              "step": 13,
+              "max_diff": 0.14062,
+              "argmax_agree": 0,
+              "margin_inc": 0.0,
+              "margin_ref": 0.125,
+              "flip_kind": "tie"
+            },
+            {
+              "step": 14,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 15,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 4.25,
+              "margin_ref": 4.125
+            },
+            {
+              "step": 16,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.25,
+              "margin_ref": 1.375
+            }
+          ],
+          "argmax_flips": 1,
+          "semantic_flips": 0,
+          "tie_flips": 1,
+          "max_logits_diff": 0.51562,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 75
+          },
+          "sec": 40.3
+        },
+        {
+          "i": 2,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 10.0,
+              "margin_ref": 10.0
+            },
+            {
+              "step": 1,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 11.0,
+              "margin_ref": 10.875
+            },
+            {
+              "step": 2,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 9.5,
+              "margin_ref": 9.5
+            },
+            {
+              "step": 3,
+              "max_diff": 0.375,
+              "argmax_agree": 1,
+              "margin_inc": 10.5,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.375,
+              "argmax_agree": 1,
+              "margin_inc": 14.5,
+              "margin_ref": 14.125
+            },
+            {
+              "step": 5,
+              "max_diff": 0.38672,
+              "argmax_agree": 1,
+              "margin_inc": 13.375,
+              "margin_ref": 13.5
+            },
+            {
+              "step": 6,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 10.375,
+              "margin_ref": 10.25
+            },
+            {
+              "step": 7,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 0.5,
+              "margin_ref": 0.5
+            },
+            {
+              "step": 8,
+              "max_diff": 0.125,
+              "argmax_agree": 0,
+              "margin_inc": 0.125,
+              "margin_ref": 0.0,
+              "flip_kind": "tie"
+            },
+            {
+              "step": 9,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 3.125,
+              "margin_ref": 3.125
+            },
+            {
+              "step": 10,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.0,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 11,
+              "max_diff": 0.14844,
+              "argmax_agree": 1,
+              "margin_inc": 2.625,
+              "margin_ref": 2.5
+            },
+            {
+              "step": 12,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 1.875,
+              "margin_ref": 1.875
+            },
+            {
+              "step": 13,
+              "max_diff": 0.15234,
+              "argmax_agree": 1,
+              "margin_inc": 1.625,
+              "margin_ref": 1.625
+            },
+            {
+              "step": 14,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 5.375,
+              "margin_ref": 5.5
+            },
+            {
+              "step": 15,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 4.5,
+              "margin_ref": 4.75
+            },
+            {
+              "step": 16,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 2.0,
+              "margin_ref": 1.875
+            }
+          ],
+          "argmax_flips": 1,
+          "semantic_flips": 0,
+          "tie_flips": 1,
+          "max_logits_diff": 0.38672,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 75
+          },
+          "sec": 61.8
+        }
+      ],
+      "ts": "2026-10-18 18:03:47"
+    },
+    "incremental_d8_patchon": {
+      "combo": "incremental_d8_patchon",
+      "status": "passed",
+      "reasons": [
+        "(info) bf16 tie-break flips=1"
+      ],
+      "flip_summary": {
+        "total": 1,
+        "semantic": 0,
+        "tie": 1
+      },
+      "mode": "incremental",
+      "depth": 8,
+      "patch": "on",
+      "n": 3,
+      "max_new": 16,
+      "tolerances": {
+        "max_logits_diff": 1.0,
+        "state_diff": 1.0
+      },
+      "armB_step": 2559,
+      "script_sha256": "129ca06846c2308b256ff1227020c4cb5965c8cb1902aebfd5aa6aad7690c163",
+      "layer_counts": {
+        "layer_calls": 16524,
+        "layer_tokens": 739692,
+        "M_layer_calls": 14688
+      },
+      "segments": {
+        "per_step_calls": 108,
+        "ref_tokens_total": 48,
+        "n_items": 3,
+        "formula_note": "measured = per item (1 prefill + G decode) x per_step; reference (gen + ref logits) excluded from measured counts below",
+        "measured_calls_formula": 15876,
+        "reference_fr_calls": 99
+      },
+      "expected_per_step_calls": 108,
+      "formula_check": null,
+      "gpu_gate": "median=15 min=15",
+      "items": [
+        {
+          "i": 0,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 9.1875,
+              "margin_ref": 9.1875
+            },
+            {
+              "step": 1,
+              "max_diff": 0.21484,
+              "argmax_agree": 1,
+              "margin_inc": 11.375,
+              "margin_ref": 11.25
+            },
+            {
+              "step": 2,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 9.375,
+              "margin_ref": 9.25
+            },
+            {
+              "step": 3,
+              "max_diff": 0.26172,
+              "argmax_agree": 1,
+              "margin_inc": 10.5,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 11.75,
+              "margin_ref": 11.875
+            },
+            {
+              "step": 5,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 13.375,
+              "margin_ref": 13.25
+            },
+            {
+              "step": 6,
+              "max_diff": 0.20312,
+              "argmax_agree": 1,
+              "margin_inc": 11.125,
+              "margin_ref": 11.0
+            },
+            {
+              "step": 7,
+              "max_diff": 0.18359,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 8,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 3.375,
+              "margin_ref": 3.25
+            },
+            {
+              "step": 9,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 1.0,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 10,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 4.875,
+              "margin_ref": 5.0
+            },
+            {
+              "step": 11,
+              "max_diff": 0.125,
+              "argmax_agree": 1,
+              "margin_inc": 1.75,
+              "margin_ref": 1.625
+            },
+            {
+              "step": 12,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.0,
+              "margin_ref": 0.0
+            },
+            {
+              "step": 13,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.0,
+              "margin_ref": 0.0
+            },
+            {
+              "step": 14,
+              "max_diff": 0.16016,
+              "argmax_agree": 0,
+              "margin_inc": 0.125,
+              "margin_ref": 0.125,
+              "flip_kind": "tie"
+            },
+            {
+              "step": 15,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 6.375,
+              "margin_ref": 6.375
+            },
+            {
+              "step": 16,
+              "max_diff": 0.20703,
+              "argmax_agree": 1,
+              "margin_inc": 7.875,
+              "margin_ref": 7.875
+            }
+          ],
+          "argmax_flips": 1,
+          "semantic_flips": 0,
+          "tie_flips": 1,
+          "max_logits_diff": 0.3125,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 225
+          },
+          "sec": 78.1
+        },
+        {
+          "i": 1,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 8.8125,
+              "margin_ref": 8.8125
+            },
+            {
+              "step": 1,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 11.0,
+              "margin_ref": 11.0
+            },
+            {
+              "step": 2,
+              "max_diff": 0.20312,
+              "argmax_agree": 1,
+              "margin_inc": 8.5,
+              "margin_ref": 8.5
+            },
+            {
+              "step": 3,
+              "max_diff": 0.20312,
+              "argmax_agree": 1,
+              "margin_inc": 10.375,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.26562,
+              "argmax_agree": 1,
+              "margin_inc": 12.125,
+              "margin_ref": 12.0
+            },
+            {
+              "step": 5,
+              "max_diff": 0.25781,
+              "argmax_agree": 1,
+              "margin_inc": 13.125,
+              "margin_ref": 13.125
+            },
+            {
+              "step": 6,
+              "max_diff": 0.12695,
+              "argmax_agree": 1,
+              "margin_inc": 11.3125,
+              "margin_ref": 11.3125
+            },
+            {
+              "step": 7,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 1.0,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 8,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 3.0,
+              "margin_ref": 3.0
+            },
+            {
+              "step": 9,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 4.375,
+              "margin_ref": 4.375
+            },
+            {
+              "step": 10,
+              "max_diff": 0.14844,
+              "argmax_agree": 1,
+              "margin_inc": 7.125,
+              "margin_ref": 7.0
+            },
+            {
+              "step": 11,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 4.75,
+              "margin_ref": 4.75
+            },
+            {
+              "step": 12,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 3.125,
+              "margin_ref": 3.0
+            },
+            {
+              "step": 13,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 14,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 15,
+              "max_diff": 0.12695,
+              "argmax_agree": 1,
+              "margin_inc": 4.0,
+              "margin_ref": 4.125
+            },
+            {
+              "step": 16,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 1.375,
+              "margin_ref": 1.375
+            }
+          ],
+          "argmax_flips": 0,
+          "semantic_flips": 0,
+          "tie_flips": 0,
+          "max_logits_diff": 0.26562,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 225
+          },
+          "sec": 157.9
+        },
+        {
+          "i": 2,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 7.0,
+              "margin_ref": 7.0
+            },
+            {
+              "step": 1,
+              "max_diff": 0.23438,
+              "argmax_agree": 1,
+              "margin_inc": 9.0,
+              "margin_ref": 9.125
+            },
+            {
+              "step": 2,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 7.25,
+              "margin_ref": 7.25
+            },
+            {
+              "step": 3,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 10.375,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 11.0,
+              "margin_ref": 10.875
+            },
+            {
+              "step": 5,
+              "max_diff": 0.3125,
+              "argmax_agree": 1,
+              "margin_inc": 13.0,
+              "margin_ref": 13.0
+            },
+            {
+              "step": 6,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 10.6875,
+              "margin_ref": 10.6875
+            },
+            {
+              "step": 7,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.375
+            },
+            {
+              "step": 8,
+              "max_diff": 0.16016,
+              "argmax_agree": 1,
+              "margin_inc": 0.125,
+              "margin_ref": 0.125
+            },
+            {
+              "step": 9,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 3.375,
+              "margin_ref": 3.375
+            },
+            {
+              "step": 10,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.875,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 11,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.25,
+              "margin_ref": 1.25
+            },
+            {
+              "step": 12,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 13,
+              "max_diff": 0.13281,
+              "argmax_agree": 1,
+              "margin_inc": 0.375,
+              "margin_ref": 0.375
+            },
+            {
+              "step": 14,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 1.875,
+              "margin_ref": 1.875
+            },
+            {
+              "step": 15,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 16,
+              "max_diff": 0.19531,
+              "argmax_agree": 1,
+              "margin_inc": 2.875,
+              "margin_ref": 2.875
+            }
+          ],
+          "argmax_flips": 0,
+          "semantic_flips": 0,
+          "tie_flips": 0,
+          "max_logits_diff": 0.3125,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 225
+          },
+          "sec": 239.1
+        }
+      ],
+      "ts": "2026-10-18 18:08:07"
+    },
+    "incremental_d8_patchoff": {
+      "combo": "incremental_d8_patchoff",
+      "status": "passed",
+      "reasons": [
+        "(info) bf16 tie-break flips=1"
+      ],
+      "flip_summary": {
+        "total": 1,
+        "semantic": 0,
+        "tie": 1
+      },
+      "mode": "incremental",
+      "depth": 8,
+      "patch": "off",
+      "n": 3,
+      "max_new": 16,
+      "tolerances": {
+        "max_logits_diff": 1.0,
+        "state_diff": 1.0
+      },
+      "armB_step": 2559,
+      "script_sha256": "129ca06846c2308b256ff1227020c4cb5965c8cb1902aebfd5aa6aad7690c163",
+      "layer_counts": {
+        "layer_calls": 16524,
+        "layer_tokens": 739692,
+        "M_layer_calls": 14688
+      },
+      "segments": {
+        "per_step_calls": 108,
+        "ref_tokens_total": 48,
+        "n_items": 3,
+        "formula_note": "measured = per item (1 prefill + G decode) x per_step; reference (gen + ref logits) excluded from measured counts below",
+        "measured_calls_formula": 15876,
+        "reference_fr_calls": 99
+      },
+      "expected_per_step_calls": 108,
+      "formula_check": null,
+      "gpu_gate": "median=14 min=14",
+      "items": [
+        {
+          "i": 0,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 9.1875,
+              "margin_ref": 9.1875
+            },
+            {
+              "step": 1,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 11.25,
+              "margin_ref": 11.25
+            },
+            {
+              "step": 2,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 9.25,
+              "margin_ref": 9.25
+            },
+            {
+              "step": 3,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 10.5,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.29688,
+              "argmax_agree": 1,
+              "margin_inc": 11.75,
+              "margin_ref": 11.875
+            },
+            {
+              "step": 5,
+              "max_diff": 0.28125,
+              "argmax_agree": 1,
+              "margin_inc": 13.375,
+              "margin_ref": 13.25
+            },
+            {
+              "step": 6,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 11.0,
+              "margin_ref": 11.0
+            },
+            {
+              "step": 7,
+              "max_diff": 0.19531,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 8,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 3.25,
+              "margin_ref": 3.25
+            },
+            {
+              "step": 9,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.875,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 10,
+              "max_diff": 0.16016,
+              "argmax_agree": 1,
+              "margin_inc": 5.0,
+              "margin_ref": 5.0
+            },
+            {
+              "step": 11,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 1.75,
+              "margin_ref": 1.625
+            },
+            {
+              "step": 12,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.0,
+              "margin_ref": 0.0
+            },
+            {
+              "step": 13,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 0.0,
+              "margin_ref": 0.0
+            },
+            {
+              "step": 14,
+              "max_diff": 0.15625,
+              "argmax_agree": 0,
+              "margin_inc": 0.125,
+              "margin_ref": 0.125,
+              "flip_kind": "tie"
+            },
+            {
+              "step": 15,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 6.375,
+              "margin_ref": 6.375
+            },
+            {
+              "step": 16,
+              "max_diff": 0.20703,
+              "argmax_agree": 1,
+              "margin_inc": 7.875,
+              "margin_ref": 7.875
+            }
+          ],
+          "argmax_flips": 1,
+          "semantic_flips": 0,
+          "tie_flips": 1,
+          "max_logits_diff": 0.29688,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 225
+          },
+          "sec": 66.2
+        },
+        {
+          "i": 1,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 8.8125,
+              "margin_ref": 8.8125
+            },
+            {
+              "step": 1,
+              "max_diff": 0.27344,
+              "argmax_agree": 1,
+              "margin_inc": 11.125,
+              "margin_ref": 11.0
+            },
+            {
+              "step": 2,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 8.5,
+              "margin_ref": 8.5
+            },
+            {
+              "step": 3,
+              "max_diff": 0.21875,
+              "argmax_agree": 1,
+              "margin_inc": 10.25,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.28125,
+              "argmax_agree": 1,
+              "margin_inc": 12.25,
+              "margin_ref": 12.0
+            },
+            {
+              "step": 5,
+              "max_diff": 0.28125,
+              "argmax_agree": 1,
+              "margin_inc": 13.25,
+              "margin_ref": 13.125
+            },
+            {
+              "step": 6,
+              "max_diff": 0.1875,
+              "argmax_agree": 1,
+              "margin_inc": 11.3125,
+              "margin_ref": 11.3125
+            },
+            {
+              "step": 7,
+              "max_diff": 0.125,
+              "argmax_agree": 1,
+              "margin_inc": 1.0,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 8,
+              "max_diff": 0.125,
+              "argmax_agree": 1,
+              "margin_inc": 3.0,
+              "margin_ref": 3.0
+            },
+            {
+              "step": 9,
+              "max_diff": 0.13477,
+              "argmax_agree": 1,
+              "margin_inc": 4.5,
+              "margin_ref": 4.375
+            },
+            {
+              "step": 10,
+              "max_diff": 0.15137,
+              "argmax_agree": 1,
+              "margin_inc": 7.125,
+              "margin_ref": 7.0
+            },
+            {
+              "step": 11,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 4.75,
+              "margin_ref": 4.75
+            },
+            {
+              "step": 12,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 3.0,
+              "margin_ref": 3.0
+            },
+            {
+              "step": 13,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 14,
+              "max_diff": 0.13281,
+              "argmax_agree": 1,
+              "margin_inc": 0.75,
+              "margin_ref": 0.75
+            },
+            {
+              "step": 15,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 4.125,
+              "margin_ref": 4.125
+            },
+            {
+              "step": 16,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.375,
+              "margin_ref": 1.375
+            }
+          ],
+          "argmax_flips": 0,
+          "semantic_flips": 0,
+          "tie_flips": 0,
+          "max_logits_diff": 0.28125,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 225
+          },
+          "sec": 135.6
+        },
+        {
+          "i": 2,
+          "ref_tokens": 16,
+          "seeded_caches": [
+            "E",
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7"
+          ],
+          "steps": [
+            {
+              "step": 0,
+              "max_diff": 0.0,
+              "argmax_agree": 1,
+              "margin_inc": 7.0,
+              "margin_ref": 7.0
+            },
+            {
+              "step": 1,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 9.125,
+              "margin_ref": 9.125
+            },
+            {
+              "step": 2,
+              "max_diff": 0.19531,
+              "argmax_agree": 1,
+              "margin_inc": 7.25,
+              "margin_ref": 7.25
+            },
+            {
+              "step": 3,
+              "max_diff": 0.23438,
+              "argmax_agree": 1,
+              "margin_inc": 10.375,
+              "margin_ref": 10.375
+            },
+            {
+              "step": 4,
+              "max_diff": 0.30469,
+              "argmax_agree": 1,
+              "margin_inc": 10.875,
+              "margin_ref": 10.875
+            },
+            {
+              "step": 5,
+              "max_diff": 0.25,
+              "argmax_agree": 1,
+              "margin_inc": 13.125,
+              "margin_ref": 13.0
+            },
+            {
+              "step": 6,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 10.625,
+              "margin_ref": 10.6875
+            },
+            {
+              "step": 7,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.375,
+              "margin_ref": 0.375
+            },
+            {
+              "step": 8,
+              "max_diff": 0.16406,
+              "argmax_agree": 1,
+              "margin_inc": 0.125,
+              "margin_ref": 0.125
+            },
+            {
+              "step": 9,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 3.375,
+              "margin_ref": 3.375
+            },
+            {
+              "step": 10,
+              "max_diff": 0.14062,
+              "argmax_agree": 1,
+              "margin_inc": 1.0,
+              "margin_ref": 0.875
+            },
+            {
+              "step": 11,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 1.25,
+              "margin_ref": 1.25
+            },
+            {
+              "step": 12,
+              "max_diff": 0.17969,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 13,
+              "max_diff": 0.15625,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.375
+            },
+            {
+              "step": 14,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 1.875,
+              "margin_ref": 1.875
+            },
+            {
+              "step": 15,
+              "max_diff": 0.17188,
+              "argmax_agree": 1,
+              "margin_inc": 0.25,
+              "margin_ref": 0.25
+            },
+            {
+              "step": 16,
+              "max_diff": 0.21094,
+              "argmax_agree": 1,
+              "margin_inc": 2.875,
+              "margin_ref": 2.875
+            }
+          ],
+          "argmax_flips": 0,
+          "semantic_flips": 0,
+          "tie_flips": 0,
+          "max_logits_diff": 0.30469,
+          "state_diff": {
+            "max_diff": 0.25,
+            "only_in_a": [],
+            "only_in_b": [],
+            "n_keys": 225
+          },
+          "sec": 206.4
+        }
+      ],
+      "ts": "2026-10-18 18:11:54"
+    }
+  },
+  "updated": "2026-10-18 18:11:54"
+}

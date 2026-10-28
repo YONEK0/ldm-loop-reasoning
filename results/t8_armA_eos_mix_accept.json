@@ -1,0 +1,199 @@
+{
+ "eos_rate_30": 0.9,
+ "eos_early_rate": 0.0,
+ "quality_strict_100": 45,
+ "quality_base_100": 44,
+ "paired_diff_mean": 0.01,
+ "boot95": [
+  -0.08,
+  0.1
+ ],
+ "gen_tokens_mean_100": 131.0,
+ "eos_rate_100": 0.89,
+ "wiki_nll_d1": 2.80076,
+ "eos_items": [
+  {
+   "i": 40,
+   "gen_tokens": 64,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 41,
+   "gen_tokens": 185,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 42,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 43,
+   "gen_tokens": 56,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 44,
+   "gen_tokens": 117,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 45,
+   "gen_tokens": 113,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 46,
+   "gen_tokens": 146,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 47,
+   "gen_tokens": 119,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 48,
+   "gen_tokens": 145,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 49,
+   "gen_tokens": 118,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 50,
+   "gen_tokens": 90,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 51,
+   "gen_tokens": 116,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 52,
+   "gen_tokens": 62,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 53,
+   "gen_tokens": 109,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 54,
+   "gen_tokens": 108,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 55,
+   "gen_tokens": 74,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 56,
+   "gen_tokens": 184,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 57,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 58,
+   "gen_tokens": 102,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 59,
+   "gen_tokens": 145,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 60,
+   "gen_tokens": 143,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 61,
+   "gen_tokens": 59,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 62,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 63,
+   "gen_tokens": 200,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 64,
+   "gen_tokens": 120,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 65,
+   "gen_tokens": 139,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 66,
+   "gen_tokens": 135,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 67,
+   "gen_tokens": 105,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 68,
+   "gen_tokens": 100,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 69,
+   "gen_tokens": 143,
+   "eos_hit": true,
+   "too_early": false
+  }
+ ],
+ "gates_passed": true,
+ "quality_back_to_noise": true,
+ "passed": true
+}

@@ -1,0 +1,285 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 12000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 17,
+    "log_every": 4000,
+    "eval_every": 4000,
+    "arms": "loop:6",
+    "sched": "const",
+    "fused": true,
+    "dyn_depth": true,
+    "dyn_min": 1,
+    "eval_rounds": "1,2,3,4,5,6,8,10",
+    "process_sup": true,
+    "beta": 0.5,
+    "round_in_core": true,
+    "remap_epoch": false,
+    "curriculum": "",
+    "eval_splits": "dev_random,confirm_depth",
+    "data_dir": "data/ldm_mvt2",
+    "out_overfit": "E:\\develop\\project_files\\llm-test\\results\\ldm_gpu_overfit.json",
+    "out_curve": "results/mvt2_3fix_s17.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 6,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 3072,
+          "exit_mlp": 12673,
+          "proc_head": 193
+        },
+        "total": 1857411,
+        "core_params": 889728,
+        "unrolled_equiv_params": 6306051
+      },
+      "final_dev": {
+        "acc": 0.71,
+        "n": 1000,
+        "by_hop": {
+          "2": 1.0,
+          "3": 0.88,
+          "4": 0.48,
+          "5": 0.48
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 0.71,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.88,
+            "4": 0.48,
+            "5": 0.48
+          }
+        },
+        "dev_random_r1": {
+          "acc": 0.708,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.868,
+            "4": 0.484,
+            "5": 0.48
+          }
+        },
+        "dev_random_r2": {
+          "acc": 0.709,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.872,
+            "4": 0.488,
+            "5": 0.476
+          }
+        },
+        "dev_random_r3": {
+          "acc": 0.704,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.868,
+            "4": 0.484,
+            "5": 0.464
+          }
+        },
+        "dev_random_r4": {
+          "acc": 0.705,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.876,
+            "4": 0.476,
+            "5": 0.468
+          }
+        },
+        "dev_random_r5": {
+          "acc": 0.707,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.876,
+            "4": 0.472,
+            "5": 0.48
+          }
+        },
+        "dev_random_r6": {
+          "acc": 0.71,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.88,
+            "4": 0.48,
+            "5": 0.48
+          }
+        },
+        "dev_random_r8": {
+          "acc": 0.71,
+          "n": 1000,
+          "by_hop": {
+            "2": 0.996,
+            "3": 0.88,
+            "4": 0.484,
+            "5": 0.48
+          }
+        },
+        "dev_random_r10": {
+          "acc": 0.706,
+          "n": 1000,
+          "by_hop": {
+            "2": 0.996,
+            "3": 0.872,
+            "4": 0.476,
+            "5": 0.48
+          }
+        },
+        "confirm_depth_r1": {
+          "acc": 0.5213,
+          "n": 750,
+          "by_hop": {
+            "6": 0.524,
+            "7": 0.532,
+            "8": 0.508
+          }
+        },
+        "confirm_depth_r2": {
+          "acc": 0.5227,
+          "n": 750,
+          "by_hop": {
+            "6": 0.536,
+            "7": 0.544,
+            "8": 0.488
+          }
+        },
+        "confirm_depth_r3": {
+          "acc": 0.5267,
+          "n": 750,
+          "by_hop": {
+            "6": 0.544,
+            "7": 0.548,
+            "8": 0.488
+          }
+        },
+        "confirm_depth_r4": {
+          "acc": 0.5213,
+          "n": 750,
+          "by_hop": {
+            "6": 0.532,
+            "7": 0.548,
+            "8": 0.484
+          }
+        },
+        "confirm_depth_r5": {
+          "acc": 0.5187,
+          "n": 750,
+          "by_hop": {
+            "6": 0.528,
+            "7": 0.54,
+            "8": 0.488
+          }
+        },
+        "confirm_depth_r6": {
+          "acc": 0.5173,
+          "n": 750,
+          "by_hop": {
+            "6": 0.528,
+            "7": 0.544,
+            "8": 0.48
+          }
+        },
+        "confirm_depth_r8": {
+          "acc": 0.5147,
+          "n": 750,
+          "by_hop": {
+            "6": 0.536,
+            "7": 0.532,
+            "8": 0.476
+          }
+        },
+        "confirm_depth_r10": {
+          "acc": 0.5093,
+          "n": 750,
+          "by_hop": {
+            "6": 0.524,
+            "7": 0.524,
+            "8": 0.48
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 4000,
+          "loss": 0.2984,
+          "grad_norm": 0.6259,
+          "sec": 306.7,
+          "dev": {
+            "acc": 0.707,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.848,
+              "4": 0.488,
+              "5": 0.492
+            }
+          }
+        },
+        {
+          "step": 8000,
+          "loss": 0.1525,
+          "grad_norm": 1.4868,
+          "sec": 440.1,
+          "dev": {
+            "acc": 0.714,
+            "n": 1000,
+            "by_hop": {
+              "2": 0.996,
+              "3": 0.852,
+              "4": 0.524,
+              "5": 0.484
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.0548,
+          "grad_norm": 0.6426,
+          "sec": 576.9,
+          "dev": {
+            "acc": 0.71,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.88,
+              "4": 0.48,
+              "5": 0.48
+            }
+          }
+        }
+      ],
+      "train_sec": 578.8
+    }
+  ]
+}

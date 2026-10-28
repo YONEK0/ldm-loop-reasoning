@@ -1,0 +1,210 @@
+{
+  "args": {
+    "train_per_target": 240,
+    "dev_per_target": 120,
+    "confirm_depth_per_target": 100,
+    "confirm_combo_per_target": 120,
+    "confirm_length_per_target": 120,
+    "pilot_per_target": 40,
+    "train_distractors": 2,
+    "length_distractors": 8,
+    "write": true
+  },
+  "stats": {
+    "train": {
+      "n": 480,
+      "hop_counts": {
+        "2": 480
+      },
+      "question_chars_mean": 156.7,
+      "question_chars_p50": 158,
+      "facts_mean": 4,
+      "distractors_mean": 2,
+      "targets": {
+        "grandparent": 240,
+        "sibling_in_law": 240
+      }
+    },
+    "dev_random": {
+      "n": 240,
+      "hop_counts": {
+        "2": 240
+      },
+      "question_chars_mean": 157.4,
+      "question_chars_p50": 158,
+      "facts_mean": 4,
+      "distractors_mean": 2,
+      "targets": {
+        "grandparent": 120,
+        "sibling_in_law": 120
+      }
+    },
+    "confirm_depth": {
+      "n": 500,
+      "hop_counts": {
+        "3": 200,
+        "4": 100,
+        "5": 100,
+        "6": 100
+      },
+      "question_chars_mean": 205.0,
+      "question_chars_p50": 201,
+      "facts_mean": 6.2,
+      "distractors_mean": 2,
+      "targets": {
+        "cousin": 100,
+        "great_grandparent": 100,
+        "great_uncle": 100,
+        "kin6": 100,
+        "second_cousin": 100
+      }
+    },
+    "confirm_combo": {
+      "n": 120,
+      "hop_counts": {
+        "2": 120
+      },
+      "question_chars_mean": 158.6,
+      "question_chars_p50": 157,
+      "facts_mean": 4,
+      "distractors_mean": 2,
+      "targets": {
+        "uncle": 120
+      }
+    },
+    "confirm_length": {
+      "n": 240,
+      "hop_counts": {
+        "2": 240
+      },
+      "question_chars_mean": 284.3,
+      "question_chars_p50": 284,
+      "facts_mean": 10,
+      "distractors_mean": 8,
+      "targets": {
+        "grandparent": 120,
+        "sibling_in_law": 120
+      }
+    },
+    "pilot": {
+      "n": 160,
+      "hop_counts": {
+        "2": 80,
+        "3": 80
+      },
+      "question_chars_mean": 167.9,
+      "question_chars_p50": 165,
+      "facts_mean": 4.5,
+      "distractors_mean": 2,
+      "targets": {
+        "cousin": 40,
+        "grandparent": 40,
+        "great_grandparent": 40,
+        "sibling_in_law": 40
+      }
+    }
+  },
+  "leakage_audit": {
+    "dev_random": {
+      "n": 240,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 298,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {}
+    },
+    "confirm_depth": {
+      "n": 500,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 300,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {
+        "7": 30,
+        "6": 3,
+        "8": 38,
+        "9": 26,
+        "10": 7
+      }
+    },
+    "confirm_combo": {
+      "n": 120,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 281,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {}
+    },
+    "confirm_length": {
+      "n": 240,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 300,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {
+        "9": 18,
+        "8": 20,
+        "10": 21
+      }
+    },
+    "pilot": {
+      "n": 160,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 293,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {
+        "8": 1
+      }
+    }
+  },
+  "uniqueness_check": {
+    "train": {
+      "checked": 480,
+      "bad": 0,
+      "examples": []
+    },
+    "dev_random": {
+      "checked": 240,
+      "bad": 0,
+      "examples": []
+    },
+    "confirm_depth": {
+      "checked": 500,
+      "bad": 0,
+      "examples": []
+    },
+    "confirm_combo": {
+      "checked": 120,
+      "bad": 0,
+      "examples": []
+    },
+    "confirm_length": {
+      "checked": 240,
+      "bad": 0,
+      "examples": []
+    },
+    "pilot": {
+      "checked": 160,
+      "bad": 0,
+      "examples": []
+    }
+  },
+  "interpretation": {
+    "train_hop_max": 2,
+    "confirm_depth_hops": [
+      3,
+      3,
+      4,
+      5,
+      6
+    ],
+    "combo_holdout": [
+      "uncle"
+    ],
+    "length_only_difference": "confirm_length 与 dev_random 同 hop，仅干扰事实更多，用于分离长度效应"
+  },
+  "files": {
+    "train": "E:\\develop\\project_files\\llm-test\\data\\synth_multihop\\train.jsonl",
+    "dev_random": "E:\\develop\\project_files\\llm-test\\data\\synth_multihop\\dev_random.jsonl",
+    "confirm_depth": "E:\\develop\\project_files\\llm-test\\data\\synth_multihop\\confirm_depth.jsonl",
+    "confirm_combo": "E:\\develop\\project_files\\llm-test\\data\\synth_multihop\\confirm_combo.jsonl",
+    "confirm_length": "E:\\develop\\project_files\\llm-test\\data\\synth_multihop\\confirm_length.jsonl",
+    "pilot": "E:\\develop\\project_files\\llm-test\\data\\synth_multihop\\pilot.jsonl"
+  }
+}

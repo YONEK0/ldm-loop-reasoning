@@ -1,0 +1,17 @@
+{
+  "ckpt": "results/remote_R_CTRL_exactT_s53_ckpt.pt",
+  "results": {
+    "hop7_orig_r6": {
+      "acc": 0.7867,
+      "n": 375
+    },
+    "hop7_inverted_r6": {
+      "acc": null,
+      "n": 0
+    },
+    "hop7_tied_r6": {
+      "acc": 0.4667,
+      "n": 30
+    }
+  }
+}

@@ -1,0 +1,1243 @@
+{
+ "eos_rate_30": 0.8,
+ "eos_early_rate": 0.0,
+ "quality_strict_100": 43,
+ "quality_base_100": 42,
+ "paired_diff_mean": 0.01,
+ "boot95": [
+  -0.07,
+  0.09
+ ],
+ "gen_tokens_mean_100": 129.2,
+ "eos_rate_100": 0.85,
+ "mean_dstar_40": 2.05,
+ "dstar_baseline": 2.05,
+ "wiki_nll_d2": 2.75442,
+ "wiki_baseline": 2.80077,
+ "dev_ce_d2": 0.97901,
+ "dev_ce_baseline": 0.95736,
+ "eos_items": [
+  {
+   "i": 40,
+   "d_star": 3,
+   "gen_tokens": 61,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 41,
+   "d_star": 2,
+   "gen_tokens": 122,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 42,
+   "d_star": 2,
+   "gen_tokens": 153,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 43,
+   "d_star": 3,
+   "gen_tokens": 65,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 44,
+   "d_star": 2,
+   "gen_tokens": 158,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 45,
+   "d_star": 2,
+   "gen_tokens": 113,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 46,
+   "d_star": 2,
+   "gen_tokens": 143,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 47,
+   "d_star": 2,
+   "gen_tokens": 127,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 48,
+   "d_star": 2,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 49,
+   "d_star": 2,
+   "gen_tokens": 113,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 50,
+   "d_star": 2,
+   "gen_tokens": 186,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 51,
+   "d_star": 2,
+   "gen_tokens": 124,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 52,
+   "d_star": 2,
+   "gen_tokens": 61,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 53,
+   "d_star": 2,
+   "gen_tokens": 138,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 54,
+   "d_star": 2,
+   "gen_tokens": 124,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 55,
+   "d_star": 2,
+   "gen_tokens": 69,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 56,
+   "d_star": 2,
+   "gen_tokens": 107,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 57,
+   "d_star": 2,
+   "gen_tokens": 76,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 58,
+   "d_star": 2,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 59,
+   "d_star": 2,
+   "gen_tokens": 111,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 60,
+   "d_star": 2,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 61,
+   "d_star": 2,
+   "gen_tokens": 61,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 62,
+   "d_star": 2,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 63,
+   "d_star": 2,
+   "gen_tokens": 141,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 64,
+   "d_star": 2,
+   "gen_tokens": 140,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 65,
+   "d_star": 2,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 66,
+   "d_star": 2,
+   "gen_tokens": 200,
+   "eos_hit": false,
+   "too_early": false
+  },
+  {
+   "i": 67,
+   "d_star": 2,
+   "gen_tokens": 75,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 68,
+   "d_star": 2,
+   "gen_tokens": 111,
+   "eos_hit": true,
+   "too_early": false
+  },
+  {
+   "i": 69,
+   "d_star": 2,
+   "gen_tokens": 100,
+   "eos_hit": true,
+   "too_early": false
+  }
+ ],
+ "quality_items": [
+  {
+   "i": 0,
+   "gold": 8.0,
+   "pred": 8.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 92,
+   "base_strict": true
+  },
+  {
+   "i": 1,
+   "gold": 36.0,
+   "pred": 36.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 110,
+   "base_strict": true
+  },
+  {
+   "i": 2,
+   "gold": 60.0,
+   "pred": 28.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 97,
+   "base_strict": true
+  },
+  {
+   "i": 3,
+   "gold": 75.0,
+   "pred": 0.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 86,
+   "base_strict": true
+  },
+  {
+   "i": 4,
+   "gold": 6.0,
+   "pred": 6.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 70,
+   "base_strict": true
+  },
+  {
+   "i": 5,
+   "gold": 600.0,
+   "pred": 300.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 109,
+   "base_strict": false
+  },
+  {
+   "i": 6,
+   "gold": 45.0,
+   "pred": 49.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 173,
+   "base_strict": false
+  },
+  {
+   "i": 7,
+   "gold": 10.0,
+   "pred": 10.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 181,
+   "base_strict": false
+  },
+  {
+   "i": 8,
+   "gold": 18.0,
+   "pred": 18.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 96,
+   "base_strict": true
+  },
+  {
+   "i": 9,
+   "gold": 72.0,
+   "pred": 72.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 55,
+   "base_strict": true
+  },
+  {
+   "i": 10,
+   "gold": 5.0,
+   "pred": 832.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 117,
+   "base_strict": false
+  },
+  {
+   "i": 11,
+   "gold": 40.0,
+   "pred": 85.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 109,
+   "base_strict": false
+  },
+  {
+   "i": 12,
+   "gold": 7.0,
+   "pred": 7.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 181,
+   "base_strict": true
+  },
+  {
+   "i": 13,
+   "gold": 30.0,
+   "pred": 30.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 187,
+   "base_strict": true
+  },
+  {
+   "i": 14,
+   "gold": 2.0,
+   "pred": 44.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 107,
+   "base_strict": false
+  },
+  {
+   "i": 15,
+   "gold": 220.0,
+   "pred": 1203.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 99,
+   "base_strict": false
+  },
+  {
+   "i": 16,
+   "gold": 64.0,
+   "pred": 192.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 102,
+   "base_strict": false
+  },
+  {
+   "i": 17,
+   "gold": 20.0,
+   "pred": 30.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 43,
+   "base_strict": false
+  },
+  {
+   "i": 18,
+   "gold": 328.0,
+   "pred": 324.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 92,
+   "base_strict": false
+  },
+  {
+   "i": 19,
+   "gold": 140.0,
+   "pred": 110.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 156,
+   "base_strict": false
+  },
+  {
+   "i": 20,
+   "gold": 77.0,
+   "pred": 77.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 155,
+   "base_strict": false
+  },
+  {
+   "i": 21,
+   "gold": 188.0,
+   "pred": 188.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 130,
+   "base_strict": true
+  },
+  {
+   "i": 22,
+   "gold": 750.0,
+   "pred": null,
+   "strict": false,
+   "finished": false,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 23,
+   "gold": 125.0,
+   "pred": 125.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 107,
+   "base_strict": true
+  },
+  {
+   "i": 24,
+   "gold": 80.0,
+   "pred": 100.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 25,
+   "gold": 148.0,
+   "pred": 148.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 110,
+   "base_strict": true
+  },
+  {
+   "i": 26,
+   "gold": 145.0,
+   "pred": 145.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 96,
+   "base_strict": true
+  },
+  {
+   "i": 27,
+   "gold": 90.0,
+   "pred": 90.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 143,
+   "base_strict": false
+  },
+  {
+   "i": 28,
+   "gold": 10.0,
+   "pred": 10.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 49,
+   "base_strict": true
+  },
+  {
+   "i": 29,
+   "gold": 1150.0,
+   "pred": 1050.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 105,
+   "base_strict": true
+  },
+  {
+   "i": 30,
+   "gold": 16000.0,
+   "pred": 16000.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 134,
+   "base_strict": true
+  },
+  {
+   "i": 31,
+   "gold": 121.0,
+   "pred": 99.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 92,
+   "base_strict": true
+  },
+  {
+   "i": 32,
+   "gold": 3900.0,
+   "pred": null,
+   "strict": false,
+   "finished": false,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 33,
+   "gold": 240.0,
+   "pred": 240.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 137,
+   "base_strict": true
+  },
+  {
+   "i": 34,
+   "gold": 100.0,
+   "pred": 40.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 129,
+   "base_strict": false
+  },
+  {
+   "i": 35,
+   "gold": 12.0,
+   "pred": 12.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 81,
+   "base_strict": true
+  },
+  {
+   "i": 36,
+   "gold": 200.0,
+   "pred": 200.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 156,
+   "base_strict": true
+  },
+  {
+   "i": 37,
+   "gold": 1000.0,
+   "pred": 1000.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": true
+  },
+  {
+   "i": 38,
+   "gold": 18.0,
+   "pred": 18.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 126,
+   "base_strict": true
+  },
+  {
+   "i": 39,
+   "gold": 117.0,
+   "pred": 117.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 124,
+   "base_strict": true
+  },
+  {
+   "i": 40,
+   "gold": 480.0,
+   "pred": 480.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 61,
+   "base_strict": true
+  },
+  {
+   "i": 41,
+   "gold": 10.0,
+   "pred": 28.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 122,
+   "base_strict": false
+  },
+  {
+   "i": 42,
+   "gold": 3.0,
+   "pred": 300.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 85,
+   "base_strict": false
+  },
+  {
+   "i": 43,
+   "gold": 10.0,
+   "pred": 2.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 65,
+   "base_strict": false
+  },
+  {
+   "i": 44,
+   "gold": 4.0,
+   "pred": 4.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 164,
+   "base_strict": true
+  },
+  {
+   "i": 45,
+   "gold": 34.0,
+   "pred": 34.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 113,
+   "base_strict": true
+  },
+  {
+   "i": 46,
+   "gold": 90.0,
+   "pred": 60.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 143,
+   "base_strict": false
+  },
+  {
+   "i": 47,
+   "gold": 108.0,
+   "pred": 108.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 127,
+   "base_strict": true
+  },
+  {
+   "i": 48,
+   "gold": 7.0,
+   "pred": 5.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 197,
+   "base_strict": false
+  },
+  {
+   "i": 49,
+   "gold": 370.0,
+   "pred": 650.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 113,
+   "base_strict": false
+  },
+  {
+   "i": 50,
+   "gold": 113.0,
+   "pred": 131.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 186,
+   "base_strict": false
+  },
+  {
+   "i": 51,
+   "gold": 54.0,
+   "pred": 60.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 124,
+   "base_strict": false
+  },
+  {
+   "i": 52,
+   "gold": 2240.0,
+   "pred": 2240.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 61,
+   "base_strict": true
+  },
+  {
+   "i": 53,
+   "gold": 31.0,
+   "pred": 31.5,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 140,
+   "base_strict": false
+  },
+  {
+   "i": 54,
+   "gold": 80.0,
+   "pred": 100.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 124,
+   "base_strict": false
+  },
+  {
+   "i": 55,
+   "gold": 10.0,
+   "pred": 40.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 69,
+   "base_strict": false
+  },
+  {
+   "i": 56,
+   "gold": 270.0,
+   "pred": 270.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 140,
+   "base_strict": false
+  },
+  {
+   "i": 57,
+   "gold": 16.0,
+   "pred": 16.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": true
+  },
+  {
+   "i": 58,
+   "gold": 192.0,
+   "pred": 192.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 126,
+   "base_strict": true
+  },
+  {
+   "i": 59,
+   "gold": 13.0,
+   "pred": 55.5,
+   "strict": false,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 60,
+   "gold": 10.0,
+   "pred": 10.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 61,
+   "gold": 52.0,
+   "pred": 52.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 75,
+   "base_strict": true
+  },
+  {
+   "i": 62,
+   "gold": 12.0,
+   "pred": 12.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 55,
+   "base_strict": true
+  },
+  {
+   "i": 63,
+   "gold": 77.0,
+   "pred": 77.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 141,
+   "base_strict": false
+  },
+  {
+   "i": 64,
+   "gold": 8.0,
+   "pred": null,
+   "strict": false,
+   "finished": false,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 65,
+   "gold": 960.0,
+   "pred": 600.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 108,
+   "base_strict": true
+  },
+  {
+   "i": 66,
+   "gold": 20.0,
+   "pred": 1200.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 67,
+   "gold": 107.0,
+   "pred": 128.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 77,
+   "base_strict": false
+  },
+  {
+   "i": 68,
+   "gold": 80.0,
+   "pred": 40.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 111,
+   "base_strict": false
+  },
+  {
+   "i": 69,
+   "gold": 42.0,
+   "pred": 42.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 100,
+   "base_strict": true
+  },
+  {
+   "i": 70,
+   "gold": 50.0,
+   "pred": 110.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 158,
+   "base_strict": false
+  },
+  {
+   "i": 71,
+   "gold": 4.0,
+   "pred": 75.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 187,
+   "base_strict": false
+  },
+  {
+   "i": 72,
+   "gold": 20.0,
+   "pred": null,
+   "strict": false,
+   "finished": false,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 73,
+   "gold": 30.0,
+   "pred": 30.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 92,
+   "base_strict": true
+  },
+  {
+   "i": 74,
+   "gold": 32.0,
+   "pred": 30.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 79,
+   "base_strict": false
+  },
+  {
+   "i": 75,
+   "gold": 285.0,
+   "pred": 305.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 115,
+   "base_strict": false
+  },
+  {
+   "i": 76,
+   "gold": 22.0,
+   "pred": 22.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 108,
+   "base_strict": true
+  },
+  {
+   "i": 77,
+   "gold": 7.0,
+   "pred": 41.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 110,
+   "base_strict": false
+  },
+  {
+   "i": 78,
+   "gold": 10.0,
+   "pred": 10.5,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 135,
+   "base_strict": false
+  },
+  {
+   "i": 79,
+   "gold": 9492.0,
+   "pred": 9552.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 155,
+   "base_strict": false
+  },
+  {
+   "i": 80,
+   "gold": 12.0,
+   "pred": 12.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 84,
+   "base_strict": true
+  },
+  {
+   "i": 81,
+   "gold": 1955.0,
+   "pred": 4250.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 109,
+   "base_strict": true
+  },
+  {
+   "i": 82,
+   "gold": 70.0,
+   "pred": 70.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": true
+  },
+  {
+   "i": 83,
+   "gold": 8.0,
+   "pred": 4.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 36,
+   "base_strict": true
+  },
+  {
+   "i": 84,
+   "gold": 8.0,
+   "pred": 0.5,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 118,
+   "base_strict": false
+  },
+  {
+   "i": 85,
+   "gold": 2.0,
+   "pred": 2.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 86,
+   "gold": 84.0,
+   "pred": 1008.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 123,
+   "base_strict": false
+  },
+  {
+   "i": 87,
+   "gold": 80.0,
+   "pred": null,
+   "strict": false,
+   "finished": false,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 88,
+   "gold": 4.0,
+   "pred": 4.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 102,
+   "base_strict": true
+  },
+  {
+   "i": 89,
+   "gold": 1890.0,
+   "pred": 1890.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 120,
+   "base_strict": false
+  },
+  {
+   "i": 90,
+   "gold": 140.0,
+   "pred": 140.0,
+   "strict": true,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 153,
+   "base_strict": false
+  },
+  {
+   "i": 91,
+   "gold": 445000.0,
+   "pred": 345000.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 137,
+   "base_strict": false
+  },
+  {
+   "i": 92,
+   "gold": 17.0,
+   "pred": -93.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 135,
+   "base_strict": false
+  },
+  {
+   "i": 93,
+   "gold": 5.0,
+   "pred": 10.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 158,
+   "base_strict": false
+  },
+  {
+   "i": 94,
+   "gold": 62.0,
+   "pred": 60.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 157,
+   "base_strict": false
+  },
+  {
+   "i": 95,
+   "gold": 867.0,
+   "pred": null,
+   "strict": false,
+   "finished": false,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 96,
+   "gold": 200.0,
+   "pred": 2400.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": false,
+   "gen_tokens": 200,
+   "base_strict": false
+  },
+  {
+   "i": 97,
+   "gold": 1500.0,
+   "pred": 3000.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 128,
+   "base_strict": false
+  },
+  {
+   "i": 98,
+   "gold": 24.0,
+   "pred": 16.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 148,
+   "base_strict": true
+  },
+  {
+   "i": 99,
+   "gold": 61.0,
+   "pred": 200.0,
+   "strict": false,
+   "finished": true,
+   "eos_hit": true,
+   "gen_tokens": 113,
+   "base_strict": false
+  }
+ ],
+ "gates_passed": true,
+ "quality_back_to_noise": true,
+ "passed": true,
+ "config": {
+  "steps": 100,
+  "stopped_early": false,
+  "mix": "1:1 per-step",
+  "trainable": "lora only",
+  "recipe": "B8 K2 beta0.3 ctx512 lr1e-4 seed2029"
+ }
+}

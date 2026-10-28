@@ -1,0 +1,261 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 12000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 19,
+    "log_every": 6000,
+    "eval_every": 6000,
+    "arms": "loop:1,loop:4,dense:2",
+    "sched": "const",
+    "fused": true,
+    "eval_splits": "dev_random,confirm_depth",
+    "data_dir": "data/ldm_mvt",
+    "out_overfit": "/root/ldm/results/ldm_gpu_overfit.json",
+    "out_curve": "results/mvt_arms_seed19.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 1,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 1855682
+      },
+      "final_dev": {
+        "acc": 1.0,
+        "n": 1000,
+        "by_hop": {
+          "2": 1.0,
+          "3": 1.0
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 1.0,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 1.0
+          }
+        },
+        "confirm_depth": {
+          "acc": 0.532,
+          "n": 750,
+          "by_hop": {
+            "4": 0.612,
+            "5": 0.484,
+            "6": 0.5
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 6000,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 168.4,
+          "dev": {
+            "acc": 0.995,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.99
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 340.0,
+          "dev": {
+            "acc": 1.0,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 1.0
+            }
+          }
+        }
+      ],
+      "train_sec": 340.4
+    },
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.998,
+        "n": 1000,
+        "by_hop": {
+          "2": 1.0,
+          "3": 0.996
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 0.998,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.996
+          }
+        },
+        "confirm_depth": {
+          "acc": 0.4467,
+          "n": 750,
+          "by_hop": {
+            "4": 0.36,
+            "5": 0.472,
+            "6": 0.508
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 6000,
+          "loss": 0.0,
+          "grad_norm": 0.0001,
+          "sec": 282.9,
+          "dev": {
+            "acc": 0.998,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.996
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.0,
+          "grad_norm": 0.0001,
+          "sec": 568.4,
+          "dev": {
+            "acc": 0.998,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.996
+            }
+          }
+        }
+      ],
+      "train_sec": 568.7
+    },
+    {
+      "variant": "dense",
+      "depth": 2,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "mid(2 unique)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193
+        },
+        "total": 1841473,
+        "core_params": 0,
+        "unrolled_equiv_params": null
+      },
+      "final_dev": {
+        "acc": 0.995,
+        "n": 1000,
+        "by_hop": {
+          "2": 1.0,
+          "3": 0.99
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 0.995,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.99
+          }
+        },
+        "confirm_depth": {
+          "acc": 0.5533,
+          "n": 750,
+          "by_hop": {
+            "4": 0.58,
+            "5": 0.552,
+            "6": 0.528
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 6000,
+          "loss": 0.0,
+          "grad_norm": 0.004,
+          "sec": 164.0,
+          "dev": {
+            "acc": 0.997,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.994
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.0001,
+          "grad_norm": 0.0057,
+          "sec": 326.2,
+          "dev": {
+            "acc": 0.995,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.99
+            }
+          }
+        }
+      ],
+      "train_sec": 326.4
+    }
+  ]
+}

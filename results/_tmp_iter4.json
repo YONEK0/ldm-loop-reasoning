@@ -1,0 +1,57 @@
+{
+  "args": {
+    "steps": 2000,
+    "bs": 64,
+    "lr": 0.001,
+    "seed": 17,
+    "r_max": 8,
+    "pos": "sin",
+    "bottleneck_dim": 0,
+    "curriculum": "2,3,4,5,6",
+    "eval_every": 2000,
+    "out": "results/_tmp_iter4.json"
+  },
+  "hist": [
+    {
+      "step": 1000,
+      "cap": 4,
+      "loss": 0.2594
+    },
+    {
+      "step": 2000,
+      "cap": 6,
+      "loss": 0.4528,
+      "sec": 80.0
+    }
+  ],
+  "evals": {
+    "step": 2000,
+    "cap": 6,
+    "sec": 80.0,
+    "dev_r1": 0.684,
+    "dev_r2": 0.733,
+    "dev_r3": 0.704,
+    "dev_r4": 0.7,
+    "dev_r5": 0.686,
+    "dev_r6": 0.687,
+    "dev_r8": 0.69,
+    "confirm_r1": 0.4787,
+    "confirm_r2": 0.4867,
+    "confirm_r3": 0.5027,
+    "confirm_r4": 0.5173,
+    "confirm_r5": 0.5027,
+    "confirm_r6": 0.4947,
+    "confirm_r8": 0.4893,
+    "dev_r5_by_hop": {
+      "2": 0.795,
+      "3": 0.825,
+      "4": 0.71,
+      "5": 0.565,
+      "6": 0.535
+    },
+    "confirm_r6_by_hop": {
+      "7": 0.496,
+      "8": 0.493
+    }
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 600,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.003,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 1200,
+    "seed": 17,
+    "log_every": 50,
+    "eval_every": 100,
+    "arms": "loop:1,loop:4,dense:2",
+    "out_overfit": "E:\\develop\\project_files\\llm-test\\results\\ldm_gpu_overfit.json",
+    "out_curve": "E:\\develop\\project_files\\llm-test\\results\\ldm_gpu_smoke.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 1,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 1855682
+      },
+      "final_dev": {
+        "acc": 0.2667,
+        "n": 600,
+        "by_hop": {
+          "2": 0.263,
+          "3": 0.275
+        }
+      },
+      "hist": [
+        {
+          "step": 50,
+          "loss": 1.3692,
+          "grad_norm": 0.4532,
+          "sec": 1.6
+        },
+        {
+          "step": 100,
+          "loss": 1.0319,
+          "grad_norm": 3.8163,
+          "sec": 2.7,
+          "dev": {
+            "acc": 0.275,
+            "n": 600,
+            "by_hop": {
+              "2": 0.278,
+              "3": 0.27
+            }
+          }
+        },
+        {
+          "step": 150,
+          "loss": 0.7438,
+          "grad_norm": 6.5903,
+          "sec": 3.9
+        },
+        {
+          "step": 200,
+          "loss": 0.0076,
+          "grad_norm": 0.2731,
+          "sec": 4.9,
+          "dev": {
+            "acc": 0.285,
+            "n": 600,
+            "by_hop": {
+              "2": 0.268,
+              "3": 0.32
+            }
+          }
+        },
+        {
+          "step": 250,
+          "loss": 0.0056,
+          "grad_norm": 0.4023,
+          "sec": 5.9
+        },
+        {
+          "step": 300,
+          "loss": 0.0012,
+          "grad_norm": 0.1191,
+          "sec": 6.9,
+          "dev": {
+            "acc": 0.2783,
+            "n": 600,
+            "by_hop": {
+              "2": 0.263,
+              "3": 0.31
+            }
+          }
+        },
+        {
+          "step": 350,
+          "loss": 0.0,
+          "grad_norm": 0.0018,
+          "sec": 7.8
+        },
+        {
+          "step": 400,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 8.7,
+          "dev": {
+            "acc": 0.2683,
+            "n": 600,
+            "by_hop": {
+              "2": 0.247,
+              "3": 0.31
+            }
+          }
+        },
+        {
+          "step": 450,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 9.8
+        },
+        {
+          "step": 500,
+          "loss": 0.0,
+          "grad_norm": 0.0006,
+          "sec": 10.7,
+          "dev": {
+            "acc": 0.2683,
+            "n": 600,
+            "by_hop": {
+              "2": 0.265,
+              "3": 0.275
+            }
+          }
+        },
+        {
+          "step": 550,
+          "loss": 0.0,
+          "grad_norm": 0.001,
+          "sec": 11.7
+        },
+        {
+          "step": 600,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 12.6,
+          "dev": {
+            "acc": 0.2667,
+            "n": 600,
+            "by_hop": {
+              "2": 0.263,
+              "3": 0.275
+            }
+          }
+        }
+      ],
+      "train_sec": 12.8
+    },
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.2833,
+        "n": 600,
+        "by_hop": {
+          "2": 0.27,
+          "3": 0.31
+        }
+      },
+      "hist": [
+        {
+          "step": 50,
+          "loss": 1.3803,
+          "grad_norm": 0.3939,
+          "sec": 2.0
+        },
+        {
+          "step": 100,
+          "loss": 0.8487,
+          "grad_norm": 1.719,
+          "sec": 3.9,
+          "dev": {
+            "acc": 0.2917,
+            "n": 600,
+            "by_hop": {
+              "2": 0.305,
+              "3": 0.265
+            }
+          }
+        },
+        {
+          "step": 150,
+          "loss": 0.458,
+          "grad_norm": 4.4502,
+          "sec": 6.0
+        },
+        {
+          "step": 200,
+          "loss": 0.0108,
+          "grad_norm": 1.0044,
+          "sec": 7.9,
+          "dev": {
+            "acc": 0.2767,
+            "n": 600,
+            "by_hop": {
+              "2": 0.282,
+              "3": 0.265
+            }
+          }
+        },
+        {
+          "step": 250,
+          "loss": 0.0391,
+          "grad_norm": 1.1957,
+          "sec": 9.8
+        },
+        {
+          "step": 300,
+          "loss": 0.0782,
+          "grad_norm": 6.7102,
+          "sec": 11.7,
+          "dev": {
+            "acc": 0.295,
+            "n": 600,
+            "by_hop": {
+              "2": 0.292,
+              "3": 0.3
+            }
+          }
+        },
+        {
+          "step": 350,
+          "loss": 0.0408,
+          "grad_norm": 2.2112,
+          "sec": 13.6
+        },
+        {
+          "step": 400,
+          "loss": 0.0,
+          "grad_norm": 0.0001,
+          "sec": 15.5,
+          "dev": {
+            "acc": 0.285,
+            "n": 600,
+            "by_hop": {
+              "2": 0.273,
+              "3": 0.31
+            }
+          }
+        },
+        {
+          "step": 450,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 17.5
+        },
+        {
+          "step": 500,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 19.3,
+          "dev": {
+            "acc": 0.2833,
+            "n": 600,
+            "by_hop": {
+              "2": 0.27,
+              "3": 0.31
+            }
+          }
+        },
+        {
+          "step": 550,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 21.4
+        },
+        {
+          "step": 600,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 23.2,
+          "dev": {
+            "acc": 0.2833,
+            "n": 600,
+            "by_hop": {
+              "2": 0.27,
+              "3": 0.31
+            }
+          }
+        }
+      ],
+      "train_sec": 23.5
+    },
+    {
+      "variant": "dense",
+      "depth": 2,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "mid(2 unique)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193
+        },
+        "total": 1841473,
+        "core_params": 0,
+        "unrolled_equiv_params": null
+      },
+      "final_dev": {
+        "acc": 0.2917,
+        "n": 600,
+        "by_hop": {
+          "2": 0.297,
+          "3": 0.28
+        }
+      },
+      "hist": [
+        {
+          "step": 50,
+          "loss": 1.3769,
+          "grad_norm": 0.3887,
+          "sec": 0.9
+        },
+        {
+          "step": 100,
+          "loss": 0.9641,
+          "grad_norm": 2.1631,
+          "sec": 1.7,
+          "dev": {
+            "acc": 0.2717,
+            "n": 600,
+            "by_hop": {
+              "2": 0.28,
+              "3": 0.255
+            }
+          }
+        },
+        {
+          "step": 150,
+          "loss": 0.4907,
+          "grad_norm": 2.3591,
+          "sec": 2.5
+        },
+        {
+          "step": 200,
+          "loss": 0.0434,
+          "grad_norm": 5.617,
+          "sec": 3.3,
+          "dev": {
+            "acc": 0.2883,
+            "n": 600,
+            "by_hop": {
+              "2": 0.282,
+              "3": 0.3
+            }
+          }
+        },
+        {
+          "step": 250,
+          "loss": 0.0347,
+          "grad_norm": 0.7927,
+          "sec": 4.1
+        },
+        {
+          "step": 300,
+          "loss": 0.0001,
+          "grad_norm": 0.0183,
+          "sec": 4.9,
+          "dev": {
+            "acc": 0.275,
+            "n": 600,
+            "by_hop": {
+              "2": 0.275,
+              "3": 0.275
+            }
+          }
+        },
+        {
+          "step": 350,
+          "loss": 0.0008,
+          "grad_norm": 0.2194,
+          "sec": 5.8
+        },
+        {
+          "step": 400,
+          "loss": 0.0,
+          "grad_norm": 0.001,
+          "sec": 6.5,
+          "dev": {
+            "acc": 0.2883,
+            "n": 600,
+            "by_hop": {
+              "2": 0.297,
+              "3": 0.27
+            }
+          }
+        },
+        {
+          "step": 450,
+          "loss": 0.0,
+          "grad_norm": 0.0002,
+          "sec": 7.4
+        },
+        {
+          "step": 500,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 8.2,
+          "dev": {
+            "acc": 0.2933,
+            "n": 600,
+            "by_hop": {
+              "2": 0.3,
+              "3": 0.28
+            }
+          }
+        },
+        {
+          "step": 550,
+          "loss": 0.0,
+          "grad_norm": 0.0001,
+          "sec": 9.1
+        },
+        {
+          "step": 600,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 10.0,
+          "dev": {
+            "acc": 0.2917,
+            "n": 600,
+            "by_hop": {
+              "2": 0.297,
+              "3": 0.28
+            }
+          }
+        }
+      ],
+      "train_sec": 10.2
+    }
+  ]
+}

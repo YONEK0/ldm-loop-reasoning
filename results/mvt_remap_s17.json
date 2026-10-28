@@ -1,0 +1,114 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 12000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 17,
+    "log_every": 6000,
+    "eval_every": 6000,
+    "arms": "loop:4",
+    "sched": "const",
+    "fused": true,
+    "dyn_depth": false,
+    "dyn_min": 1,
+    "eval_rounds": "",
+    "remap_epoch": true,
+    "curriculum": "",
+    "eval_splits": "dev_random,confirm_depth",
+    "data_dir": "data/ldm_mvt",
+    "out_overfit": "/root/ldm/results/ldm_gpu_overfit.json",
+    "out_curve": "results/mvt_remap_s17.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.984,
+        "n": 1000,
+        "by_hop": {
+          "2": 0.996,
+          "3": 0.972
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 0.984,
+          "n": 1000,
+          "by_hop": {
+            "2": 0.996,
+            "3": 0.972
+          }
+        },
+        "confirm_depth": {
+          "acc": 0.5013,
+          "n": 750,
+          "by_hop": {
+            "4": 0.568,
+            "5": 0.452,
+            "6": 0.484
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 6000,
+          "loss": 0.034,
+          "grad_norm": 0.9015,
+          "sec": 288.8,
+          "dev": {
+            "acc": 0.951,
+            "n": 1000,
+            "by_hop": {
+              "2": 0.992,
+              "3": 0.91
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.0021,
+          "grad_norm": 0.0802,
+          "sec": 585.3,
+          "dev": {
+            "acc": 0.984,
+            "n": 1000,
+            "by_hop": {
+              "2": 0.996,
+              "3": 0.972
+            }
+          }
+        }
+      ],
+      "train_sec": 585.6
+    }
+  ]
+}

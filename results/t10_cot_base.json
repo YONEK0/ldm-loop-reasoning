@@ -1,0 +1,11 @@
+{
+ "n": 100,
+ "strict": 33,
+ "finished": 97,
+ "stop_str_rate": 0.99,
+ "gen_mean": 129.6,
+ "gen_median": 127.5,
+ "gen_min": 39,
+ "gen_max": 512,
+ "note": "base 0.8B 4-shot CoT；stop-string 为工程规则 (lm-eval until 约定)，非自然 EOS"
+}

@@ -1,0 +1,52 @@
+{
+  "n": 150,
+  "fixed": {
+    "1": {
+      "acc": 0.18,
+      "layers_mean": 12381.9
+    },
+    "2": {
+      "acc": 0.1533,
+      "layers_mean": 39428.3
+    },
+    "4": {
+      "acc": 0.22,
+      "layers_mean": 76591.6
+    },
+    "8": {
+      "acc": 0.24,
+      "layers_mean": 122881.9
+    }
+  },
+  "policies": {
+    "oracle_min_round": {
+      "acc": 0.3267,
+      "layers_mean": 100790.8
+    },
+    "conservative_1_or_8": {
+      "acc": 0.28,
+      "layers_mean": 106618.9
+    },
+    "mid_1_4_8": {
+      "acc": 0.3067,
+      "layers_mean": 102474.7
+    },
+    "stability_implementable": {
+      "acc": 0.26,
+      "layers_mean": 111815.3
+    }
+  },
+  "saving_vs_r8": {
+    "oracle_min_round": 0.1798,
+    "conservative_1_or_8": 0.1323,
+    "mid_1_4_8": 0.1661,
+    "stability_implementable": 0.0901
+  },
+  "quality_delta_vs_r8": {
+    "oracle_min_round": 0.0867,
+    "conservative_1_or_8": 0.04,
+    "mid_1_4_8": 0.0667,
+    "stability_implementable": 0.02
+  },
+  "note": "oracle=每题取最早答对轮数；文本通道逐题算力口径 layers_mean (token-layer)。质量差 0 表示该策略精度 不低于固定 r8。"
+}

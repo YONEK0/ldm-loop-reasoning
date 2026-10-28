@@ -1,0 +1,114 @@
+{
+  "args": {
+    "steps": 300,
+    "bs": 16,
+    "lr": 0.003,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 17,
+    "log_every": 50,
+    "eval_every": 100,
+    "arms": "loop:4",
+    "threads": 0,
+    "out": "results/ldm_smoke_probe.json"
+  },
+  "results": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.275,
+        "n": 600,
+        "by_hop": {
+          "2": 0.28,
+          "3": 0.265
+        }
+      },
+      "hist": [
+        {
+          "step": 50,
+          "loss": 1.3284,
+          "grad_norm": 0.045,
+          "sec": 7.5
+        },
+        {
+          "step": 100,
+          "loss": 1.428,
+          "grad_norm": 0.02,
+          "sec": 14.7,
+          "dev": {
+            "acc": 0.25,
+            "n": 600,
+            "by_hop": {
+              "2": 0.24,
+              "3": 0.27
+            }
+          }
+        },
+        {
+          "step": 150,
+          "loss": 1.4296,
+          "grad_norm": 0.016,
+          "sec": 23.8
+        },
+        {
+          "step": 200,
+          "loss": 1.4081,
+          "grad_norm": 0.006,
+          "sec": 31.6,
+          "dev": {
+            "acc": 0.2816666666666667,
+            "n": 600,
+            "by_hop": {
+              "2": 0.282,
+              "3": 0.28
+            }
+          }
+        },
+        {
+          "step": 250,
+          "loss": 1.402,
+          "grad_norm": 0.012,
+          "sec": 40.8
+        },
+        {
+          "step": 300,
+          "loss": 1.4147,
+          "grad_norm": 0.012,
+          "sec": 48.6,
+          "dev": {
+            "acc": 0.275,
+            "n": 600,
+            "by_hop": {
+              "2": 0.28,
+              "3": 0.265
+            }
+          }
+        }
+      ],
+      "wall_sec": 51.5,
+      "arm_sec": 53.1
+    }
+  ],
+  "note": "CPU 冒烟；非正式实验；confirm_* 未使用；数字仅判管线可学性"
+}

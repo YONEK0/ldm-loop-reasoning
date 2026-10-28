@@ -1,0 +1,190 @@
+{
+  "baseline_decode_ms_per_token": 285.79,
+  "profiler_top_ops": [
+    {
+      "key": "aten::empty",
+      "calls": 3360,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 9.61,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::to",
+      "calls": 10790,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 11.1,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::_to_copy",
+      "calls": 6260,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 22.73,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::empty_strided",
+      "calls": 40550,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 75.31,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::copy_",
+      "calls": 60010,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 637.48,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::lift_fresh",
+      "calls": 20,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 0.01,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::detach_",
+      "calls": 20,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 0.02,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "detach_",
+      "calls": 20,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 0.03,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::select",
+      "calls": 37340,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 95.61,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::as_strided",
+      "calls": 163700,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 68.13,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::embedding",
+      "calls": 10,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 0.09,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::reshape",
+      "calls": 14860,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 17.66,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::view",
+      "calls": 14450,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 17.83,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::index_select",
+      "calls": 10,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 3.02,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::resize_",
+      "calls": 550,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 1.59,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::unsqueeze",
+      "calls": 20930,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 43.58,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::expand",
+      "calls": 6000,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 10.26,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::matmul",
+      "calls": 8530,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 39.11,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::_reshape_alias",
+      "calls": 910,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 1.99,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::bmm",
+      "calls": 2350,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 73.4,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::_unsafe_view",
+      "calls": 8620,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 7.64,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::transpose",
+      "calls": 9630,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 16.64,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::slice",
+      "calls": 71140,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 160.75,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::cat",
+      "calls": 820,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 14.08,
+      "cuda_share": 0.0
+    },
+    {
+      "key": "aten::cos",
+      "calls": 10,
+      "cuda_ms_total": 0.0,
+      "cpu_ms_total": 0.15,
+      "cuda_share": 0.0
+    }
+  ],
+  "total_cuda_ms_per_10_steps": 0.0,
+  "cuda_ms_per_token": 0.0,
+  "python_loop_ms_per_token_24_layers": 0.0002,
+  "cache_update_ms_per_call": 0.024,
+  "interpretation": {
+    "gpu_busy_share": 0.0,
+    "note": "cuda_ms_per_token / baseline = GPU 繁忙占比；其余为 CPU dispatch/同步/Python 开销"
+  },
+  "depth": 2,
+  "ts": "2026-10-20 10:11:38"
+}

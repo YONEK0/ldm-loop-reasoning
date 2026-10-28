@@ -1,0 +1,45 @@
+{
+ "strict": 0,
+ "loose": 0,
+ "finished": 0,
+ "n": 3,
+ "tau": 0.3,
+ "counting": {
+  "note": "M_layers = real executed M-layer forwards; KV backfill projections included as 1 layer each"
+ },
+ "items": [
+  {
+   "q": "There are 5 houses on a street, and each of the first four houses has 3 gnomes i",
+   "gold": 8.0,
+   "pred": null,
+   "ok": false,
+   "finished": false,
+   "gen_tokens": 60,
+   "mean_exit_depth": 6.0,
+   "layers_forward": 10404,
+   "text_head": " Let]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]"
+  },
+  {
+   "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below ",
+   "gold": 36.0,
+   "pred": null,
+   "ok": false,
+   "finished": false,
+   "gen_tokens": 60,
+   "mean_exit_depth": 6.0,
+   "layers_forward": 10012,
+   "text_head": " Let]]]]]]]]]]]]]]]]]]]]]]]]\n]\n]\n]\n]\n]\n9\n9\n9\n9\n9\n9\n9\n9\n9\n9\n9\n9\n"
+  },
+  {
+   "q": "An earthquake caused four buildings to collapse. Experts predicted that each fol",
+   "gold": 60.0,
+   "pred": null,
+   "ok": false,
+   "finished": false,
+   "gen_tokens": 60,
+   "mean_exit_depth": 5.864,
+   "layers_forward": 10430,
+   "text_head": " Let: was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was. Now. "
+  }
+ ]
+}

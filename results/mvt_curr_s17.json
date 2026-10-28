@@ -1,0 +1,173 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 12000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 17,
+    "log_every": 6000,
+    "eval_every": 6000,
+    "arms": "loop:4",
+    "sched": "const",
+    "fused": true,
+    "dyn_depth": false,
+    "dyn_min": 1,
+    "eval_rounds": "1,2,4,6",
+    "remap_epoch": false,
+    "curriculum": "2,3,4",
+    "eval_splits": "dev_random,confirm_depth",
+    "data_dir": "data/ldm_mvt",
+    "out_overfit": "/root/ldm/results/ldm_gpu_overfit.json",
+    "out_curve": "results/mvt_curr_s17.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 1.0,
+        "n": 1000,
+        "by_hop": {
+          "2": 1.0,
+          "3": 1.0
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 1.0,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 1.0
+          }
+        },
+        "dev_random_r1": {
+          "acc": 0.959,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.918
+          }
+        },
+        "dev_random_r2": {
+          "acc": 0.99,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.98
+          }
+        },
+        "dev_random_r4": {
+          "acc": 1.0,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 1.0
+          }
+        },
+        "dev_random_r6": {
+          "acc": 0.999,
+          "n": 1000,
+          "by_hop": {
+            "2": 0.998,
+            "3": 1.0
+          }
+        },
+        "confirm_depth_r1": {
+          "acc": 0.516,
+          "n": 750,
+          "by_hop": {
+            "4": 0.54,
+            "5": 0.5,
+            "6": 0.508
+          }
+        },
+        "confirm_depth_r2": {
+          "acc": 0.5133,
+          "n": 750,
+          "by_hop": {
+            "4": 0.588,
+            "5": 0.472,
+            "6": 0.48
+          }
+        },
+        "confirm_depth_r4": {
+          "acc": 0.54,
+          "n": 750,
+          "by_hop": {
+            "4": 0.636,
+            "5": 0.492,
+            "6": 0.492
+          }
+        },
+        "confirm_depth_r6": {
+          "acc": 0.5387,
+          "n": 750,
+          "by_hop": {
+            "4": 0.644,
+            "5": 0.464,
+            "6": 0.508
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 6000,
+          "loss": 0.2527,
+          "grad_norm": 2.7278,
+          "sec": 297.8,
+          "dev": {
+            "acc": 0.965,
+            "n": 1000,
+            "by_hop": {
+              "2": 0.984,
+              "3": 0.946
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "sec": 598.0,
+          "dev": {
+            "acc": 1.0,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 1.0
+            }
+          }
+        }
+      ],
+      "train_sec": 598.8
+    }
+  ]
+}

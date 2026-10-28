@@ -1,0 +1,43 @@
+{
+ "config": {
+  "model": "Qwen3.5-0.8B-Base (bf16)",
+  "data": "prosqa_valid (300, synthetic)",
+  "shots": "prosqa_train[0:4]",
+  "max_new": {
+   "cot_on": 96,
+   "cot_off": 24
+  },
+  "stop": "EOS | '\\nQ:'",
+  "scoring": "last '<X> is a <Y>' symbol == gold symbol"
+ },
+ "modes": {
+  "cot_on": {
+   "n": 300,
+   "strict": 74,
+   "strict_rate": 0.247,
+   "has_answer_rate": 1.0,
+   "ent_ok_rate": 0.917,
+   "gen_mean": 53.5,
+   "gen_median": 45.0,
+   "gen_max": 96,
+   "stop_hit_rate": 0.85,
+   "prompt_tokens_mean": 1872.5,
+   "sec_mean": 4.2
+  },
+  "cot_off": {
+   "n": 300,
+   "strict": 154,
+   "strict_rate": 0.513,
+   "has_answer_rate": 1.0,
+   "ent_ok_rate": 1.0,
+   "gen_mean": 9.7,
+   "gen_median": 10.0,
+   "gen_max": 11,
+   "stop_hit_rate": 1.0,
+   "prompt_tokens_mean": 1737.5,
+   "sec_mean": 1.7
+  }
+ },
+ "cot_delta_pp": -26.6,
+ "note": "P1-1 的门禁参照：若 cot_on 基线本身接近 0，说明 0.8B 在该任务上无法通过提示学会多跳搜索，需考虑升 4B；若 cot_on 显著高于 cot_off，则任务对 0.8B 可学，可进入循环训练。"
+}

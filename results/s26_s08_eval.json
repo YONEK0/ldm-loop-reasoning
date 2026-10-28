@@ -1,0 +1,637 @@
+{
+  "spec": {
+    "blocks": 24,
+    "n_gen": 40,
+    "depths": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "armA_step": 2559,
+    "armB_step": 2559,
+    "protocol": "v1.1 strict/boundary"
+  },
+  "armA_ce_blocks": [
+    0.911281406879425,
+    0.8815457224845886,
+    1.114301323890686,
+    1.0722547769546509,
+    0.789854109287262,
+    1.0295594930648804,
+    0.9058252573013306,
+    0.7817119359970093,
+    1.0790014266967773,
+    0.6872767806053162,
+    1.0588724613189697,
+    0.849916934967041,
+    0.8327112197875977,
+    1.3108422756195068,
+    0.6642755270004272,
+    1.0820475816726685,
+    0.9396228790283203,
+    1.0731298923492432,
+    0.8939551115036011,
+    1.0772526264190674,
+    0.8340588808059692,
+    0.9939260482788086,
+    0.9452795386314392,
+    1.0375105142593384
+  ],
+  "depth_scan": {
+    "d1": {
+      "ceB_mean": 0.96634,
+      "ceA_mean": 0.95192,
+      "paired_diff_mean_BminusA": 0.01442,
+      "win_blocks_B": 4,
+      "bootstrap95_BminusA": [
+        0.00848,
+        0.02181
+      ]
+    },
+    "d2": {
+      "ceB_mean": 0.96465,
+      "ceA_mean": 0.95192,
+      "paired_diff_mean_BminusA": 0.01273,
+      "win_blocks_B": 6,
+      "bootstrap95_BminusA": [
+        0.00678,
+        0.01969
+      ]
+    },
+    "d4": {
+      "ceB_mean": 0.96501,
+      "ceA_mean": 0.95192,
+      "paired_diff_mean_BminusA": 0.01309,
+      "win_blocks_B": 3,
+      "bootstrap95_BminusA": [
+        0.00701,
+        0.02042
+      ]
+    },
+    "d8": {
+      "ceB_mean": 0.96776,
+      "ceA_mean": 0.95192,
+      "paired_diff_mean_BminusA": 0.01585,
+      "win_blocks_B": 3,
+      "bootstrap95_BminusA": [
+        0.00944,
+        0.02367
+      ]
+    }
+  },
+  "gen": {
+    "A_partial": {
+      "n": 40,
+      "strict": 21,
+      "items": [
+        {
+          "q": "There are 5 houses on a street, and each of the first four h",
+          "gold": 8.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Mr. Sanchez found out that 40% of his Grade 5  students got ",
+          "gold": 36.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "An earthquake caused four buildings to collapse. Experts pre",
+          "gold": 60.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "There are 25 roses in a garden. There are 40 tulips. There a",
+          "gold": 75.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Peter goes to the store to buy a soda. The soda costs $.25 a",
+          "gold": 6.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John's cow weighs 400 pounds.  It increased its weight to 1.",
+          "gold": 600.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Hector purchased a container of gumballs.  He gave 4 to Todd",
+          "gold": 45.0,
+          "ok": false,
+          "finished": false
+        },
+        {
+          "q": "A young girl pours 23 blue beads and 16 yellow beads into a ",
+          "gold": 10.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Mark has two pets, a hare that runs 10 feet/second and a tur",
+          "gold": 18.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "John volunteers at a shelter twice a month for 3 hours at a ",
+          "gold": 72.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Randy just turned 12 and started playing the piano. His frie",
+          "gold": 5.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Bryan starts exercising at home during quarantine. To start,",
+          "gold": 40.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Jack is running a bake sale to help pay for his basketball t",
+          "gold": 7.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Nate got lost looking for his car in the airport parking lot",
+          "gold": 30.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Jimmy is going to sell pizzas at the carnival to make some m",
+          "gold": 2.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Jim collects model cars, and he has 301 models total.  Jim h",
+          "gold": 220.0,
+          "ok": false,
+          "finished": false
+        },
+        {
+          "q": "Parker is 4 inches shorter than Daisy. Daisy is 8 inches tal",
+          "gold": 64.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Farmer Brown raises emus, large birds. His flock has a total",
+          "gold": 20.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Rene can finish reading 30 pages in 60 minutes. Lulu can rea",
+          "gold": 328.0,
+          "ok": false,
+          "finished": false
+        },
+        {
+          "q": "Daniela goes shopping during a sale. She finds out that the ",
+          "gold": 140.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Holly needs to take 2 insulin pills per day, 3 blood pressur",
+          "gold": 77.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Uncle Jude baked 256 cookies. He gave 15 cookies to Tim, 23 ",
+          "gold": 188.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John drinks 2 energy drinks. 1 of them is a 12-ounce drink w",
+          "gold": 750.0,
+          "ok": false,
+          "finished": false
+        },
+        {
+          "q": "Calvin and Paislee played a pool game where points were awar",
+          "gold": 125.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Calvin has been saving his hair clippings after each haircut",
+          "gold": 80.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Jar A has 28 marbles. Jar B has 12 more marbles than jar A. ",
+          "gold": 148.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "James and Ali together own $250. If you know that James owns",
+          "gold": 145.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "There are 6 people going on an airplane trip.  They each hav",
+          "gold": 90.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "3 lions and 2 rhinos escape from the zoo.  If it takes 2 hou",
+          "gold": 10.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "In Mary's class, there are 25 students. Their teacher told t",
+          "gold": 1150.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "James paves a new parking lot.  It is 400 feet by 500 feet. ",
+          "gold": 16000.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Jacob has half the number of shoes Edward has. Edward has 3 ",
+          "gold": 121.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Jack is on the phone with a scammer who says the IRS will ar",
+          "gold": 3900.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "At a roller derby, 4 teams are competing. Each team is made ",
+          "gold": 240.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Libby is building an igloo in her backyard using bricks of s",
+          "gold": 100.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Robin likes to bake cupcakes for friends and to make her pup",
+          "gold": 12.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John is holding a poker night with his friends and is gettin",
+          "gold": 200.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John ends up damaging his hearing aids.  He needs to replace",
+          "gold": 1000.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "There are 36 seagulls on the roof of the Taco Bell. Kids sca",
+          "gold": 18.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Olivia earns $9 per hour.  She worked 4 hours on Monday, 3 h",
+          "gold": 117.0,
+          "ok": true,
+          "finished": true
+        }
+      ]
+    },
+    "A": {
+      "depth": 1,
+      "strict": 21,
+      "loose": 21,
+      "finished": 36,
+      "n": 40,
+      "samples": [
+        {
+          "q": "There are 5 houses on a street, and each of the first four houses has 3 gnomes i",
+          "gold": 8.0,
+          "pred": 8.0,
+          "finished": true,
+          "text": " Let's think step by step. The first four houses have a total of 4 x 3 = <<4*3=12>>12 gnomes.\nThere are 20 - 12 = <<20-12=8>>8 gnomes left for the fifth house.\n#### 8\n\nQ: A farmer has 1000 chickens.  "
+        },
+        {
+          "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below ",
+          "gold": 36.0,
+          "pred": 36.0,
+          "finished": true,
+          "text": " Let's think step by step. 40% of the students got a final grade below B, so 100% - 40% = 60% got a final grade of B or above.\nIf there are 60 students in Grade 5, then 60 x 60% = <<60*60*.01=36>>36 s"
+        },
+        {
+          "q": "An earthquake caused four buildings to collapse. Experts predicted that each fol",
+          "gold": 60.0,
+          "pred": 60.0,
+          "finished": true,
+          "text": " Let's think step by step. The second earthquake caused 4*2=<<4*2=8>>8 buildings to collapse.\nThe third earthquake caused 8*2=<<8*2=16>>16 buildings to collapse.\nThe fourth earthquake caused 16*2=<<16"
+        }
+      ]
+    },
+    "B_partial": {
+      "n": 40,
+      "strict": 22,
+      "items": [
+        {
+          "q": "There are 5 houses on a street, and each of the first four h",
+          "gold": 8.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Mr. Sanchez found out that 40% of his Grade 5  students got ",
+          "gold": 36.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "An earthquake caused four buildings to collapse. Experts pre",
+          "gold": 60.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "There are 25 roses in a garden. There are 40 tulips. There a",
+          "gold": 75.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Peter goes to the store to buy a soda. The soda costs $.25 a",
+          "gold": 6.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John's cow weighs 400 pounds.  It increased its weight to 1.",
+          "gold": 600.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Hector purchased a container of gumballs.  He gave 4 to Todd",
+          "gold": 45.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "A young girl pours 23 blue beads and 16 yellow beads into a ",
+          "gold": 10.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Mark has two pets, a hare that runs 10 feet/second and a tur",
+          "gold": 18.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John volunteers at a shelter twice a month for 3 hours at a ",
+          "gold": 72.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Randy just turned 12 and started playing the piano. His frie",
+          "gold": 5.0,
+          "ok": false,
+          "finished": false
+        },
+        {
+          "q": "Bryan starts exercising at home during quarantine. To start,",
+          "gold": 40.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Jack is running a bake sale to help pay for his basketball t",
+          "gold": 7.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Nate got lost looking for his car in the airport parking lot",
+          "gold": 30.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Jimmy is going to sell pizzas at the carnival to make some m",
+          "gold": 2.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Jim collects model cars, and he has 301 models total.  Jim h",
+          "gold": 220.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Parker is 4 inches shorter than Daisy. Daisy is 8 inches tal",
+          "gold": 64.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Farmer Brown raises emus, large birds. His flock has a total",
+          "gold": 20.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Rene can finish reading 30 pages in 60 minutes. Lulu can rea",
+          "gold": 328.0,
+          "ok": false,
+          "finished": false
+        },
+        {
+          "q": "Daniela goes shopping during a sale. She finds out that the ",
+          "gold": 140.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Holly needs to take 2 insulin pills per day, 3 blood pressur",
+          "gold": 77.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Uncle Jude baked 256 cookies. He gave 15 cookies to Tim, 23 ",
+          "gold": 188.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John drinks 2 energy drinks. 1 of them is a 12-ounce drink w",
+          "gold": 750.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Calvin and Paislee played a pool game where points were awar",
+          "gold": 125.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Calvin has been saving his hair clippings after each haircut",
+          "gold": 80.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Jar A has 28 marbles. Jar B has 12 more marbles than jar A. ",
+          "gold": 148.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "James and Ali together own $250. If you know that James owns",
+          "gold": 145.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "There are 6 people going on an airplane trip.  They each hav",
+          "gold": 90.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "3 lions and 2 rhinos escape from the zoo.  If it takes 2 hou",
+          "gold": 10.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "In Mary's class, there are 25 students. Their teacher told t",
+          "gold": 1150.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "James paves a new parking lot.  It is 400 feet by 500 feet. ",
+          "gold": 16000.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Jacob has half the number of shoes Edward has. Edward has 3 ",
+          "gold": 121.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Jack is on the phone with a scammer who says the IRS will ar",
+          "gold": 3900.0,
+          "ok": false,
+          "finished": false
+        },
+        {
+          "q": "At a roller derby, 4 teams are competing. Each team is made ",
+          "gold": 240.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Libby is building an igloo in her backyard using bricks of s",
+          "gold": 100.0,
+          "ok": false,
+          "finished": true
+        },
+        {
+          "q": "Robin likes to bake cupcakes for friends and to make her pup",
+          "gold": 12.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John is holding a poker night with his friends and is gettin",
+          "gold": 200.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "John ends up damaging his hearing aids.  He needs to replace",
+          "gold": 1000.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "There are 36 seagulls on the roof of the Taco Bell. Kids sca",
+          "gold": 18.0,
+          "ok": true,
+          "finished": true
+        },
+        {
+          "q": "Olivia earns $9 per hour.  She worked 4 hours on Monday, 3 h",
+          "gold": 117.0,
+          "ok": true,
+          "finished": true
+        }
+      ]
+    },
+    "B": {
+      "depth": 2,
+      "strict": 22,
+      "loose": 22,
+      "finished": 37,
+      "n": 40,
+      "samples": [
+        {
+          "q": "There are 5 houses on a street, and each of the first four houses has 3 gnomes i",
+          "gold": 8.0,
+          "pred": 55.0,
+          "finished": true,
+          "text": " Let's think step by step. The first four houses have 4 x 3 = <<4*3=12>>12 gnomes.\nThere are 20 - 12 = <<20-12=8>>8 gnomes left for the fifth house.\n#### 8\n\nQ: A farmer has 100 chickens.  He sells 20 "
+        },
+        {
+          "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below ",
+          "gold": 36.0,
+          "pred": 36.0,
+          "finished": true,
+          "text": " Let's think step by step. If 40% of his students got a final grade below B, then 100% - 40% = 60% of his students got a final grade of B and above.\nIf 60% of his students got a final grade of B and a"
+        },
+        {
+          "q": "An earthquake caused four buildings to collapse. Experts predicted that each fol",
+          "gold": 60.0,
+          "pred": 28.0,
+          "finished": true,
+          "text": " Let's think step by step. The first earthquake caused 4 buildings to collapse.\nThe second earthquake caused 2*4 = <<2*4=8>>8 buildings to collapse.\nThe third earthquake caused 2*8 = <<2*8=16>>16 buil"
+        }
+      ]
+    }
+  }
+}

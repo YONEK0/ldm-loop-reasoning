@@ -1,0 +1,139 @@
+{
+  "splits": {
+    "train": {
+      "n": 480,
+      "hop_hist": {
+        "2": 480
+      },
+      "target_hist": {
+        "grandparent": 240,
+        "sibling_in_law": 240
+      },
+      "difficulty": {
+        "hop_mean": 2,
+        "facts_mean": 4,
+        "chars_mean": 100.5,
+        "search_proxy": 8
+      }
+    },
+    "dev_random": {
+      "n": 240,
+      "hop_hist": {
+        "2": 240
+      },
+      "target_hist": {
+        "grandparent": 120,
+        "sibling_in_law": 120
+      },
+      "difficulty": {
+        "hop_mean": 2,
+        "facts_mean": 4,
+        "chars_mean": 100.6,
+        "search_proxy": 8
+      }
+    },
+    "confirm_depth": {
+      "n": 500,
+      "hop_hist": {
+        "3": 200,
+        "4": 100,
+        "5": 100,
+        "6": 100
+      },
+      "target_hist": {
+        "cousin": 100,
+        "great_grandparent": 100,
+        "great_uncle": 100,
+        "second_cousin": 100,
+        "kin6": 100
+      },
+      "difficulty": {
+        "hop_mean": 4.2,
+        "facts_mean": 6.2,
+        "chars_mean": 136.4,
+        "search_proxy": 26.04
+      }
+    },
+    "confirm_combo": {
+      "n": 120,
+      "hop_hist": {
+        "2": 120
+      },
+      "target_hist": {
+        "uncle": 120
+      },
+      "difficulty": {
+        "hop_mean": 2,
+        "facts_mean": 4,
+        "chars_mean": 101.4,
+        "search_proxy": 8
+      }
+    },
+    "confirm_length": {
+      "n": 240,
+      "hop_hist": {
+        "2": 240
+      },
+      "target_hist": {
+        "grandparent": 120,
+        "sibling_in_law": 120
+      },
+      "difficulty": {
+        "hop_mean": 2,
+        "facts_mean": 10,
+        "chars_mean": 201.0,
+        "search_proxy": 20
+      }
+    },
+    "pilot": {
+      "n": 160,
+      "hop_hist": {
+        "2": 80,
+        "3": 80
+      },
+      "target_hist": {
+        "grandparent": 40,
+        "sibling_in_law": 40,
+        "cousin": 40,
+        "great_grandparent": 40
+      },
+      "difficulty": {
+        "hop_mean": 2.5,
+        "facts_mean": 4.5,
+        "chars_mean": 108.5,
+        "search_proxy": 11.25
+      }
+    }
+  },
+  "recommendations": {
+    "train_hop_range": [
+      1,
+      3
+    ],
+    "confirm_depth_hops": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "confirm_combo_hops": [
+      2
+    ],
+    "length_control_valid": true,
+    "notes": []
+  },
+  "risks_requiring_gpu_pilot": [
+    "本脚本只能估计结构难度，是否“所有参数预算都饱和”必须由 GPU pilot 验证；若 pilot 中所有预算都在很早达到高准确率，需要提高 hop 或扩大关系/实体空间。",
+    "若 pilot 中所有预算都无法学习，需要降低 hop 或增加训练样本。",
+    "实体来自匿名池且训练集/确认集实体集合不重叠，可抑制实体记忆；但文本模板单一，仍可能让模型学到模板捷径，正式训练建议扩充模板 或至少在确认集使用不同 template_id。"
+  ],
+  "next_action": {
+    "cpu_done": true,
+    "requires_gpu": [
+      "pilot 难度验证",
+      "参数预算曲线",
+      "深度/组合/长度确认集评测"
+    ],
+    "estimated_first_pilot": "用最小参数预算在 pilot 集跑短程训练，确认准确率既非立刻饱和也非始终为零"
+  }
+}

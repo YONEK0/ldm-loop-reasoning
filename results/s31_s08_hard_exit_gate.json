@@ -1,0 +1,36 @@
+{
+ "router_step": 3907,
+ "blocks": 16,
+ "taus": {
+  "0.3": {
+   "hard_ce": 1.05956,
+   "drift_vs_soft": 0.00067,
+   "mean_depth": 1.338,
+   "m_block_saving": 0.833
+  },
+  "0.5": {
+   "hard_ce": 1.06018,
+   "drift_vs_soft": 0.00129,
+   "mean_depth": 1.185,
+   "m_block_saving": 0.852
+  },
+  "0.7": {
+   "hard_ce": 1.06583,
+   "drift_vs_soft": 0.00694,
+   "mean_depth": 1.086,
+   "m_block_saving": 0.864
+  },
+  "0.9": {
+   "hard_ce": 1.22715,
+   "drift_vs_soft": 0.16826,
+   "mean_depth": 0.87,
+   "m_block_saving": 0.891
+  }
+ },
+ "soft_ce": 1.05889,
+ "verdict": {
+  "best_tau": "0.3",
+  "passed": true,
+  "note": "gate: teacher-forced hard-vs-soft drift <= 0.005"
+ }
+}

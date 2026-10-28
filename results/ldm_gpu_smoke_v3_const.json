@@ -1,0 +1,312 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 24000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 17,
+    "log_every": 3000,
+    "eval_every": 3000,
+    "arms": "loop:4,dense:2",
+    "sched": "const",
+    "data_dir": "data/ldm_edge_action_v3",
+    "out_overfit": "E:\\develop\\project_files\\llm-test\\results\\ldm_gpu_overfit.json",
+    "out_curve": "results/ldm_gpu_smoke_v3_const.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.28,
+        "n": 400,
+        "by_hop": {
+          "3": 0.245,
+          "4": 0.315
+        }
+      },
+      "hist": [
+        {
+          "step": 3000,
+          "loss": 1.3436,
+          "grad_norm": 0.0954,
+          "sec": 147.5,
+          "dev": {
+            "acc": 0.2575,
+            "n": 400,
+            "by_hop": {
+              "3": 0.295,
+              "4": 0.22
+            }
+          }
+        },
+        {
+          "step": 6000,
+          "loss": 1.2124,
+          "grad_norm": 0.613,
+          "sec": 303.7,
+          "dev": {
+            "acc": 0.305,
+            "n": 400,
+            "by_hop": {
+              "3": 0.32,
+              "4": 0.29
+            }
+          }
+        },
+        {
+          "step": 9000,
+          "loss": 1.1356,
+          "grad_norm": 1.3287,
+          "sec": 446.0,
+          "dev": {
+            "acc": 0.305,
+            "n": 400,
+            "by_hop": {
+              "3": 0.29,
+              "4": 0.32
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.8572,
+          "grad_norm": 1.5958,
+          "sec": 601.8,
+          "dev": {
+            "acc": 0.245,
+            "n": 400,
+            "by_hop": {
+              "3": 0.235,
+              "4": 0.255
+            }
+          }
+        },
+        {
+          "step": 15000,
+          "loss": 0.8788,
+          "grad_norm": 2.3362,
+          "sec": 759.0,
+          "dev": {
+            "acc": 0.26,
+            "n": 400,
+            "by_hop": {
+              "3": 0.24,
+              "4": 0.28
+            }
+          }
+        },
+        {
+          "step": 18000,
+          "loss": 0.5211,
+          "grad_norm": 1.9721,
+          "sec": 916.2,
+          "dev": {
+            "acc": 0.2575,
+            "n": 400,
+            "by_hop": {
+              "3": 0.27,
+              "4": 0.245
+            }
+          }
+        },
+        {
+          "step": 21000,
+          "loss": 0.5079,
+          "grad_norm": 2.5513,
+          "sec": 1073.5,
+          "dev": {
+            "acc": 0.2675,
+            "n": 400,
+            "by_hop": {
+              "3": 0.24,
+              "4": 0.295
+            }
+          }
+        },
+        {
+          "step": 24000,
+          "loss": 0.6054,
+          "grad_norm": 4.3793,
+          "sec": 1231.5,
+          "dev": {
+            "acc": 0.28,
+            "n": 400,
+            "by_hop": {
+              "3": 0.245,
+              "4": 0.315
+            }
+          }
+        }
+      ],
+      "train_sec": 1231.8
+    },
+    {
+      "variant": "dense",
+      "depth": 2,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "mid(2 unique)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193
+        },
+        "total": 1841473,
+        "core_params": 0,
+        "unrolled_equiv_params": null
+      },
+      "final_dev": {
+        "acc": 0.235,
+        "n": 400,
+        "by_hop": {
+          "3": 0.28,
+          "4": 0.19
+        }
+      },
+      "hist": [
+        {
+          "step": 3000,
+          "loss": 1.2818,
+          "grad_norm": 0.4454,
+          "sec": 62.6,
+          "dev": {
+            "acc": 0.275,
+            "n": 400,
+            "by_hop": {
+              "3": 0.275,
+              "4": 0.275
+            }
+          }
+        },
+        {
+          "step": 6000,
+          "loss": 0.8242,
+          "grad_norm": 1.9822,
+          "sec": 125.3,
+          "dev": {
+            "acc": 0.255,
+            "n": 400,
+            "by_hop": {
+              "3": 0.23,
+              "4": 0.28
+            }
+          }
+        },
+        {
+          "step": 9000,
+          "loss": 0.6097,
+          "grad_norm": 2.6059,
+          "sec": 187.7,
+          "dev": {
+            "acc": 0.26,
+            "n": 400,
+            "by_hop": {
+              "3": 0.275,
+              "4": 0.245
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.5297,
+          "grad_norm": 4.1953,
+          "sec": 250.2,
+          "dev": {
+            "acc": 0.2375,
+            "n": 400,
+            "by_hop": {
+              "3": 0.28,
+              "4": 0.195
+            }
+          }
+        },
+        {
+          "step": 15000,
+          "loss": 0.6324,
+          "grad_norm": 5.2706,
+          "sec": 312.6,
+          "dev": {
+            "acc": 0.25,
+            "n": 400,
+            "by_hop": {
+              "3": 0.285,
+              "4": 0.215
+            }
+          }
+        },
+        {
+          "step": 18000,
+          "loss": 0.2662,
+          "grad_norm": 5.3702,
+          "sec": 375.0,
+          "dev": {
+            "acc": 0.2575,
+            "n": 400,
+            "by_hop": {
+              "3": 0.275,
+              "4": 0.24
+            }
+          }
+        },
+        {
+          "step": 21000,
+          "loss": 0.3174,
+          "grad_norm": 7.0845,
+          "sec": 437.5,
+          "dev": {
+            "acc": 0.2325,
+            "n": 400,
+            "by_hop": {
+              "3": 0.285,
+              "4": 0.18
+            }
+          }
+        },
+        {
+          "step": 24000,
+          "loss": 0.326,
+          "grad_norm": 4.458,
+          "sec": 499.9,
+          "dev": {
+            "acc": 0.235,
+            "n": 400,
+            "by_hop": {
+              "3": 0.28,
+              "4": 0.19
+            }
+          }
+        }
+      ],
+      "train_sec": 500.0
+    }
+  ]
+}

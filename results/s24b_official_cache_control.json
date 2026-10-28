@@ -1,0 +1,104 @@
+{
+  "spec": {
+    "seq": 49,
+    "pre": 35,
+    "path": "official model.forward + official cache"
+  },
+  "official_cache": {
+    "per_step_maxdiff": [
+      0.0,
+      0.127,
+      0.1562,
+      0.2422,
+      0.1875,
+      0.2266,
+      0.1875,
+      0.209,
+      0.1875,
+      0.625,
+      0.7344,
+      0.5625,
+      0.7578,
+      0.2031,
+      0.2188
+    ],
+    "argmax_flip_steps": "0/15",
+    "detail": [
+      {
+        "p_refargmax_cache": 0.9424,
+        "p_refargmax_ref": 0.9424,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.9521,
+        "p_refargmax_ref": 0.9525,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.9274,
+        "p_refargmax_ref": 0.9273,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.4467,
+        "p_refargmax_ref": 0.4455,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.5622,
+        "p_refargmax_ref": 0.5542,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.8742,
+        "p_refargmax_ref": 0.8734,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.3754,
+        "p_refargmax_ref": 0.3713,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.3349,
+        "p_refargmax_ref": 0.339,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.1106,
+        "p_refargmax_ref": 0.1061,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.9641,
+        "p_refargmax_ref": 0.9568,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.5311,
+        "p_refargmax_ref": 0.6223,
+        "top5_overlap": 4
+      },
+      {
+        "p_refargmax_cache": 0.9999,
+        "p_refargmax_ref": 0.9999,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.5361,
+        "p_refargmax_ref": 0.5437,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.375,
+        "p_refargmax_ref": 0.3744,
+        "top5_overlap": 5
+      },
+      {
+        "p_refargmax_cache": 0.3359,
+        "p_refargmax_ref": 0.3387,
+        "top5_overlap": 5
+      }
+    ]
+  }
+}

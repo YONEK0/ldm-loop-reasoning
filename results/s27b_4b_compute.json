@@ -1,0 +1,595 @@
+{
+ "time": "2026-10-15 17:51:59",
+ "router_step": 225,
+ "cost_model": {
+  "base": "T*32",
+  "looped": "T*20 + 12*sum(d_i)"
+ },
+ "profiles": [
+  {
+   "tag": "base_d0",
+   "q": "There are 90 rooms at the KozyInn Motel. It takes housekeeping 20 minutes to cle",
+   "tokens": 581,
+   "n_gen": 256,
+   "strict": true,
+   "mean_depth": 3.998,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 145,
+    "tensor(1., device='cuda:0')": 10,
+    "tensor(2., device='cuda:0')": 26,
+    "tensor(4., device='cuda:0')": 98,
+    "tensor(5., device='cuda:0')": 171,
+    "tensor(6., device='cuda:0')": 10,
+    "tensor(7., device='cuda:0')": 14,
+    "tensor(8., device='cuda:0')": 107
+   },
+   "base_layers": 18592,
+   "looped_layers": 39496,
+   "sec": 12.4,
+   "ratio_looped_over_base": 2.124
+  },
+  {
+   "tag": "base_d0",
+   "q": "Sam ran 3 miles on Monday, Wednesday and Friday.  On Tuesday and Thursday, Sam r",
+   "tokens": 574,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.39,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 172,
+    "tensor(1., device='cuda:0')": 7,
+    "tensor(2., device='cuda:0')": 38,
+    "tensor(4., device='cuda:0')": 121,
+    "tensor(5., device='cuda:0')": 164,
+    "tensor(6., device='cuda:0')": 5,
+    "tensor(7., device='cuda:0')": 7,
+    "tensor(8., device='cuda:0')": 60
+   },
+   "base_layers": 18368,
+   "looped_layers": 34832,
+   "sec": 10.3,
+   "ratio_looped_over_base": 1.896
+  },
+  {
+   "tag": "base_d0",
+   "q": "An interior design firm offers installation for $129.00.  It includes hanging 4 ",
+   "tokens": 628,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 4.218,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 121,
+    "tensor(1., device='cuda:0')": 14,
+    "tensor(2., device='cuda:0')": 31,
+    "tensor(4., device='cuda:0')": 140,
+    "tensor(5., device='cuda:0')": 182,
+    "tensor(6., device='cuda:0')": 5,
+    "tensor(7., device='cuda:0')": 7,
+    "tensor(8., device='cuda:0')": 128
+   },
+   "base_layers": 20096,
+   "looped_layers": 44348,
+   "sec": 13.0,
+   "ratio_looped_over_base": 2.207
+  },
+  {
+   "tag": "base_d0",
+   "q": "A local town is expanding and wants to build several new homes across the next t",
+   "tokens": 618,
+   "n_gen": 256,
+   "strict": true,
+   "mean_depth": 3.542,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 148,
+    "tensor(1., device='cuda:0')": 11,
+    "tensor(2., device='cuda:0')": 27,
+    "tensor(4., device='cuda:0')": 171,
+    "tensor(5., device='cuda:0')": 210,
+    "tensor(6., device='cuda:0')": 6,
+    "tensor(7., device='cuda:0')": 6,
+    "tensor(8., device='cuda:0')": 39
+   },
+   "base_layers": 19776,
+   "looped_layers": 38628,
+   "sec": 11.0,
+   "ratio_looped_over_base": 1.953
+  },
+  {
+   "tag": "base_d0",
+   "q": "Maria was charging her power bank before going to the park when she disconnected",
+   "tokens": 660,
+   "n_gen": 256,
+   "strict": true,
+   "mean_depth": 4.112,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 143,
+    "tensor(1., device='cuda:0')": 7,
+    "tensor(2., device='cuda:0')": 26,
+    "tensor(4., device='cuda:0')": 125,
+    "tensor(5., device='cuda:0')": 233,
+    "tensor(6., device='cuda:0')": 5,
+    "tensor(7., device='cuda:0')": 8,
+    "tensor(8., device='cuda:0')": 113
+   },
+   "base_layers": 21120,
+   "looped_layers": 45768,
+   "sec": 9.8,
+   "ratio_looped_over_base": 2.167
+  },
+  {
+   "tag": "base_d0",
+   "q": "Gene is sewing a quilt out of old souvenir t-shirts. He has one shirt from each ",
+   "tokens": 623,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.637,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 160,
+    "tensor(1., device='cuda:0')": 11,
+    "tensor(2., device='cuda:0')": 32,
+    "tensor(4., device='cuda:0')": 129,
+    "tensor(5., device='cuda:0')": 212,
+    "tensor(6., device='cuda:0')": 4,
+    "tensor(7., device='cuda:0')": 9,
+    "tensor(8., device='cuda:0')": 66
+   },
+   "base_layers": 19936,
+   "looped_layers": 39652,
+   "sec": 11.7,
+   "ratio_looped_over_base": 1.989
+  },
+  {
+   "tag": "base_d0",
+   "q": "Six years ago, when Noah was half as old as Cera, the population of Chile was ha",
+   "tokens": 603,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.353,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 173,
+    "tensor(1., device='cuda:0')": 13,
+    "tensor(2., device='cuda:0')": 34,
+    "tensor(4., device='cuda:0')": 136,
+    "tensor(5., device='cuda:0')": 186,
+    "tensor(6., device='cuda:0')": 6,
+    "tensor(7., device='cuda:0')": 9,
+    "tensor(8., device='cuda:0')": 46
+   },
+   "base_layers": 19296,
+   "looped_layers": 36324,
+   "sec": 12.3,
+   "ratio_looped_over_base": 1.882
+  },
+  {
+   "tag": "base_d0",
+   "q": "Michael is replacing the carpet in his bedroom.  The new carpet he's chosen cost",
+   "tokens": 629,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 4.173,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 129,
+    "tensor(1., device='cuda:0')": 10,
+    "tensor(2., device='cuda:0')": 22,
+    "tensor(4., device='cuda:0')": 130,
+    "tensor(5., device='cuda:0')": 209,
+    "tensor(6., device='cuda:0')": 8,
+    "tensor(7., device='cuda:0')": 10,
+    "tensor(8., device='cuda:0')": 111
+   },
+   "base_layers": 20128,
+   "looped_layers": 44080,
+   "sec": 10.6,
+   "ratio_looped_over_base": 2.19
+  },
+  {
+   "tag": "base_d0",
+   "q": "John drives to his friend's house 200 miles away.  He drives at a speed of 70 mp",
+   "tokens": 617,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.653,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 170,
+    "tensor(1., device='cuda:0')": 12,
+    "tensor(2., device='cuda:0')": 29,
+    "tensor(4., device='cuda:0')": 120,
+    "tensor(5., device='cuda:0')": 188,
+    "tensor(6., device='cuda:0')": 4,
+    "tensor(7., device='cuda:0')": 12,
+    "tensor(8., device='cuda:0')": 82
+   },
+   "base_layers": 19744,
+   "looped_layers": 39388,
+   "sec": 13.0,
+   "ratio_looped_over_base": 1.995
+  },
+  {
+   "tag": "base_d0",
+   "q": "Sam sells bread. He has a target of selling 120 crates of bread in a week. One w",
+   "tokens": 618,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.846,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 155,
+    "tensor(1., device='cuda:0')": 9,
+    "tensor(2., device='cuda:0')": 32,
+    "tensor(4., device='cuda:0')": 122,
+    "tensor(5., device='cuda:0')": 187,
+    "tensor(6., device='cuda:0')": 6,
+    "tensor(7., device='cuda:0')": 11,
+    "tensor(8., device='cuda:0')": 96
+   },
+   "base_layers": 19776,
+   "looped_layers": 40884,
+   "sec": 11.4,
+   "ratio_looped_over_base": 2.067
+  },
+  {
+   "tag": "base_d0",
+   "q": "A farmer is baling hay in their field. Each hour the farmer makes 5 bales. At th",
+   "tokens": 615,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.6,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 165,
+    "tensor(1., device='cuda:0')": 10,
+    "tensor(2., device='cuda:0')": 30,
+    "tensor(4., device='cuda:0')": 114,
+    "tensor(5., device='cuda:0')": 222,
+    "tensor(6., device='cuda:0')": 4,
+    "tensor(7., device='cuda:0')": 6,
+    "tensor(8., device='cuda:0')": 64
+   },
+   "base_layers": 19680,
+   "looped_layers": 38868,
+   "sec": 13.0,
+   "ratio_looped_over_base": 1.975
+  },
+  {
+   "tag": "base_d0",
+   "q": "Mark plants a beanstalk below his second-story window, which is 20 feet off the ",
+   "tokens": 595,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.8,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 156,
+    "tensor(1., device='cuda:0')": 7,
+    "tensor(2., device='cuda:0')": 25,
+    "tensor(4., device='cuda:0')": 132,
+    "tensor(5., device='cuda:0')": 169,
+    "tensor(6., device='cuda:0')": 4,
+    "tensor(7., device='cuda:0')": 9,
+    "tensor(8., device='cuda:0')": 93
+   },
+   "base_layers": 19040,
+   "looped_layers": 39032,
+   "sec": 10.1,
+   "ratio_looped_over_base": 2.05
+  },
+  {
+   "tag": "adaptive",
+   "q": "There are 90 rooms at the KozyInn Motel. It takes housekeeping 20 minutes to cle",
+   "tokens": 581,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.654,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 160,
+    "tensor(1., device='cuda:0')": 10,
+    "tensor(2., device='cuda:0')": 24,
+    "tensor(4., device='cuda:0')": 134,
+    "tensor(5., device='cuda:0')": 156,
+    "tensor(6., device='cuda:0')": 8,
+    "tensor(7., device='cuda:0')": 11,
+    "tensor(8., device='cuda:0')": 78
+   },
+   "base_layers": 18592,
+   "looped_layers": 37096,
+   "sec": 11.7,
+   "ratio_looped_over_base": 1.995
+  },
+  {
+   "tag": "adaptive",
+   "q": "Sam ran 3 miles on Monday, Wednesday and Friday.  On Tuesday and Thursday, Sam r",
+   "tokens": 574,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.359,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 161,
+    "tensor(1., device='cuda:0')": 11,
+    "tensor(2., device='cuda:0')": 39,
+    "tensor(4., device='cuda:0')": 139,
+    "tensor(5., device='cuda:0')": 162,
+    "tensor(6., device='cuda:0')": 7,
+    "tensor(7., device='cuda:0')": 9,
+    "tensor(8., device='cuda:0')": 46
+   },
+   "base_layers": 18368,
+   "looped_layers": 34616,
+   "sec": 10.6,
+   "ratio_looped_over_base": 1.885
+  },
+  {
+   "tag": "adaptive",
+   "q": "An interior design firm offers installation for $129.00.  It includes hanging 4 ",
+   "tokens": 628,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.775,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 162,
+    "tensor(1., device='cuda:0')": 9,
+    "tensor(2., device='cuda:0')": 35,
+    "tensor(4., device='cuda:0')": 150,
+    "tensor(5., device='cuda:0')": 156,
+    "tensor(6., device='cuda:0')": 4,
+    "tensor(7., device='cuda:0')": 8,
+    "tensor(8., device='cuda:0')": 104
+   },
+   "base_layers": 20096,
+   "looped_layers": 41012,
+   "sec": 13.1,
+   "ratio_looped_over_base": 2.041
+  },
+  {
+   "tag": "adaptive",
+   "q": "A local town is expanding and wants to build several new homes across the next t",
+   "tokens": 618,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 3.736,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 143,
+    "tensor(1., device='cuda:0')": 14,
+    "tensor(2., device='cuda:0')": 36,
+    "tensor(4., device='cuda:0')": 126,
+    "tensor(5., device='cuda:0')": 217,
+    "tensor(6., device='cuda:0')": 7,
+    "tensor(7., device='cuda:0')": 8,
+    "tensor(8., device='cuda:0')": 67
+   },
+   "base_layers": 19776,
+   "looped_layers": 40068,
+   "sec": 11.4,
+   "ratio_looped_over_base": 2.026
+  },
+  {
+   "tag": "adaptive",
+   "q": "Maria was charging her power bank before going to the park when she disconnected",
+   "tokens": 660,
+   "n_gen": 256,
+   "strict": false,
+   "mean_depth": 4.118,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 130,
+    "tensor(1., device='cuda:0')": 8,
+    "tensor(2., device='cuda:0')": 32,
+    "tensor(4., device='cuda:0')": 145,
+    "tensor(5., device='cuda:0')": 226,
+    "tensor(6., device='cuda:0')": 4,
+    "tensor(7., device='cuda:0')": 8,
+    "tensor(8., device='cuda:0')": 107
+   },
+   "base_layers": 21120,
+   "looped_layers": 45816,
+   "sec": 9.9,
+   "ratio_looped_over_base": 2.169
+  },
+  {
+   "tag": "adaptive",
+   "q": "Gene is sewing a quilt out of old souvenir t-shirts. He has one shirt from each ",
+   "tokens": 623,
+   "n_gen": 256,
+   "strict": true,
+   "mean_depth": 3.459,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 163,
+    "tensor(1., device='cuda:0')": 10,
+    "tensor(2., device='cuda:0')": 28,
+    "tensor(4., device='cuda:0')": 175,
+    "tensor(5., device='cuda:0')": 191,
+    "tensor(6., device='cuda:0')": 4,
+    "tensor(7., device='cuda:0')": 6,
+    "tensor(8., device='cuda:0')": 46
+   },
+   "base_layers": 19936,
+   "looped_layers": 38320,
+   "sec": 12.1,
+   "ratio_looped_over_base": 1.922
+  },
+  {
+   "tag": "gold_cot",
+   "q": "There are 90 rooms at the KozyInn Motel. It takes housekeeping 20 minutes to cle",
+   "tokens": 421,
+   "n_gen": null,
+   "strict": true,
+   "mean_depth": 3.613,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 111,
+    "tensor(1., device='cuda:0')": 11,
+    "tensor(2., device='cuda:0')": 30,
+    "tensor(4., device='cuda:0')": 83,
+    "tensor(5., device='cuda:0')": 115,
+    "tensor(6., device='cuda:0')": 6,
+    "tensor(7., device='cuda:0')": 13,
+    "tensor(8., device='cuda:0')": 52
+   },
+   "base_layers": 13472,
+   "looped_layers": 26672,
+   "sec": 8.2,
+   "ratio_looped_over_base": 1.98
+  },
+  {
+   "tag": "gold_cot",
+   "q": "Sam ran 3 miles on Monday, Wednesday and Friday.  On Tuesday and Thursday, Sam r",
+   "tokens": 404,
+   "n_gen": null,
+   "strict": true,
+   "mean_depth": 3.433,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 123,
+    "tensor(1., device='cuda:0')": 8,
+    "tensor(2., device='cuda:0')": 23,
+    "tensor(4., device='cuda:0')": 78,
+    "tensor(5., device='cuda:0')": 112,
+    "tensor(6., device='cuda:0')": 6,
+    "tensor(7., device='cuda:0')": 7,
+    "tensor(8., device='cuda:0')": 47
+   },
+   "base_layers": 12928,
+   "looped_layers": 24724,
+   "sec": 8.7,
+   "ratio_looped_over_base": 1.912
+  },
+  {
+   "tag": "gold_cot",
+   "q": "An interior design firm offers installation for $129.00.  It includes hanging 4 ",
+   "tokens": 675,
+   "n_gen": null,
+   "strict": true,
+   "mean_depth": 4.259,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 128,
+    "tensor(1., device='cuda:0')": 20,
+    "tensor(2., device='cuda:0')": 35,
+    "tensor(4., device='cuda:0')": 127,
+    "tensor(5., device='cuda:0')": 204,
+    "tensor(6., device='cuda:0')": 8,
+    "tensor(7., device='cuda:0')": 15,
+    "tensor(8., device='cuda:0')": 138
+   },
+   "base_layers": 21600,
+   "looped_layers": 48000,
+   "sec": 11.5,
+   "ratio_looped_over_base": 2.222
+  },
+  {
+   "tag": "gold_cot",
+   "q": "A local town is expanding and wants to build several new homes across the next t",
+   "tokens": 510,
+   "n_gen": null,
+   "strict": true,
+   "mean_depth": 3.573,
+   "depth_hist": {
+    "tensor(0., device='cuda:0')": 124,
+    "tensor(1., device='cuda:0')": 10,
+    "tensor(2., device='cuda:0')": 29,
+    "tensor(4., device='cuda:0')": 126,
+    "tensor(5., device='cuda:0')": 167,
+    "tensor(6., device='cuda:0')": 5,
+    "tensor(7., device='cuda:0')": 7,
+    "tensor(8., device='cuda:0')": 42
+   },
+   "base_layers": 16320,
+   "looped_layers": 32064,
+   "sec": 13.2,
+   "ratio_looped_over_base": 1.965
+  }
+ ],
+ "summary": {
+  "base_d0": {
+   "n_texts": 12,
+   "tokens": 7361,
+   "mean_depth": 3.782,
+   "base_layers": 235552,
+   "looped_layers": 481300,
+   "ratio": 2.043,
+   "strict_rate": 0.25,
+   "looped_layers_per_token": 65.38,
+   "breakeven_token_ratio": 0.489
+  },
+  "adaptive": {
+   "n_texts": 6,
+   "tokens": 3684,
+   "mean_depth": 3.693,
+   "base_layers": 117888,
+   "looped_layers": 236928,
+   "ratio": 2.01,
+   "strict_rate": 0.167,
+   "looped_layers_per_token": 64.32,
+   "breakeven_token_ratio": 0.498
+  },
+  "gold_cot": {
+   "n_texts": 4,
+   "tokens": 2010,
+   "mean_depth": 3.784,
+   "base_layers": 64320,
+   "looped_layers": 131460,
+   "ratio": 2.044,
+   "strict_rate": 1.0,
+   "looped_layers_per_token": 65.41,
+   "breakeven_token_ratio": 0.489
+  }
+ },
+ "direct_test": {
+  "n": 6,
+  "strict": 0,
+  "items": [
+   {
+    "q": "There are 90 rooms at the KozyInn Motel. It takes housekeeping 20 minutes to cle",
+    "gold": "15",
+    "gen": 48,
+    "pred": null,
+    "strict": false,
+    "looped_layers": 3336,
+    "text_head": " 90 minutes.\nThe answer is 90 minutes.\nQ: A 100-pound man can lift 100 pounds. If he can lift 10% more than that, how much can he",
+    "sec": 122.3
+   },
+   {
+    "q": "Sam ran 3 miles on Monday, Wednesday and Friday.  On Tuesday and Thursday, Sam r",
+    "gold": "19",
+    "gen": 48,
+    "pred": null,
+    "strict": false,
+    "looped_layers": 2136,
+    "text_head": " 22.\nSam ran 3 miles on Monday, Wednesday and Friday.\n3 + 3 + 3 = 9\nSam ran 5 miles on Tuesday and Thursday.\n5 + 5 = 10",
+    "sec": 122.7
+   },
+   {
+    "q": "An interior design firm offers installation for $129.00.  It includes hanging 4 ",
+    "gold": "324",
+    "gen": 48,
+    "pred": null,
+    "strict": false,
+    "looped_layers": 2460,
+    "text_head": " 249.00\nThe answer is 249.00\nAngela needs 6+2+20 = 28 items installed.\nThe cost of the installation is 28*1",
+    "sec": 131.6
+   },
+   {
+    "q": "A local town is expanding and wants to build several new homes across the next t",
+    "gold": "144",
+    "gen": 48,
+    "pred": null,
+    "strict": false,
+    "looped_layers": 1788,
+    "text_head": " 108.\nIn the first year, the town will build 12 homes.\nIn the second year, they will build 12 x 3 = 36 homes.\nIn the third year, they",
+    "sec": 128.0
+   },
+   {
+    "q": "Maria was charging her power bank before going to the park when she disconnected",
+    "gold": "94",
+    "gen": 48,
+    "pred": null,
+    "strict": false,
+    "looped_layers": 3432,
+    "text_head": " 50%.\nQ: A man is trying to figure out how many people are in his class. He knows that there are 10 more girls than boys in his class. There are 10 more boys th",
+    "sec": 134.8
+   },
+   {
+    "q": "Gene is sewing a quilt out of old souvenir t-shirts. He has one shirt from each ",
+    "gold": "44",
+    "gen": 48,
+    "pred": null,
+    "strict": false,
+    "looped_layers": 2004,
+    "text_head": " 120.\nHe has been on 12 vacations (4 x 3 = 34 - 23 = 31; 31 + 1 = 34).\nEach vacation is a",
+    "sec": 131.5
+   }
+  ]
+ }
+}

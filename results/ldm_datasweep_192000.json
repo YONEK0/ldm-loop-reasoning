@@ -1,0 +1,89 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 12000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 192000,
+    "seed": 17,
+    "log_every": 6000,
+    "eval_every": 6000,
+    "arms": "loop:4",
+    "sched": "const",
+    "fused": true,
+    "data_dir": "data/ldm_edge_action_v5",
+    "out_overfit": "E:\\develop\\project_files\\llm-test\\results\\ldm_gpu_overfit.json",
+    "out_curve": "results/ldm_datasweep_192000.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.29,
+        "n": 400,
+        "by_hop": {
+          "3": 0.25,
+          "4": 0.33
+        }
+      },
+      "hist": [
+        {
+          "step": 6000,
+          "loss": 1.3511,
+          "grad_norm": 0.0028,
+          "sec": 193.1,
+          "dev": {
+            "acc": 0.2775,
+            "n": 400,
+            "by_hop": {
+              "3": 0.22,
+              "4": 0.335
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 1.4218,
+          "grad_norm": 0.007,
+          "sec": 372.4,
+          "dev": {
+            "acc": 0.29,
+            "n": 400,
+            "by_hop": {
+              "3": 0.25,
+              "4": 0.33
+            }
+          }
+        }
+      ],
+      "train_sec": 372.5
+    }
+  ]
+}

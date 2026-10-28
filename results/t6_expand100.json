@@ -1,0 +1,46 @@
+{
+ "n_paired": 100,
+ "strict_original": 42,
+ "strict_patched": 34,
+ "regressed": 13,
+ "improved": 5,
+ "regressed_ids": [
+  2,
+  4,
+  9,
+  21,
+  29,
+  31,
+  37,
+  58,
+  73,
+  81,
+  82,
+  88,
+  98
+ ],
+ "improved_ids": [
+  11,
+  20,
+  63,
+  78,
+  89
+ ],
+ "paired_diff_mean": -0.08,
+ "boot95": [
+  -0.16,
+  0.0
+ ],
+ "subset_0_40": {
+  "original": 23,
+  "patched": 18
+ },
+ "subset_40_100": {
+  "original": 19,
+  "patched": 16
+ },
+ "gen_tokens_patched_mean": 131.2,
+ "eos_rate_patched": 0.9,
+ "gen_tokens_original_mean": 200.0,
+ "interpretation_note": "CI 不含 0 → 回归坐实；CI 跨 0 → 噪声级"
+}

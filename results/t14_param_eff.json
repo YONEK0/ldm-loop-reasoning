@@ -1,0 +1,327 @@
+{
+ "config": {
+  "lr": 5e-05,
+  "bps": 4,
+  "ctx": 160,
+  "steps_max": 200,
+  "threshold": 0.9,
+  "grid": [
+   1,
+   2
+  ],
+  "task": "synth_multihop hop2 (T-13 v2)",
+  "note": "dense 臂覆盖全 24 层；loop 臂覆盖 M 区 12 层（可训练范围有意不同）"
+ },
+ "summary": {
+  "dense": {
+   "min_r_reached": 2,
+   "cells": [
+    {
+     "r": 1,
+     "n_trainable": 657696,
+     "first_90": null,
+     "final_dev": 0.76,
+     "final_depth": 0.3,
+     "span": {
+      "layers": [
+       0,
+       24
+      ],
+      "n_layers": 24,
+      "n_target_modules": 168
+     }
+    },
+    {
+     "r": 2,
+     "n_trainable": 1315392,
+     "first_90": 200,
+     "final_dev": 0.9,
+     "final_depth": 0.375,
+     "span": {
+      "layers": [
+       0,
+       24
+      ],
+      "n_layers": 24,
+      "n_target_modules": 168
+     }
+    }
+   ]
+  },
+  "loop": {
+   "min_r_reached": null,
+   "cells": [
+    {
+     "r": 1,
+     "n_trainable": 328848,
+     "first_90": null,
+     "final_dev": 0.73,
+     "final_depth": 0.2,
+     "span": {
+      "layers": [
+       4,
+       16
+      ],
+      "n_layers": 12,
+      "n_target_modules": 84
+     }
+    },
+    {
+     "r": 2,
+     "n_trainable": 657696,
+     "first_90": null,
+     "final_dev": 0.84,
+     "final_depth": 0.3,
+     "span": {
+      "layers": [
+       4,
+       16
+      ],
+      "n_layers": 12,
+      "n_target_modules": 84
+     }
+    }
+   ]
+  }
+ },
+ "verdict": "dense_more_param_efficient",
+ "curves": [
+  {
+   "arm": "dense",
+   "r": 1,
+   "n_trainable": 657696,
+   "span": {
+    "layers": [
+     0,
+     24
+    ],
+    "n_layers": 24,
+    "n_target_modules": 168
+   },
+   "depth": 1,
+   "hist": [
+    {
+     "step": 50,
+     "loss": 1.6696,
+     "grad_norm": 10.688,
+     "sec": 59.6,
+     "dev_random": 0.44,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.1,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 100,
+     "loss": 1.3077,
+     "grad_norm": 14.5,
+     "sec": 130.5,
+     "dev_random": 0.66,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.25,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 150,
+     "loss": 1.2432,
+     "grad_norm": 36.75,
+     "sec": 202.5,
+     "dev_random": 0.76,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.275,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 200,
+     "loss": 0.0579,
+     "grad_norm": 2.031,
+     "sec": 274.4,
+     "dev_random": 0.76,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.3,
+     "confirm_depth_by_hop": {}
+    }
+   ],
+   "first_90": null,
+   "final_dev": 0.76,
+   "final_depth": 0.3
+  },
+  {
+   "arm": "loop",
+   "r": 1,
+   "n_trainable": 328848,
+   "span": {
+    "layers": [
+     4,
+     16
+    ],
+    "n_layers": 12,
+    "n_target_modules": 84
+   },
+   "depth": 2,
+   "hist": [
+    {
+     "step": 50,
+     "loss": 1.9057,
+     "grad_norm": 3.703,
+     "sec": 86.2,
+     "dev_random": 0.27,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.125,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 100,
+     "loss": 1.8992,
+     "grad_norm": 5.75,
+     "sec": 185.0,
+     "dev_random": 0.4,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.15,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 150,
+     "loss": 2.3846,
+     "grad_norm": 23.125,
+     "sec": 284.4,
+     "dev_random": 0.64,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.15,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 200,
+     "loss": 1.2293,
+     "grad_norm": 37.75,
+     "sec": 383.8,
+     "dev_random": 0.73,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.2,
+     "confirm_depth_by_hop": {}
+    }
+   ],
+   "first_90": null,
+   "final_dev": 0.73,
+   "final_depth": 0.2
+  },
+  {
+   "arm": "dense",
+   "r": 2,
+   "n_trainable": 1315392,
+   "span": {
+    "layers": [
+     0,
+     24
+    ],
+    "n_layers": 24,
+    "n_target_modules": 168
+   },
+   "depth": 1,
+   "hist": [
+    {
+     "step": 50,
+     "loss": 0.8924,
+     "grad_norm": 15.188,
+     "sec": 63.6,
+     "dev_random": 0.59,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.1,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 100,
+     "loss": 1.7826,
+     "grad_norm": 33.75,
+     "sec": 135.8,
+     "dev_random": 0.76,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.3,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 150,
+     "loss": 1.1978,
+     "grad_norm": 95.0,
+     "sec": 208.9,
+     "dev_random": 0.85,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.2,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 200,
+     "loss": 0.0194,
+     "grad_norm": 2.984,
+     "sec": 283.3,
+     "dev_random": 0.9,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.375,
+     "confirm_depth_by_hop": {}
+    }
+   ],
+   "first_90": 200,
+   "final_dev": 0.9,
+   "final_depth": 0.375
+  },
+  {
+   "arm": "loop",
+   "r": 2,
+   "n_trainable": 657696,
+   "span": {
+    "layers": [
+     4,
+     16
+    ],
+    "n_layers": 12,
+    "n_target_modules": 84
+   },
+   "depth": 2,
+   "hist": [
+    {
+     "step": 50,
+     "loss": 2.175,
+     "grad_norm": 13.875,
+     "sec": 86.5,
+     "dev_random": 0.26,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.1,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 100,
+     "loss": 1.7284,
+     "grad_norm": 14.625,
+     "sec": 186.9,
+     "dev_random": 0.67,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.125,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 150,
+     "loss": 1.6881,
+     "grad_norm": 17.875,
+     "sec": 288.2,
+     "dev_random": 0.8,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.35,
+     "confirm_depth_by_hop": {}
+    },
+    {
+     "step": 200,
+     "loss": 0.0552,
+     "grad_norm": 4.812,
+     "sec": 389.1,
+     "dev_random": 0.84,
+     "dev_random_by_hop": {},
+     "confirm_depth": 0.3,
+     "confirm_depth_by_hop": {}
+    }
+   ],
+   "first_90": null,
+   "final_dev": 0.84,
+   "final_depth": 0.3
+  }
+ ],
+ "ts": "2026-10-23 14:05:17"
+}

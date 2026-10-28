@@ -1,0 +1,61 @@
+{
+  "spec": {
+    "ctx": 128,
+    "model": "Qwen3.5-0.8B-Base NF4",
+    "M": [
+      4,
+      16
+    ],
+    "bypass": true
+  },
+  "C1_single_pass": {
+    "logits_maxdiff": 0.0,
+    "argmax_agree": 1.0,
+    "ce_ref": 1.97601,
+    "ce_man": 1.97601
+  },
+  "C2_determinism": {
+    "logits_maxdiff": 0.0
+  },
+  "C4_cache_multi_d": {
+    "d1": {
+      "per_step_maxdiff_head": [
+        0.0,
+        0.127,
+        0.1562,
+        0.2422,
+        0.1875,
+        0.2266
+      ],
+      "logits_maxdiff": 0.7578,
+      "decode_ce_vs_ref_argmax": 0.62269,
+      "argmax_flip_steps": "0/15"
+    },
+    "d2": {
+      "per_step_maxdiff_head": [
+        0.0,
+        0.1562,
+        0.1719,
+        0.1562,
+        0.1289,
+        0.1641
+      ],
+      "logits_maxdiff": 0.3438,
+      "decode_ce_vs_ref_argmax": 0.56477,
+      "argmax_flip_steps": "0/15"
+    },
+    "d4": {
+      "per_step_maxdiff_head": [
+        0.0,
+        0.1875,
+        0.1758,
+        0.1875,
+        0.125,
+        0.1875
+      ],
+      "logits_maxdiff": 0.25,
+      "decode_ce_vs_ref_argmax": 0.66595,
+      "argmax_flip_steps": "0/15"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "args": {
+    "train_per_hop": 2400,
+    "dev_per_hop": 200,
+    "depth_per_hop": 375,
+    "train_hops": "2,3,4,5,6",
+    "depth_hops": "7,8",
+    "data_dir": "data/ldm_mvt5",
+    "comp_mode": "deep",
+    "write": true
+  },
+  "audits": [
+    {
+      "split": "train",
+      "n": 12000,
+      "solver_bad": 0,
+      "train_key_overlap": 12000,
+      "answer_pos": {
+        "0": 6009,
+        "1": 5991
+      },
+      "hop_hist": {
+        "2": 2400,
+        "3": 2400,
+        "4": 2400,
+        "5": 2400,
+        "6": 2400
+      }
+    },
+    {
+      "split": "dev_random",
+      "n": 1000,
+      "solver_bad": 0,
+      "train_key_overlap": 0,
+      "answer_pos": {
+        "0": 517,
+        "1": 483
+      },
+      "hop_hist": {
+        "2": 200,
+        "3": 200,
+        "4": 200,
+        "5": 200,
+        "6": 200
+      }
+    },
+    {
+      "split": "confirm_depth",
+      "n": 750,
+      "solver_bad": 0,
+      "train_key_overlap": 0,
+      "answer_pos": {
+        "0": 366,
+        "1": 384
+      },
+      "hop_hist": {
+        "7": 375,
+        "8": 375
+      }
+    }
+  ]
+}

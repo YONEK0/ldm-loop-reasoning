@@ -1,0 +1,37 @@
+{
+  "variant": "loop",
+  "rounds": 4,
+  "dense_mid": 2,
+  "d": 192,
+  "heads": 4,
+  "ffn": 768,
+  "bs": 8,
+  "seq_len": 59,
+  "depth_blocks": 10,
+  "params": {
+    "groups": {
+      "token_emb": 61440,
+      "prelude": 444864,
+      "core(shared)": 889728,
+      "coda": 444864,
+      "ln_loop": 384,
+      "score": 193,
+      "round_emb": 1536,
+      "exit_mlp": 12673
+    },
+    "total": 1855682,
+    "core_params": 889728,
+    "unrolled_equiv_params": 4524866
+  },
+  "step_sec_mean": 0.0843,
+  "step_sec_all": [
+    0.1321,
+    0.0861,
+    0.0733,
+    0.0648,
+    0.0651
+  ],
+  "peak_rss_mb": 0.0,
+  "fwd_macs_est": 2087976960,
+  "fwd_macs_note": "attn term\u672a\u8ba1; 4d^2\u4e3aqkv+proj, 2d*ffn\u4e3amlp"
+}

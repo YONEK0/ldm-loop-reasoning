@@ -1,0 +1,44 @@
+{
+ "strict": 1,
+ "loose": 1,
+ "finished": 1,
+ "n": 3,
+ "items": [
+  {
+   "q": "There are 5 houses on a street, and each of the first four houses has 3 gnomes i",
+   "gold": 8.0,
+   "pred": 8.0,
+   "ok": true,
+   "finished": true,
+   "d_star": 2,
+   "gen_tokens": 80,
+   "prefill_layers": 116,
+   "gen_layers": 3476,
+   "text_head": " Let's think step by step. The first four houses have 4 x 3 = <<4*3=12>>12 gnomes in the garden.\nThere are 20 - 12 = <<20-12=8>>8 gnomes left for the fifth hous"
+  },
+  {
+   "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below ",
+   "gold": 36.0,
+   "pred": null,
+   "ok": false,
+   "finished": false,
+   "d_star": 2,
+   "gen_tokens": 80,
+   "prefill_layers": 116,
+   "gen_layers": 3476,
+   "text_head": " Let's think step by step. If 40% of his students got a final grade below B, then 100% - 40% = 60% of his students got a final grade of B and above.\nIf 60% of h"
+  },
+  {
+   "q": "An earthquake caused four buildings to collapse. Experts predicted that each fol",
+   "gold": 60.0,
+   "pred": null,
+   "ok": false,
+   "finished": false,
+   "d_star": 2,
+   "gen_tokens": 80,
+   "prefill_layers": 116,
+   "gen_layers": 3476,
+   "text_head": " Let's think step by step. The first earthquake caused 4 buildings to collapse.\nThe second earthquake caused 2*4 = <<2*4=8>>8 buildings to collapse.\nThe third e"
+  }
+ ]
+}

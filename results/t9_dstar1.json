@@ -1,0 +1,21 @@
+{
+ "n": 100,
+ "dstar_dist": {
+  "1": 0,
+  "2": 96,
+  "3": 4
+ },
+ "dstar1_fired": false,
+ "eff_min": 1.9796,
+ "eff_max": 2.7527,
+ "strict": 40,
+ "finished": 94,
+ "eos_rate": 0.84,
+ "gen_mean": 131.4,
+ "gen_median": 127.5,
+ "refs": {
+  "adaptive_d23_strict": 40,
+  "src": "results/s5_quality_seq_adaptive.json",
+  "armB_orig_strict": 42
+ }
+}

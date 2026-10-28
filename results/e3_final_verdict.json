@@ -1,0 +1,94 @@
+{
+  "engineering": {
+    "change": "decode GDN step: chunk kernel -> official recurrent kernel + seed adapter (patch off)",
+    "aten_ops_per_token": {
+      "chunk": 66392,
+      "recurrent": 14660
+    },
+    "speedup_decode": {
+      "armA": 2.9,
+      "fixed_d2": 2.76,
+      "seq_adaptive": 2.65,
+      "fixed_d8": 3.19
+    },
+    "quality_preserved": true
+  },
+  "post_optimization_core": {
+    "seq_adaptive_vs_fixed_d8_decode_saving": 0.6107,
+    "seq_adaptive_vs_fixed_d8_whole_saving": 0.6098,
+    "seq_adaptive_vs_armA_decode_cost": 1.531
+  },
+  "timing_before": {
+    "armA": {
+      "n": 33,
+      "ttft": 315.7,
+      "dec": 190.5,
+      "p50": 181.2,
+      "whole": 38.23,
+      "vram": 1559.5
+    },
+    "fixed_d2": {
+      "n": 60,
+      "ttft": 439.0,
+      "dec": 274.7,
+      "p50": 268.3,
+      "whole": 55.1,
+      "vram": 3048.3
+    },
+    "seq_adaptive": {
+      "n": 60,
+      "ttft": 485.0,
+      "dec": 266.4,
+      "p50": 259.1,
+      "whole": 53.5,
+      "vram": 1579.8
+    },
+    "fixed_d8": {
+      "n": 15,
+      "ttft": 1387.0,
+      "dec": 825.5,
+      "p50": 802.4,
+      "whole": 165.65,
+      "vram": 1622.9
+    }
+  },
+  "timing_after": {
+    "armA": {
+      "n": 60,
+      "ttft": 359.7,
+      "dec": 65.7,
+      "p50": 63.5,
+      "whole": 13.44,
+      "vram": 1559.2
+    },
+    "fixed_d2": {
+      "n": 60,
+      "ttft": 544.3,
+      "dec": 99.5,
+      "p50": 95.6,
+      "whole": 20.34,
+      "vram": 3047.9
+    },
+    "seq_adaptive": {
+      "n": 60,
+      "ttft": 616.6,
+      "dec": 100.6,
+      "p50": 96.7,
+      "whole": 20.64,
+      "vram": 4518.2
+    },
+    "fixed_d8": {
+      "n": 15,
+      "ttft": 1483.9,
+      "dec": 258.4,
+      "p50": 243.5,
+      "whole": 52.9,
+      "vram": 1622.0
+    }
+  },
+  "labels": {
+    "engineering_speedup_passed": true,
+    "quality_preserved_under_optimization": true
+  },
+  "ts": "2026-10-20 12:58:05"
+}

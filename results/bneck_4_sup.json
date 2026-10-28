@@ -1,0 +1,297 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 12000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 0,
+    "seed": 17,
+    "log_every": 12000,
+    "eval_every": 12000,
+    "arms": "loop:8",
+    "sched": "const",
+    "fused": true,
+    "dyn_depth": true,
+    "dyn_min": 1,
+    "eval_rounds": "1,2,4,6,8",
+    "bottleneck_dim": 4,
+    "pos": "sin",
+    "attn_mode": "full",
+    "local_w": 4,
+    "n_core": 1,
+    "n_prelude": 1,
+    "n_coda": 1,
+    "process_sup": true,
+    "beta": 0.5,
+    "round_in_core": true,
+    "remap_epoch": false,
+    "curriculum": "",
+    "eval_splits": "dev_random,confirm_depth",
+    "data_dir": "../data/ldm_mvt3",
+    "out_overfit": "/root/autodl-tmp/bundle_v4/code/results/ldm_gpu_overfit.json",
+    "out_curve": "../results/bneck_4_sup.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 8,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 444864,
+          "coda": 444864,
+          "ln_loop": 384,
+          "b_down": 772,
+          "b_up": 960,
+          "score": 193,
+          "round_emb": 3072,
+          "exit_mlp": 12673,
+          "proc_head": 193
+        },
+        "total": 1414279,
+        "core_params": 444864,
+        "unrolled_equiv_params": 4528327
+      },
+      "final_dev": {
+        "acc": 0.939,
+        "n": 1000,
+        "by_hop": {
+          "2": 1.0,
+          "3": 0.996,
+          "4": 0.944,
+          "5": 0.816
+        },
+        "surv_acc_by_round": {
+          "1": 0.995,
+          "2": 0.98,
+          "3": 0.952,
+          "4": 0.947,
+          "5": 1.0,
+          "6": 1.0,
+          "7": 1.0,
+          "8": 1.0
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 0.939,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.996,
+            "4": 0.944,
+            "5": 0.816
+          },
+          "surv_acc_by_round": {
+            "1": 0.995,
+            "2": 0.98,
+            "3": 0.952,
+            "4": 0.947,
+            "5": 1.0,
+            "6": 1.0,
+            "7": 1.0,
+            "8": 1.0
+          }
+        },
+        "dev_random_r1": {
+          "acc": 0.926,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.992,
+            "4": 0.932,
+            "5": 0.78
+          },
+          "surv_acc_by_round": {
+            "1": 0.995
+          }
+        },
+        "dev_random_r2": {
+          "acc": 0.944,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 1.0,
+            "4": 0.96,
+            "5": 0.816
+          },
+          "surv_acc_by_round": {
+            "1": 0.995,
+            "2": 0.98
+          }
+        },
+        "dev_random_r4": {
+          "acc": 0.942,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 1.0,
+            "4": 0.944,
+            "5": 0.824
+          },
+          "surv_acc_by_round": {
+            "1": 0.995,
+            "2": 0.98,
+            "3": 0.952,
+            "4": 0.947
+          }
+        },
+        "dev_random_r6": {
+          "acc": 0.939,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 1.0,
+            "4": 0.94,
+            "5": 0.816
+          },
+          "surv_acc_by_round": {
+            "1": 0.995,
+            "2": 0.98,
+            "3": 0.952,
+            "4": 0.947,
+            "5": 1.0,
+            "6": 1.0
+          }
+        },
+        "dev_random_r8": {
+          "acc": 0.939,
+          "n": 1000,
+          "by_hop": {
+            "2": 1.0,
+            "3": 0.996,
+            "4": 0.944,
+            "5": 0.816
+          },
+          "surv_acc_by_round": {
+            "1": 0.995,
+            "2": 0.98,
+            "3": 0.952,
+            "4": 0.947,
+            "5": 1.0,
+            "6": 1.0,
+            "7": 1.0,
+            "8": 1.0
+          }
+        },
+        "confirm_depth_r1": {
+          "acc": 0.5027,
+          "n": 750,
+          "by_hop": {
+            "6": 0.492,
+            "7": 0.528,
+            "8": 0.488
+          },
+          "surv_acc_by_round": {
+            "1": 0.919
+          }
+        },
+        "confirm_depth_r2": {
+          "acc": 0.496,
+          "n": 750,
+          "by_hop": {
+            "6": 0.436,
+            "7": 0.552,
+            "8": 0.5
+          },
+          "surv_acc_by_round": {
+            "1": 0.919,
+            "2": 0.817
+          }
+        },
+        "confirm_depth_r4": {
+          "acc": 0.488,
+          "n": 750,
+          "by_hop": {
+            "6": 0.468,
+            "7": 0.512,
+            "8": 0.484
+          },
+          "surv_acc_by_round": {
+            "1": 0.919,
+            "2": 0.817,
+            "3": 0.714,
+            "4": 0.507
+          }
+        },
+        "confirm_depth_r6": {
+          "acc": 0.4907,
+          "n": 750,
+          "by_hop": {
+            "6": 0.444,
+            "7": 0.508,
+            "8": 0.52
+          },
+          "surv_acc_by_round": {
+            "1": 0.919,
+            "2": 0.817,
+            "3": 0.714,
+            "4": 0.507,
+            "5": 0.414,
+            "6": 0.64
+          }
+        },
+        "confirm_depth_r8": {
+          "acc": 0.4987,
+          "n": 750,
+          "by_hop": {
+            "6": 0.448,
+            "7": 0.528,
+            "8": 0.52
+          },
+          "surv_acc_by_round": {
+            "1": 0.919,
+            "2": 0.817,
+            "3": 0.714,
+            "4": 0.507,
+            "5": 0.414,
+            "6": 0.64,
+            "7": 0.833,
+            "8": 1.0
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 12000,
+          "loss": 0.0394,
+          "grad_norm": 4.5538,
+          "sec": 394.8,
+          "dev": {
+            "acc": 0.939,
+            "n": 1000,
+            "by_hop": {
+              "2": 1.0,
+              "3": 0.996,
+              "4": 0.944,
+              "5": 0.816
+            },
+            "surv_acc_by_round": {
+              "1": 0.995,
+              "2": 0.98,
+              "3": 0.952,
+              "4": 0.947,
+              "5": 1.0,
+              "6": 1.0,
+              "7": 1.0,
+              "8": 1.0
+            }
+          }
+        }
+      ],
+      "train_sec": 396.0
+    }
+  ]
+}

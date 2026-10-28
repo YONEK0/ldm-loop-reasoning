@@ -1,0 +1,65 @@
+{
+  "timing": {
+    "armA": {
+      "n": 33,
+      "ttft": 315.7,
+      "dec_mean": 190.5,
+      "dec_p50": 181.2,
+      "dec_p95": 279.3,
+      "whole": 38.23,
+      "vram": 1559.5
+    },
+    "fixed_d2": {
+      "n": 60,
+      "ttft": 439.0,
+      "dec_mean": 274.7,
+      "dec_p50": 268.3,
+      "dec_p95": 354.4,
+      "whole": 55.1,
+      "vram": 3048.3
+    },
+    "seq_adaptive": {
+      "n": 60,
+      "ttft": 485.0,
+      "dec_mean": 266.4,
+      "dec_p50": 259.1,
+      "dec_p95": 371.2,
+      "whole": 53.5,
+      "vram": 1579.8
+    },
+    "fixed_d8": {
+      "n": 15,
+      "ttft": 1387.0,
+      "dec_mean": 825.5,
+      "dec_p50": 802.4,
+      "dec_p95": 1183.8,
+      "whole": 165.65,
+      "vram": 1622.9
+    }
+  },
+  "verdict": {
+    "decode_saving_vs_d8": 0.6773,
+    "whole_saving_vs_d8": 0.677,
+    "ttft_saving_vs_d8": 0.6503,
+    "decode_cost_vs_armA": 1.398,
+    "layercall_saving_vs_d8": 0.661
+  },
+  "quality": {
+    "seq_adaptive_strict": 21,
+    "fixed_d8_strict": 23,
+    "paired_ci": "[-0.05,0.15] includes 0 (noise level)",
+    "finished": {
+      "seq_adaptive": 35,
+      "fixed_d8": 36
+    }
+  },
+  "labels": {
+    "quality_parity_passed": true,
+    "exact_cache_correctness_passed": true,
+    "sequence_adaptive_layer_saving_passed": true,
+    "wall_clock_speedup_passed": true,
+    "token_level_skip_passed": false,
+    "npu_port_passed": false
+  },
+  "ts": "2026-10-20 10:04:20"
+}

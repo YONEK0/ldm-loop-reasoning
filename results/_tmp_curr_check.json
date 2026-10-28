@@ -1,0 +1,100 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 1500,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 2000,
+    "seed": 17,
+    "log_every": 1500,
+    "eval_every": 1500,
+    "arms": "loop:4",
+    "sched": "const",
+    "fused": true,
+    "dyn_depth": false,
+    "dyn_min": 1,
+    "eval_rounds": "",
+    "remap_epoch": false,
+    "curriculum": "2,3",
+    "eval_splits": "dev_random,confirm_depth",
+    "data_dir": "data/ldm_mvt",
+    "out_overfit": "E:\\develop\\project_files\\llm-test\\results\\ldm_gpu_overfit.json",
+    "out_curve": "results/_tmp_curr_check.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.844,
+        "n": 1000,
+        "by_hop": {
+          "2": 0.988,
+          "3": 0.7
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 0.844,
+          "n": 1000,
+          "by_hop": {
+            "2": 0.988,
+            "3": 0.7
+          }
+        },
+        "confirm_depth": {
+          "acc": 0.464,
+          "n": 750,
+          "by_hop": {
+            "4": 0.428,
+            "5": 0.472,
+            "6": 0.492
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 1500,
+          "loss": 0.1257,
+          "grad_norm": 2.9339,
+          "sec": 37.1,
+          "dev": {
+            "acc": 0.844,
+            "n": 1000,
+            "by_hop": {
+              "2": 0.988,
+              "3": 0.7
+            }
+          }
+        }
+      ],
+      "train_sec": 37.3
+    }
+  ]
+}

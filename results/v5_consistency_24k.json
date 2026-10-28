@@ -1,0 +1,100 @@
+{
+  "args": {
+    "mode": "curve",
+    "device": "auto",
+    "steps": 12000,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.001,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 24000,
+    "seed": 17,
+    "log_every": 6000,
+    "eval_every": 6000,
+    "arms": "loop:4",
+    "sched": "const",
+    "fused": true,
+    "eval_splits": "dev_random",
+    "data_dir": "data/ldm_edge_action_v5",
+    "out_overfit": "/root/ldm/results/ldm_gpu_overfit.json",
+    "out_curve": "results/v5_consistency_24k.json"
+  },
+  "device": "cuda",
+  "curve": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "params": {
+        "groups": {
+          "token_emb": 61440,
+          "prelude": 444864,
+          "core(shared)": 889728,
+          "coda": 444864,
+          "ln_loop": 384,
+          "score": 193,
+          "round_emb": 1536,
+          "exit_mlp": 12673
+        },
+        "total": 1855682,
+        "core_params": 889728,
+        "unrolled_equiv_params": 4524866
+      },
+      "final_dev": {
+        "acc": 0.2525,
+        "n": 400,
+        "by_hop": {
+          "3": 0.25,
+          "4": 0.255
+        }
+      },
+      "final_evals": {
+        "dev_random": {
+          "acc": 0.2525,
+          "n": 400,
+          "by_hop": {
+            "3": 0.25,
+            "4": 0.255
+          }
+        }
+      },
+      "hist": [
+        {
+          "step": 6000,
+          "loss": 0.5636,
+          "grad_norm": 5.5586,
+          "sec": 288.8,
+          "dev": {
+            "acc": 0.2575,
+            "n": 400,
+            "by_hop": {
+              "3": 0.26,
+              "4": 0.255
+            }
+          }
+        },
+        {
+          "step": 12000,
+          "loss": 0.2118,
+          "grad_norm": 4.529,
+          "sec": 586.3,
+          "dev": {
+            "acc": 0.2525,
+            "n": 400,
+            "by_hop": {
+              "3": 0.25,
+              "4": 0.255
+            }
+          }
+        }
+      ],
+      "train_sec": 586.4
+    }
+  ]
+}

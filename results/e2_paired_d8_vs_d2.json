@@ -1,0 +1,12 @@
+{
+  "fixed_d8_strict": 23,
+  "fixed_d2_strict": 21,
+  "paired_d8_minus_d2_sum": 2,
+  "paired_mean": 0.05,
+  "bootstrap95": [
+    -0.05,
+    0.15
+  ],
+  "n_paired": 40,
+  "interpretation": "d8 strict 高于 d2 2 题；CI包含0（噪声级）"
+}

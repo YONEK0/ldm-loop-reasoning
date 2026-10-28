@@ -1,0 +1,94 @@
+{
+  "steps": [
+    {
+      "step": "prefill",
+      "official_vs_full": 0.0,
+      "manualofficial_vs_full": 0.0,
+      "split_vs_full": 0.0
+    },
+    {
+      "step": 35,
+      "official_vs_full": 0.12695,
+      "manualofficial_vs_full": 2.48047,
+      "split_vs_full": 2.48047
+    },
+    {
+      "step": 36,
+      "official_vs_full": 0.15625,
+      "manualofficial_vs_full": 1.3656,
+      "split_vs_full": 1.3656
+    },
+    {
+      "step": 37,
+      "official_vs_full": 0.24219,
+      "manualofficial_vs_full": 0.90625,
+      "split_vs_full": 0.90625
+    },
+    {
+      "step": 38,
+      "official_vs_full": 0.1875,
+      "manualofficial_vs_full": 0.57031,
+      "split_vs_full": 0.57031
+    },
+    {
+      "step": 39,
+      "official_vs_full": 0.22656,
+      "manualofficial_vs_full": 0.84375,
+      "split_vs_full": 0.84375
+    },
+    {
+      "step": 40,
+      "official_vs_full": 0.1875,
+      "manualofficial_vs_full": 0.8125,
+      "split_vs_full": 0.8125
+    },
+    {
+      "step": 41,
+      "official_vs_full": 0.20898,
+      "manualofficial_vs_full": 0.625,
+      "split_vs_full": 0.625
+    },
+    {
+      "step": 42,
+      "official_vs_full": 0.1875,
+      "manualofficial_vs_full": 0.58008,
+      "split_vs_full": 0.58008
+    },
+    {
+      "step": 43,
+      "official_vs_full": 0.625,
+      "manualofficial_vs_full": 1.3125,
+      "split_vs_full": 1.3125
+    },
+    {
+      "step": 44,
+      "official_vs_full": 0.73438,
+      "manualofficial_vs_full": 1.375,
+      "split_vs_full": 1.375
+    },
+    {
+      "step": 45,
+      "official_vs_full": 0.5625,
+      "manualofficial_vs_full": 1.40625,
+      "split_vs_full": 1.40625
+    },
+    {
+      "step": 46,
+      "official_vs_full": 0.75781,
+      "manualofficial_vs_full": 2.01562,
+      "split_vs_full": 2.01562
+    },
+    {
+      "step": 47,
+      "official_vs_full": 0.20312,
+      "manualofficial_vs_full": 0.75,
+      "split_vs_full": 0.75
+    },
+    {
+      "step": 48,
+      "official_vs_full": 0.21875,
+      "manualofficial_vs_full": 0.9375,
+      "split_vs_full": 0.9375
+    }
+  ]
+}

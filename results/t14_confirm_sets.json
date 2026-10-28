@@ -1,0 +1,91 @@
+{
+ "config": {
+  "ctx": 160,
+  "splits": {
+   "dev_random": 200,
+   "confirm_combo": 120,
+   "confirm_length": 120,
+   "confirm_depth": 120
+  },
+  "note": "同一 checkpoint 上跨 split 对比；confirm_depth 为严格外推"
+ },
+ "cells": [
+  {
+   "arm": "dense",
+   "r": 1,
+   "n_trainable": 657696,
+   "span": {
+    "layers": [
+     0,
+     24
+    ],
+    "n_layers": 24,
+    "n_target_modules": 168
+   },
+   "depth": 1,
+   "trained_step": 200,
+   "dev_random": 0.73,
+   "confirm_combo": 0.3167,
+   "confirm_length": 0.2083,
+   "confirm_depth": 0.4
+  },
+  {
+   "arm": "dense",
+   "r": 2,
+   "n_trainable": 1315392,
+   "span": {
+    "layers": [
+     0,
+     24
+    ],
+    "n_layers": 24,
+    "n_target_modules": 168
+   },
+   "depth": 1,
+   "trained_step": 200,
+   "dev_random": 0.84,
+   "confirm_combo": 0.375,
+   "confirm_length": 0.2417,
+   "confirm_depth": 0.425
+  },
+  {
+   "arm": "loop",
+   "r": 1,
+   "n_trainable": 328848,
+   "span": {
+    "layers": [
+     4,
+     16
+    ],
+    "n_layers": 12,
+    "n_target_modules": 84
+   },
+   "depth": 2,
+   "trained_step": 200,
+   "dev_random": 0.64,
+   "confirm_combo": 0.3,
+   "confirm_length": 0.1583,
+   "confirm_depth": 0.3583
+  },
+  {
+   "arm": "loop",
+   "r": 2,
+   "n_trainable": 657696,
+   "span": {
+    "layers": [
+     4,
+     16
+    ],
+    "n_layers": 12,
+    "n_target_modules": 84
+   },
+   "depth": 2,
+   "trained_step": 200,
+   "dev_random": 0.78,
+   "confirm_combo": 0.3417,
+   "confirm_length": 0.225,
+   "confirm_depth": 0.4333
+  }
+ ],
+ "ts": "2026-10-23 14:10:58"
+}

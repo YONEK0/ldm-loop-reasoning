@@ -1,0 +1,230 @@
+{
+ "mode": "seq_adaptive",
+ "n_items": 10,
+ "repeat": 2,
+ "records": [
+  {
+   "rep": 0,
+   "i": 0,
+   "gen_tokens": 92,
+   "ttft_ms": 558.095,
+   "decode_ms_mean": 94.793,
+   "decode_ms_p50": 91.898,
+   "decode_ms_p95": 117.059,
+   "whole_ms": 9184.26,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 1,
+   "gen_tokens": 110,
+   "ttft_ms": 507.271,
+   "decode_ms_mean": 94.063,
+   "decode_ms_p50": 91.487,
+   "decode_ms_p95": 115.301,
+   "whole_ms": 10760.12,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 2,
+   "gen_tokens": 97,
+   "ttft_ms": 524.595,
+   "decode_ms_mean": 94.583,
+   "decode_ms_p50": 91.47,
+   "decode_ms_p95": 116.401,
+   "whole_ms": 9604.59,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 3,
+   "gen_tokens": 86,
+   "ttft_ms": 524.221,
+   "decode_ms_mean": 92.61,
+   "decode_ms_p50": 91.325,
+   "decode_ms_p95": 103.949,
+   "whole_ms": 8396.06,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 4,
+   "gen_tokens": 76,
+   "ttft_ms": 544.661,
+   "decode_ms_mean": 92.838,
+   "decode_ms_p50": 90.382,
+   "decode_ms_p95": 112.205,
+   "whole_ms": 7507.47,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 5,
+   "gen_tokens": 109,
+   "ttft_ms": 518.556,
+   "decode_ms_mean": 91.686,
+   "decode_ms_p50": 90.073,
+   "decode_ms_p95": 99.769,
+   "whole_ms": 10420.67,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 6,
+   "gen_tokens": 173,
+   "ttft_ms": 545.809,
+   "decode_ms_mean": 96.143,
+   "decode_ms_p50": 93.221,
+   "decode_ms_p95": 115.414,
+   "whole_ms": 17082.48,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 7,
+   "gen_tokens": 181,
+   "ttft_ms": 525.861,
+   "decode_ms_mean": 92.493,
+   "decode_ms_p50": 90.054,
+   "decode_ms_p95": 114.385,
+   "whole_ms": 17174.68,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 8,
+   "gen_tokens": 96,
+   "ttft_ms": 563.025,
+   "decode_ms_mean": 93.128,
+   "decode_ms_p50": 90.345,
+   "decode_ms_p95": 112.494,
+   "whole_ms": 9410.21,
+   "d_star": 2
+  },
+  {
+   "rep": 0,
+   "i": 9,
+   "gen_tokens": 55,
+   "ttft_ms": 527.003,
+   "decode_ms_mean": 94.106,
+   "decode_ms_p50": 90.963,
+   "decode_ms_p95": 112.181,
+   "whole_ms": 5608.74,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 0,
+   "gen_tokens": 92,
+   "ttft_ms": 497.388,
+   "decode_ms_mean": 94.427,
+   "decode_ms_p50": 91.203,
+   "decode_ms_p95": 115.734,
+   "whole_ms": 9090.28,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 1,
+   "gen_tokens": 110,
+   "ttft_ms": 542.444,
+   "decode_ms_mean": 93.145,
+   "decode_ms_p50": 90.105,
+   "decode_ms_p95": 119.655,
+   "whole_ms": 10695.21,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 2,
+   "gen_tokens": 97,
+   "ttft_ms": 554.598,
+   "decode_ms_mean": 93.531,
+   "decode_ms_p50": 90.711,
+   "decode_ms_p95": 113.269,
+   "whole_ms": 9533.59,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 3,
+   "gen_tokens": 86,
+   "ttft_ms": 538.279,
+   "decode_ms_mean": 93.47,
+   "decode_ms_p50": 89.931,
+   "decode_ms_p95": 116.94,
+   "whole_ms": 8483.23,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 4,
+   "gen_tokens": 76,
+   "ttft_ms": 502.04,
+   "decode_ms_mean": 93.802,
+   "decode_ms_p50": 91.33,
+   "decode_ms_p95": 112.37,
+   "whole_ms": 7537.19,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 5,
+   "gen_tokens": 109,
+   "ttft_ms": 522.256,
+   "decode_ms_mean": 95.178,
+   "decode_ms_p50": 91.67,
+   "decode_ms_p95": 114.434,
+   "whole_ms": 10801.52,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 6,
+   "gen_tokens": 173,
+   "ttft_ms": 538.174,
+   "decode_ms_mean": 93.526,
+   "decode_ms_p50": 90.538,
+   "decode_ms_p95": 116.599,
+   "whole_ms": 16624.64,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 7,
+   "gen_tokens": 181,
+   "ttft_ms": 492.353,
+   "decode_ms_mean": 91.991,
+   "decode_ms_p50": 88.606,
+   "decode_ms_p95": 116.063,
+   "whole_ms": 17050.66,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 8,
+   "gen_tokens": 96,
+   "ttft_ms": 510.417,
+   "decode_ms_mean": 93.72,
+   "decode_ms_p50": 90.504,
+   "decode_ms_p95": 112.247,
+   "whole_ms": 9413.79,
+   "d_star": 2
+  },
+  {
+   "rep": 1,
+   "i": 9,
+   "gen_tokens": 55,
+   "ttft_ms": 500.455,
+   "decode_ms_mean": 93.326,
+   "decode_ms_p50": 91.432,
+   "decode_ms_p95": 112.655,
+   "whole_ms": 5540.04,
+   "d_star": 2
+  }
+ ],
+ "peak_vram_mib": 1568.4,
+ "gpu_gate": "median=17 min=17",
+ "ts": "2026-10-22 17:08:06"
+}

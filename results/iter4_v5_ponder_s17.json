@@ -1,0 +1,501 @@
+{
+  "args": {
+    "steps": 20000,
+    "bs": 64,
+    "lr": 0.001,
+    "seed": 17,
+    "r_max": 8,
+    "pos": "none",
+    "variant": "loop",
+    "dense_mid": 1,
+    "bottleneck_dim": 0,
+    "curriculum": "2,3,4,5,6",
+    "joint_exit": false,
+    "ponder": true,
+    "lam_prior": 0.6666666666666666,
+    "beta_kl": 0.1,
+    "taus": "0.3,0.5,0.7,0.9",
+    "lam_max": 0.002,
+    "eval_every": 5000,
+    "out": "results/iter4_v5_ponder_s17.json"
+  },
+  "hist": [
+    {
+      "step": 1000,
+      "cap": 2,
+      "loss": 0.0,
+      "task": 0.0,
+      "kl": 0.0001,
+      "e_halt": 2.8691,
+      "q_mean_first": 0.663,
+      "q_mean_last": 0.621
+    },
+    {
+      "step": 2000,
+      "cap": 2,
+      "loss": 0.0208,
+      "task": 0.0208,
+      "kl": 0.0001,
+      "e_halt": 2.8687,
+      "q_mean_first": 0.6669,
+      "q_mean_last": 0.6141
+    },
+    {
+      "step": 3000,
+      "cap": 2,
+      "loss": 0.0001,
+      "task": 0.0,
+      "kl": 0.0003,
+      "e_halt": 2.8389,
+      "q_mean_first": 0.6628,
+      "q_mean_last": 0.6078
+    },
+    {
+      "step": 4000,
+      "cap": 3,
+      "loss": 6.6063,
+      "task": 6.6063,
+      "kl": 0.0,
+      "e_halt": 2.898,
+      "q_mean_first": 0.6703,
+      "q_mean_last": 0.6162
+    },
+    {
+      "step": 5000,
+      "cap": 3,
+      "loss": 0.0244,
+      "task": 0.0244,
+      "kl": 0.0002,
+      "e_halt": 2.8693,
+      "q_mean_first": 0.6654,
+      "q_mean_last": 0.6183,
+      "sec": 357.5
+    },
+    {
+      "step": 6000,
+      "cap": 3,
+      "loss": 0.0,
+      "task": 0.0,
+      "kl": 0.0002,
+      "e_halt": 2.8871,
+      "q_mean_first": 0.6718,
+      "q_mean_last": 0.6157
+    },
+    {
+      "step": 7000,
+      "cap": 3,
+      "loss": 0.0215,
+      "task": 0.0215,
+      "kl": 0.0,
+      "e_halt": 2.8975,
+      "q_mean_first": 0.6695,
+      "q_mean_last": 0.6242
+    },
+    {
+      "step": 8000,
+      "cap": 4,
+      "loss": 2.9149,
+      "task": 2.9149,
+      "kl": 0.0,
+      "e_halt": 2.8768,
+      "q_mean_first": 0.6651,
+      "q_mean_last": 0.6254
+    },
+    {
+      "step": 9000,
+      "cap": 4,
+      "loss": 0.033,
+      "task": 0.0187,
+      "kl": 0.1432,
+      "e_halt": 3.2189,
+      "q_mean_first": 0.7933,
+      "q_mean_last": 0.6382
+    },
+    {
+      "step": 10000,
+      "cap": 4,
+      "loss": 0.0124,
+      "task": 0.0016,
+      "kl": 0.108,
+      "e_halt": 3.1745,
+      "q_mean_first": 0.7632,
+      "q_mean_last": 0.6545,
+      "sec": 742.0
+    },
+    {
+      "step": 11000,
+      "cap": 4,
+      "loss": 0.0348,
+      "task": 0.0214,
+      "kl": 0.1335,
+      "e_halt": 3.1889,
+      "q_mean_first": 0.7687,
+      "q_mean_last": 0.66
+    },
+    {
+      "step": 12000,
+      "cap": 5,
+      "loss": 0.2301,
+      "task": 0.213,
+      "kl": 0.1706,
+      "e_halt": 3.3221,
+      "q_mean_first": 0.8038,
+      "q_mean_last": 0.7767
+    },
+    {
+      "step": 13000,
+      "cap": 5,
+      "loss": 0.0435,
+      "task": 0.0075,
+      "kl": 0.3607,
+      "e_halt": 3.8771,
+      "q_mean_first": 0.8572,
+      "q_mean_last": 0.6872
+    },
+    {
+      "step": 14000,
+      "cap": 5,
+      "loss": 0.0477,
+      "task": 0.0143,
+      "kl": 0.3344,
+      "e_halt": 3.7867,
+      "q_mean_first": 0.8411,
+      "q_mean_last": 0.6648
+    },
+    {
+      "step": 15000,
+      "cap": 5,
+      "loss": 0.0335,
+      "task": 0.001,
+      "kl": 0.325,
+      "e_halt": 3.7254,
+      "q_mean_first": 0.8369,
+      "q_mean_last": 0.6715,
+      "sec": 1166.7
+    },
+    {
+      "step": 16000,
+      "cap": 6,
+      "loss": 0.3348,
+      "task": 0.299,
+      "kl": 0.3575,
+      "e_halt": 3.7097,
+      "q_mean_first": 0.8717,
+      "q_mean_last": 0.6722
+    },
+    {
+      "step": 17000,
+      "cap": 6,
+      "loss": 0.2194,
+      "task": 0.1909,
+      "kl": 0.2853,
+      "e_halt": 3.6164,
+      "q_mean_first": 0.8398,
+      "q_mean_last": 0.6689
+    },
+    {
+      "step": 18000,
+      "cap": 6,
+      "loss": 0.1661,
+      "task": 0.1425,
+      "kl": 0.2352,
+      "e_halt": 3.4239,
+      "q_mean_first": 0.7896,
+      "q_mean_last": 0.7436
+    },
+    {
+      "step": 19000,
+      "cap": 6,
+      "loss": 0.1661,
+      "task": 0.1372,
+      "kl": 0.2894,
+      "e_halt": 3.5703,
+      "q_mean_first": 0.8183,
+      "q_mean_last": 0.7994
+    },
+    {
+      "step": 20000,
+      "cap": 6,
+      "loss": 0.2144,
+      "task": 0.1875,
+      "kl": 0.2693,
+      "e_halt": 3.6113,
+      "q_mean_first": 0.8149,
+      "q_mean_last": 0.7793,
+      "sec": 1591.5
+    }
+  ],
+  "last_evals": {
+    "step": 20000,
+    "cap": 6,
+    "sec": 1591.5,
+    "dev_r1": 0.735,
+    "dev_r2": 0.823,
+    "dev_r3": 0.895,
+    "dev_r4": 0.898,
+    "dev_r5": 0.891,
+    "dev_r6": 0.888,
+    "dev_r8": 0.892,
+    "confirm_r1": 0.476,
+    "confirm_r2": 0.4893,
+    "confirm_r3": 0.508,
+    "confirm_r4": 0.5053,
+    "confirm_r5": 0.5027,
+    "confirm_r6": 0.5027,
+    "confirm_r8": 0.5,
+    "dev_r5_by_hop": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 0.995,
+      "6": 0.46
+    },
+    "confirm_r6_by_hop": {
+      "7": 0.525,
+      "8": 0.48
+    },
+    "dev_r1_by_hop": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 0.65,
+      "5": 0.525,
+      "6": 0.5
+    },
+    "dev_r2_by_hop": {
+      "2": 1.0,
+      "3": 0.995,
+      "4": 1.0,
+      "5": 0.61,
+      "6": 0.51
+    },
+    "dev_r3_by_hop": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 0.975,
+      "6": 0.5
+    },
+    "dev_r4_by_hop": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 0.99,
+      "6": 0.5
+    },
+    "dev_r6_by_hop": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 0.995,
+      "6": 0.445
+    },
+    "dev_r8_by_hop": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 0.995,
+      "6": 0.465
+    }
+  },
+  "ponder_eval": {
+    "oracle_fixed_r": 0.898,
+    "fixed_r8": 0.892,
+    "tau_sweep": [
+      {
+        "tau": 0.3,
+        "acc": 0.885,
+        "mean_rounds": 1.978,
+        "by_hop": {
+          "2": {
+            "avg_round": 1.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "3": {
+            "avg_round": 1.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "4": {
+            "avg_round": 2.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "5": {
+            "avg_round": 4.0,
+            "acc": 0.99,
+            "n": 200
+          },
+          "6": {
+            "avg_round": 1.89,
+            "acc": 0.435,
+            "n": 200
+          }
+        },
+        "exit_hist": {
+          "1": 540,
+          "2": 201,
+          "4": 259
+        },
+        "stop_match_rate": 0.4,
+        "collapse": false
+      },
+      {
+        "tau": 0.5,
+        "acc": 0.892,
+        "mean_rounds": 8.0,
+        "by_hop": {
+          "2": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "3": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "4": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "5": {
+            "avg_round": 8.0,
+            "acc": 0.995,
+            "n": 200
+          },
+          "6": {
+            "avg_round": 8.0,
+            "acc": 0.465,
+            "n": 200
+          }
+        },
+        "exit_hist": {
+          "8": 1000
+        },
+        "stop_match_rate": 0.0,
+        "collapse": true
+      },
+      {
+        "tau": 0.7,
+        "acc": 0.892,
+        "mean_rounds": 8.0,
+        "by_hop": {
+          "2": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "3": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "4": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "5": {
+            "avg_round": 8.0,
+            "acc": 0.995,
+            "n": 200
+          },
+          "6": {
+            "avg_round": 8.0,
+            "acc": 0.465,
+            "n": 200
+          }
+        },
+        "exit_hist": {
+          "8": 1000
+        },
+        "stop_match_rate": 0.0,
+        "collapse": true
+      },
+      {
+        "tau": 0.9,
+        "acc": 0.892,
+        "mean_rounds": 8.0,
+        "by_hop": {
+          "2": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "3": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "4": {
+            "avg_round": 8.0,
+            "acc": 1.0,
+            "n": 200
+          },
+          "5": {
+            "avg_round": 8.0,
+            "acc": 0.995,
+            "n": 200
+          },
+          "6": {
+            "avg_round": 8.0,
+            "acc": 0.465,
+            "n": 200
+          }
+        },
+        "exit_hist": {
+          "8": 1000
+        },
+        "stop_match_rate": 0.0,
+        "collapse": true
+      }
+    ],
+    "best_tau": {
+      "tau": 0.5,
+      "acc": 0.892,
+      "mean_rounds": 8.0,
+      "by_hop": {
+        "2": {
+          "avg_round": 8.0,
+          "acc": 1.0,
+          "n": 200
+        },
+        "3": {
+          "avg_round": 8.0,
+          "acc": 1.0,
+          "n": 200
+        },
+        "4": {
+          "avg_round": 8.0,
+          "acc": 1.0,
+          "n": 200
+        },
+        "5": {
+          "avg_round": 8.0,
+          "acc": 0.995,
+          "n": 200
+        },
+        "6": {
+          "avg_round": 8.0,
+          "acc": 0.465,
+          "n": 200
+        }
+      },
+      "exit_hist": {
+        "8": 1000
+      },
+      "stop_match_rate": 0.0,
+      "collapse": true
+    },
+    "prereg_verdict": {
+      "quality_pass": true,
+      "rounds_pass": false,
+      "saving_vs_r8_pass": false,
+      "match_pass": false,
+      "collapse_any_tau": true
+    },
+    "falsified_if": "任一 τ 塌缩（≥95% 质量单轮）或全判据不过"
+  }
+}

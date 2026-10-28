@@ -1,0 +1,149 @@
+{
+ "mode": "armA",
+ "n": 10,
+ "strict": 6,
+ "loose": 6,
+ "finished": 10,
+ "strict_rate": 0.6,
+ "finished_rate": 1.0,
+ "total_gen_tokens": 1153,
+ "mean_d_star": null,
+ "hook_segments": {
+  "prefill": {
+   "calls": 240,
+   "tokens": 13416
+  },
+  "decode": {
+   "calls": 27432,
+   "tokens": 27432
+  },
+  "probe": {
+   "calls": 0,
+   "tokens": 0
+  }
+ },
+ "script_sha256": "b4876ead761e609381a8c2c20cdfd1e07de7f4ddd30502ebe62d03da13fa1ac1",
+ "items": [
+  {
+   "i": 0,
+   "q": "There are 5 houses on a street, and each of the first four houses has 3 gnomes i",
+   "gold": 8.0,
+   "pred": 8.0,
+   "strict": true,
+   "loose": true,
+   "finished": true,
+   "gen_tokens": 91,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 1,
+   "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below ",
+   "gold": 36.0,
+   "pred": 36.0,
+   "strict": true,
+   "loose": true,
+   "finished": true,
+   "gen_tokens": 107,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 2,
+   "q": "An earthquake caused four buildings to collapse. Experts predicted that each fol",
+   "gold": 60.0,
+   "pred": 58.0,
+   "strict": false,
+   "loose": false,
+   "finished": true,
+   "gen_tokens": 119,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 3,
+   "q": "There are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What ",
+   "gold": 75.0,
+   "pred": 75.0,
+   "strict": true,
+   "loose": true,
+   "finished": true,
+   "gen_tokens": 85,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 4,
+   "q": "Peter goes to the store to buy a soda. The soda costs $.25 an ounce. He brought ",
+   "gold": 6.0,
+   "pred": 6.0,
+   "strict": true,
+   "loose": true,
+   "finished": true,
+   "gen_tokens": 200,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 5,
+   "q": "John's cow weighs 400 pounds.  It increased its weight to 1.5 times its starting",
+   "gold": 600.0,
+   "pred": 300.0,
+   "strict": false,
+   "loose": false,
+   "finished": true,
+   "gen_tokens": 110,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 6,
+   "q": "Hector purchased a container of gumballs.  He gave 4 to Todd, then he gave twice",
+   "gold": 45.0,
+   "pred": 45.0,
+   "strict": true,
+   "loose": true,
+   "finished": true,
+   "gen_tokens": 156,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 7,
+   "q": "A young girl pours 23 blue beads and 16 yellow beads into a bowl. She divides th",
+   "gold": 10.0,
+   "pred": 20.0,
+   "strict": false,
+   "loose": false,
+   "finished": true,
+   "gen_tokens": 130,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 8,
+   "q": "Mark has two pets, a hare that runs 10 feet/second and a turtle that crawls 1 fo",
+   "gold": 18.0,
+   "pred": 18.0,
+   "strict": true,
+   "loose": true,
+   "finished": true,
+   "gen_tokens": 92,
+   "d_star": null,
+   "eff_depth": null
+  },
+  {
+   "i": 9,
+   "q": "John volunteers at a shelter twice a month for 3 hours at a time.  How many hour",
+   "gold": 72.0,
+   "pred": 2190.0,
+   "strict": false,
+   "loose": false,
+   "finished": true,
+   "gen_tokens": 63,
+   "d_star": null,
+   "eff_depth": null
+  }
+ ],
+ "ts": "2026-10-22 17:09:41"
+}

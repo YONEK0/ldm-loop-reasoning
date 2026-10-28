@@ -1,0 +1,52 @@
+{
+  "checkpoints": {
+    "armA": {
+      "path": "E:\\develop\\project_files\\llm-test\\runs\\s08_armA\\ckpt_latest.pt",
+      "sha256": "915d930146c1cbd386908b89cb4c302fdc2dab9f9a8499b16127224143e9becb",
+      "size_mb": 30.3,
+      "readable": true,
+      "step": 2559,
+      "sup_tokens": 2620416
+    },
+    "armB": {
+      "path": "E:\\develop\\project_files\\llm-test\\runs\\s08_armB\\ckpt_latest.pt",
+      "sha256": "9fd6d11345f7185cc378b86e5fe87050b3dea6ce8e4f340ee9a2150c5bec2198",
+      "size_mb": 31.8,
+      "readable": true,
+      "step": 2559,
+      "sup_tokens": 2620416
+    },
+    "qat": {
+      "path": "E:\\develop\\project_files\\llm-test\\runs\\s08_qat_exit\\ckpt_latest.pt",
+      "sha256": "e216fe8cb4858c9cbe74d59d767d022e374c6ca5c4ad904db0561f66cfc48152",
+      "size_mb": 22.1,
+      "readable": true,
+      "step": 3907,
+      "sup_tokens": 1000192
+    }
+  },
+  "scripts": {
+    "s08_arch.py": "0eb350f9e99ffef6d901546910f9410c77e2305bdd885eee5de83edd84dc71a3",
+    "s34_gdn_step_fix.py": "7e26fa5b1a2363d766b177e910e93a858d9b5d6ae9a642978ae026543983d538",
+    "scorer_strict.py": "1a6931359061533d36787ed81a389b91cfdb4368f4e0443138562d12fb6bf038",
+    "s40_e0_manifest.py": "aba34db0e737d6595a5d1362a9e53a5542fdf68b453750374cf68624e93f43be"
+  },
+  "legacy_results": {
+    "results/s26_s08_eval.json": {
+      "sha256": "5f868b1d7fc01aaa2b7c0c71c4f3a11277265bb7c72d2d337ddad78c6c63d010",
+      "status": "legacy_pending_revalidation"
+    },
+    "results/s30_s08_adaptive_gen.json": {
+      "sha256": "cc4ac0784ae9829de607ccb9d4473dedebd7198b1d2f7bc0d4b3e97fdaba8bab",
+      "status": "legacy_pending_revalidation"
+    },
+    "results/s31_s08_hard_exit_gate.json": {
+      "sha256": "24eac5c6dd9ac91456608b68d14bea4b0b3fe6d835a101a7e8b1dd8797613aa6",
+      "status": "legacy_pending_revalidation"
+    },
+    "results/s33_s08_seq_adaptive_gen.json": {
+      "sha256": "5a307c599e491a53af26657c86b9449621bc29c99e3119001505bada67cf9427",
+      "status": "legacy_pending_revalidation"
+    }
+  }
+}

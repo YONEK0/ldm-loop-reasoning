@@ -1,0 +1,42 @@
+{
+  "info": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_gb": 8.5,
+    "sm": "12.0",
+    "peak_vram_gb": 1.0,
+    "scaling_ratio": 4.48,
+    "verdict": "GPU-bound\uff08\u5927\u6279\u91cf\u66f4\u9ad8\u6548\uff0c\u5f3a\u5361\u6709\u7528\uff09"
+  },
+  "sweep": [
+    {
+      "bs": 32,
+      "steps": 40,
+      "sec": 1.334,
+      "samples_per_sec": 959.2,
+      "ms_per_sample": 1.043
+    },
+    {
+      "bs": 64,
+      "steps": 40,
+      "sec": 1.264,
+      "samples_per_sec": 2026.0,
+      "ms_per_sample": 0.494
+    },
+    {
+      "bs": 128,
+      "steps": 40,
+      "sec": 1.647,
+      "samples_per_sec": 3108.7,
+      "ms_per_sample": 0.322
+    },
+    {
+      "bs": 256,
+      "steps": 40,
+      "sec": 2.385,
+      "samples_per_sec": 4293.6,
+      "ms_per_sample": 0.233
+    }
+  ]
+}

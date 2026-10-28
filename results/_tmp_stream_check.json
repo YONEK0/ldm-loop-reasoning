@@ -1,0 +1,34 @@
+{
+  "args": {
+    "steps": 2000,
+    "bs": 64,
+    "lr": 0.001,
+    "seed": 17,
+    "r_max": 12,
+    "eval_every": 2000,
+    "out": "results/_tmp_stream_check.json"
+  },
+  "hist": [
+    {
+      "step": 1000,
+      "loss": 0.694
+    },
+    {
+      "step": 2000,
+      "loss": 0.693,
+      "sec": 87.1,
+      "dev_r1": 0.487,
+      "dev_r2": 0.483,
+      "dev_r4": 0.486,
+      "dev_r8": 0.498,
+      "dev_r12": 0.488,
+      "dev_r16": 0.487,
+      "confirm_r1": 0.532,
+      "confirm_r2": 0.5267,
+      "confirm_r4": 0.5253,
+      "confirm_r8": 0.524,
+      "confirm_r12": 0.5213,
+      "confirm_r16": 0.5373
+    }
+  ]
+}

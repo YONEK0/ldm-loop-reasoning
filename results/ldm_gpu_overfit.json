@@ -1,0 +1,194 @@
+{
+  "args": {
+    "mode": "overfit",
+    "device": "auto",
+    "steps": 600,
+    "overfit_steps": 120,
+    "overfit_n": 32,
+    "bs": 64,
+    "eval_bs": 256,
+    "lr": 0.003,
+    "wd": 0.1,
+    "clip": 1.0,
+    "d": 192,
+    "heads": 4,
+    "ffn": 768,
+    "max_len": 256,
+    "train_subset": 1200,
+    "seed": 17,
+    "log_every": 50,
+    "eval_every": 100,
+    "arms": "loop:1,loop:4,dense:2",
+    "sched": "oncycle",
+    "fused": false,
+    "eval_splits": "dev_random",
+    "data_dir": "data/ldm_mvt",
+    "out_overfit": "/root/ldm/results/ldm_gpu_overfit.json",
+    "out_curve": "/root/ldm/results/ldm_gpu_smoke.json"
+  },
+  "device": "cuda",
+  "overfit": [
+    {
+      "variant": "loop",
+      "depth": 4,
+      "zero_init": true,
+      "n": 32,
+      "params": 1855682,
+      "final_loss": 0.0,
+      "final_acc": 1.0,
+      "sec": 6.1,
+      "hist": [
+        {
+          "step": 1,
+          "loss": 0.7095,
+          "grad_norm": 1.6745,
+          "acc": 0.469
+        },
+        {
+          "step": 20,
+          "loss": 0.0047,
+          "grad_norm": 0.064,
+          "acc": 1.0
+        },
+        {
+          "step": 40,
+          "loss": 0.0,
+          "grad_norm": 0.0039,
+          "acc": 1.0
+        },
+        {
+          "step": 60,
+          "loss": 0.0,
+          "grad_norm": 0.0001,
+          "acc": 1.0
+        },
+        {
+          "step": 80,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 100,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 120,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        }
+      ]
+    },
+    {
+      "variant": "loop",
+      "depth": 4,
+      "zero_init": false,
+      "n": 32,
+      "params": 1855682,
+      "final_loss": 0.0,
+      "final_acc": 1.0,
+      "sec": 5.4,
+      "hist": [
+        {
+          "step": 1,
+          "loss": 0.7393,
+          "grad_norm": 1.8683,
+          "acc": 0.5
+        },
+        {
+          "step": 20,
+          "loss": 0.0,
+          "grad_norm": 0.0003,
+          "acc": 1.0
+        },
+        {
+          "step": 40,
+          "loss": 0.0,
+          "grad_norm": 0.0002,
+          "acc": 1.0
+        },
+        {
+          "step": 60,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 80,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 100,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 120,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        }
+      ]
+    },
+    {
+      "variant": "dense",
+      "depth": 2,
+      "zero_init": true,
+      "n": 32,
+      "params": 1841473,
+      "final_loss": 0.0,
+      "final_acc": 1.0,
+      "sec": 3.1,
+      "hist": [
+        {
+          "step": 1,
+          "loss": 0.7086,
+          "grad_norm": 1.7317,
+          "acc": 0.469
+        },
+        {
+          "step": 20,
+          "loss": 0.0083,
+          "grad_norm": 0.3031,
+          "acc": 1.0
+        },
+        {
+          "step": 40,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 60,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 80,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 100,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        },
+        {
+          "step": 120,
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "acc": 1.0
+        }
+      ]
+    }
+  ]
+}

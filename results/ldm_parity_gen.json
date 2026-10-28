@@ -1,0 +1,37 @@
+{
+  "audits": {
+    "train": {
+      "n": 12000,
+      "parity_balance": {
+        "0": 6040,
+        "1": 5960
+      },
+      "k_min": 1,
+      "k_max": 48,
+      "k_mean": 24.8,
+      "overlap_vs_train": 0
+    },
+    "dev_random": {
+      "n": 1000,
+      "parity_balance": {
+        "1": 480,
+        "0": 520
+      },
+      "k_min": 1,
+      "k_max": 48,
+      "k_mean": 25.4,
+      "overlap_vs_train": 0
+    },
+    "confirm_depth": {
+      "n": 750,
+      "parity_balance": {
+        "1": 403,
+        "0": 347
+      },
+      "k_min": 49,
+      "k_max": 96,
+      "k_mean": 72.7,
+      "overlap_vs_train": 0
+    }
+  }
+}

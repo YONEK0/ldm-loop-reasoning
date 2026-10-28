@@ -1,0 +1,272 @@
+{
+ "config": {
+  "arm": "dense",
+  "r": 2,
+  "n_trainable": 657696,
+  "lr": 0.0003,
+  "bps": 4,
+  "ctx": 192,
+  "steps_max": 300
+ },
+ "history": [
+  {
+   "step": 25,
+   "loss": 0.0053,
+   "grad_norm": 0.232,
+   "sec": 23.5,
+   "pilot": 0.475,
+   "pilot_by_hop": {
+    "1": 0.4,
+    "2": 0.988,
+    "3": 0.0
+   },
+   "dev_random": 0.59,
+   "dev_random_by_hop": {
+    "1": 0.325,
+    "2": 0.988
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 50,
+   "loss": 0.3105,
+   "grad_norm": 35.5,
+   "sec": 255.0,
+   "pilot": 0.485,
+   "pilot_by_hop": {
+    "1": 0.5,
+    "2": 0.963,
+    "3": 0.0
+   },
+   "dev_random": 0.705,
+   "dev_random_by_hop": {
+    "1": 0.542,
+    "2": 0.95
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 75,
+   "loss": 0.0045,
+   "grad_norm": 0.316,
+   "sec": 493.9,
+   "pilot": 0.535,
+   "pilot_by_hop": {
+    "1": 0.725,
+    "2": 0.975,
+    "3": 0.0
+   },
+   "dev_random": 0.785,
+   "dev_random_by_hop": {
+    "1": 0.642,
+    "2": 1.0
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 100,
+   "loss": 0.001,
+   "grad_norm": 0.068,
+   "sec": 735.6,
+   "pilot": 0.545,
+   "pilot_by_hop": {
+    "1": 0.8,
+    "2": 0.963,
+    "3": 0.0
+   },
+   "dev_random": 0.885,
+   "dev_random_by_hop": {
+    "1": 0.85,
+    "2": 0.938
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 125,
+   "loss": 0.0016,
+   "grad_norm": 0.04,
+   "sec": 975.9,
+   "pilot": 0.395,
+   "pilot_by_hop": {
+    "1": 0.0,
+    "2": 0.988,
+    "3": 0.0
+   },
+   "dev_random": 0.405,
+   "dev_random_by_hop": {
+    "1": 0.017,
+    "2": 0.988
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 150,
+   "loss": 0.0003,
+   "grad_norm": 0.006,
+   "sec": 1220.6,
+   "pilot": 0.47,
+   "pilot_by_hop": {
+    "1": 0.375,
+    "2": 0.988,
+    "3": 0.0
+   },
+   "dev_random": 0.69,
+   "dev_random_by_hop": {
+    "1": 0.483,
+    "2": 1.0
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 175,
+   "loss": 0.0003,
+   "grad_norm": 0.007,
+   "sec": 1464.4,
+   "pilot": 0.55,
+   "pilot_by_hop": {
+    "1": 1.0,
+    "2": 0.875,
+    "3": 0.0
+   },
+   "dev_random": 0.81,
+   "dev_random_by_hop": {
+    "1": 0.858,
+    "2": 0.738
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 200,
+   "loss": 0.0008,
+   "grad_norm": 0.039,
+   "sec": 1708.2,
+   "pilot": 0.565,
+   "pilot_by_hop": {
+    "1": 0.85,
+    "2": 0.988,
+    "3": 0.0
+   },
+   "dev_random": 0.935,
+   "dev_random_by_hop": {
+    "1": 0.892,
+    "2": 1.0
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 225,
+   "loss": 0.0002,
+   "grad_norm": 0.004,
+   "sec": 1952.9,
+   "pilot": 0.395,
+   "pilot_by_hop": {
+    "1": 0.0,
+    "2": 0.988,
+    "3": 0.0
+   },
+   "dev_random": 0.395,
+   "dev_random_by_hop": {
+    "1": 0.0,
+    "2": 0.988
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 250,
+   "loss": 0.0002,
+   "grad_norm": 0.004,
+   "sec": 2198.4,
+   "pilot": 0.38,
+   "pilot_by_hop": {
+    "1": 0.0,
+    "2": 0.95,
+    "3": 0.0
+   },
+   "dev_random": 0.385,
+   "dev_random_by_hop": {
+    "1": 0.0,
+    "2": 0.963
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  },
+  {
+   "step": 275,
+   "loss": 0.0018,
+   "grad_norm": 0.088,
+   "sec": 2445.0,
+   "pilot": 0.575,
+   "pilot_by_hop": {
+    "1": 0.95,
+    "2": 0.963,
+    "3": 0.0
+   },
+   "dev_random": 0.965,
+   "dev_random_by_hop": {
+    "1": 0.95,
+    "2": 0.988
+   },
+   "confirm_depth": 0.0,
+   "confirm_depth_by_hop": {
+    "3": 0.0
+   }
+  }
+ ],
+ "final": {
+  "step": 275,
+  "loss": 0.0018,
+  "grad_norm": 0.088,
+  "sec": 2445.0,
+  "pilot": 0.575,
+  "pilot_by_hop": {
+   "1": 0.95,
+   "2": 0.963,
+   "3": 0.0
+  },
+  "dev_random": 0.965,
+  "dev_random_by_hop": {
+   "1": 0.95,
+   "2": 0.988
+  },
+  "confirm_depth": 0.0,
+  "confirm_depth_by_hop": {
+   "3": 0.0
+  }
+ },
+ "verdict": "usable_gradient",
+ "verdict_rule": {
+  "too_easy": "step<=50 且 dev≥0.90",
+  "too_hard": "300 步 dev<0.50",
+  "usable_gradient": "其余"
+ },
+ "ts": "2026-10-23 10:25:32"
+}
