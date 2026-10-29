@@ -30,6 +30,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 
 
+def _find_dirs() -> tuple[Path, Path]:
+    """定位 (代码目录, 数据目录)。
+
+    仓库结构有两种：代码在仓库根（本地），或在 code/ 子目录（GitHub 版）。
+    数据相应在 data/ldm_mvtd2 或 ../data/ldm_mvtd2。逐个探测，别写死。
+    """
+    code = ROOT
+    for cand in (ROOT, ROOT / 'code'):
+        if (cand / 's71_ldm_iter4.py').exists():
+            code = cand
+            break
+    data = None
+    for cand in (ROOT / 'data/ldm_mvtd2', ROOT.parent / 'data/ldm_mvtd2',
+                 code.parent / 'data/ldm_mvtd2'):
+        if (cand / 'train.jsonl').exists():
+            data = cand
+            break
+    return code, (data or ROOT / 'data/ldm_mvtd2')
+
+
 def run_one(tmp: Path, idx: int, steps: int, warmup: int) -> float:
     """跑一个 run，返回每秒步数。"""
     out = tmp / f'cal_{idx}.json'
@@ -54,17 +74,18 @@ def run_one(tmp: Path, idx: int, steps: int, warmup: int) -> float:
 
 def measure(slots: int, steps: int, warmup: int) -> dict:
     tmp = Path(tempfile.mkdtemp(prefix=f'cal{slots}_'))
+    code_dir, data_dir = _find_dirs()
     try:
         procs = [subprocess.Popen(
             [sys.executable, 's71_ldm_iter4.py',
-             '--task', 'mvtd', '--data-dir', str(ROOT / 'data/ldm_mvtd2'),
+             '--task', 'mvtd', '--data-dir', str(data_dir),
              '--pos', 'none', '--ouro', '--step-sup',
              '--curriculum', '2', '--curriculum-step', '8000',
              '--steps', str(steps), '--warmup', str(warmup),
              '--bs', '64', '--lr', '1e-3', '--r-max', '8',
              '--eval-every', str(steps), '--seed', str(200 + slots * 10 + i),
              '--out', str(tmp / f'cal_{i}.json')],
-            cwd=str(ROOT), stdout=subprocess.DEVNULL,
+            cwd=str(code_dir), stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL)
             for i in range(slots)]
         t0 = time.perf_counter()
@@ -72,6 +93,11 @@ def measure(slots: int, steps: int, warmup: int) -> dict:
             p.wait()
         dt = time.perf_counter() - t0
         ok = sum(1 for p in procs if p.returncode == 0)
+        if ok < slots:
+            # 子进程失败（路径/依赖问题）时数据无意义，必须显式报出来，
+            # 否则效率算成 0 会被误读成"并行度没用"。
+            print(f'  !! {slots}-way: 只有 {ok}/{slots} 个子进程成功返回 0，'
+                  f'测量无效（检查代码/数据目录）', flush=True)
         return {'slots': slots, 'wall': dt, 'ok': ok,
                 'per_run_sps': steps / dt,
                 'total_sps': steps * ok / dt}
