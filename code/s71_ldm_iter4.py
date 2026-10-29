@@ -510,8 +510,11 @@ def main():
             start_step = st['step'] + 1
         elif ckpt_path.exists():
             # 旧版 ckpt 只有权重（V5b 误杀现场）：从 --init-step 续，
-            # 优化器/LR/RNG 重建——等价"热启动"，非严格续跑，日志标注
-            model.load_state_dict(torch.load(ckpt_path, map_location=dev_))
+            # 优化器/LR/RNG 重建——等价"热启动"，非严格续跑，日志标注。
+            # weights_only=False 是必须的：torch>=2.6 默认改 True，而
+            # MILESTONE 存档是 dict（含 evals/triggers），会被拒。
+            model.load_state_dict(torch.load(ckpt_path, map_location=dev_,
+                                             weights_only=False))
             start_step = args.init_step + 1
             hist = [{'step': args.init_step, 'note': 'warm-start from ckpt'}]
         else:
