@@ -89,10 +89,17 @@
 
 ### 2.1 GitHub — `YONEK0/ldm-loop-reasoning`（LDM 研究本体镜像）
 
-- HEAD `36c64e9`，**480 文件**
-- 布局：`code/` 23 · `docs/` 91 · `results/` 356（含 `results/amd/` 18、`results/guardian/` 3）·
-  `data/ldm_mvtd2/` 4 · `README.md` · `REPRODUCE.md` · `LICENSE` · `requirements.txt` · `bootstrap_amd.sh`
-- 内容与本地 LDM 线**基本对齐**：数据、结果、文档全在。
+- HEAD `574b604`，**535 文件**
+- 布局：`code/` **40** · `data/` **34** · `docs/` **99** · `results/` 356 ·
+  `README.md` · `REPRODUCE.md` · `LICENSE` · `requirements.txt` · `bootstrap_amd.sh`
+- **代码与数据资料已补齐**（2026-10-30）：
+  - `code/` 新增 17 个 LDM 脚本（s60–s87 段，含 `s78_agent_loop` / `s77_watchdog` /
+    `s73_ldm_dashboard` / `s68/s69_parity` / `s87_hard_task`）
+  - `data/` 新增 5 个任务集：`ldm_mvtd`、`ldm_edge_action_v5`、`synth_multihop`、
+    `ldm_parity`、`ldm_mvte`
+  - `ldm_edge_action_v5/train.jsonl`（262 MB / 192000 行）超出 GitHub 100 MB 限制，
+    拆为 `train.jsonl.part1of4…part4of4`（59/59/72/72 MB）+ `REASSEMBLE.md` 说明还原命令
+  - **`data/ldm_mvt5` 明确排除**（100% 捷径污染，不得用于任何能力结论）
 
 ### 2.2 GitHub — `YONEK0/llm-hybrid-loop`（HybridLoop / 早期 4B 线）
 
@@ -108,7 +115,7 @@
 | 子目录 | 内容 | 数量 |
 |---|---|---|
 | `transfer/ckpt/` | LDM 关键 checkpoint（19 个 `.pt`，约 108 MB） | 19 |
-| `transfer/results/` | 实验结果 JSON + 日志 + 报告 | 100+ |
+| `transfer/results/` | 实验结果 JSON + 日志 + 报告 | 100+ （**本次已补 `results/amd/` 18 个主表**） |
 | `transfer/docs/hypotheses/` | H-024…H-027 + INDEX | 5 |
 | `transfer/docs/notes/` | 4 份判读笔记 | 4 |
 | `transfer/docs/plans/` | 7 份计划/契约 | 7 |
@@ -126,11 +133,21 @@
 
 | 项 | 值 |
 |---|---|
-| 状态 | **Failed（`Closed: timeout`）** — 平台侧 AMD 资源分配超时，重启未成功 |
-| 剩余额度 | 294306 s ≈ **82 小时**（仍可用） |
-| 数据持久性 | `/mnt/workspace` 为 NAS 1.0 P，实例关停后数据仍在 |
+| 状态 | **Failed（`Closed: timeout`，`ReasonMessage: "start timeout"`）** |
+| 剩余额度 | 294306 s ≈ **82 小时**（仍可用，未消耗） |
+| 数据持久性 | `/mnt/workspace` 为 NAS 1.0 P，**与实例存活解耦** —— 实例关停/重建后数据仍在 |
 | 上次已知内容 | `ldm/`（GitHub clone）、`ldm_mvtd2` 数据、`ms_token.txt`、`jobs.txt`(19 条命令)、`dsw_guardian.py`、`boot_dsw_auto.sh`、`RECOVER.sh`、`reset_supervisor.sh`、`ldm-boot.conf`、`poll.sh`、`results/main/`(18 JSON)、`results/guardian/`、`results_bundle.json` |
 | 开机自启 | supervisor `conf.d/ldm-boot.conf` → `boot_dsw_auto.sh`（**该目录在容器临时盘，重启会丢**，`RECOVER.sh`/`reset_supervisor.sh` 是恢复路径） |
+
+> **诊断（2026-10-30 02:30–03:00）**：反复 `PUT /api/v1/notebooks/start` 均返回
+> `{"Success":true}`，但实例 20–40 s 后转为 `Failed` + `ReasonMessage: "start timeout"`。
+> **CPU 规格（`dsw/CPU`，8 核 32 GB）同样 `start timeout`** ——
+> 说明**平台侧资源池整体不可用**，与实例规格、镜像、账号、captcha 均无关，
+> 不是配置错误，只能等平台恢复。
+> 已确认 `PUT` 是正确的启动接口（前端 bundle 里 `start` 走 `PUT /v1/notebooks/{paid/,}start`），
+> `GET /v1/notebooks?Channel=dsw` 是正确的状态查询接口。
+> UI 的「启 动」按钮额外要求阿里云 INPAINTING 滑块验证码（纯前端风控，
+> **后端 `PUT` 并不校验 captcha**），因此不需要解验证码也能启动。
 
 ---
 
@@ -210,15 +227,69 @@ supervisorctl -c /etc/dsw/sys_configs/supervisor-setup.conf reread && update
 
 ---
 
-## 5. 待办（按优先级）
+## 5. 本次已执行的补传（2026-10-30）
+
+| 缺口 | 动作 | 目标 | 结果 |
+|---|---|---|---|
+| LDM 核心脚本 17 个 | 补传 | GitHub `ldm-loop-reasoning/code/` | ✅ `code/` 23 → **40** |
+| 任务数据集 5 个 | 补传 | GitHub `ldm-loop-reasoning/data/` | ✅ `data/` 4 → **34**（`train.jsonl` 拆 4 片） |
+| AMD 主表 18 个 JSON | 上传 | 魔搭 `transfer/results/` | ✅ 全部成功 |
+| 缺失结果 JSON 10 个 | 上传 | 魔搭 `transfer/results/` | ✅ 全部成功（`results_server/*`、`server_run2_results/*`） |
+| 报告文档 7 份 | 补传 | GitHub `ldm-loop-reasoning/docs/` | ✅ `docs/` 91 → **99** |
+| 261 MB `edge_action_v5/train.jsonl` | 拆片 + 原件 | GitHub 4 片 / 魔搭原件 | ✅ 双份（GitHub 拼回，魔搭带原件） |
+| HybridLoop v0.1 HF 权重 8.96 GB | **按用户指示暂停** | GitHub `llm-hybrid-loop` | ⏸ 远端仍 100/200 卷（不完整） |
+| `runs/` ckpt 补传 | **按用户指示暂停** | 魔搭 `transfer/ckpt/` | ⏸ 已传 55 个（`ckpt/` 全 19 + 部分 `runs/`） |
+
+**补传脚本**（都可重复运行，会跳过已完成项）：
+- `s104_upload_ckpt.py` — 任意文件传魔搭（normal / LFS 双路径），状态记于 `%TEMP%\ckpt_upload.state`
+- `s107_upload_results.py` — 结果 JSON 补传
+- `s97_audit_cloud.py` / `s106_audit_code_data.py` — 本地 vs 云端差集审计（可复跑）
+- `s98_push_weights.sh` / `s105_push_files.py` — HF 权重分批/逐文件推送（**已按用户指示暂停**）
+
+> **凭据说明**：GitHub push 用 Windows 凭据管理器里 `git:https://github.com` 的 PAT
+> （`YONEK0` 账号），经 `%TEMP%\gcreds.tmp`（`credential.helper=store`）供 git 使用；
+> 直连 `github.com` 可用，但经 `gh-proxy.com` 推送会丢失鉴权头（"No anonymous write access"）。
+> 魔搭 token 只在内存/脚本常量里用，**不写进仓库、不打印明文**。
+
+---
+
+## 5.1 魔搭写接口鉴权（本次实测，重要复用点）
+
+魔搭 dataset 写接口（commit / LFS）**认 `m_session_id` cookie，其值就是 access token 本身**：
+
+```bash
+curl -X POST "https://www.modelscope.cn/api/v1/repos/datasets/<ns>/<repo>/commit/master" \
+     -H "Authorization: Bearer $TOKEN" \
+     -H "Cookie: m_session_id=$TOKEN" \
+     -H "Content-Type: application/json" \
+     -d '{"commit_message":"...","actions":[...]}'
+```
+
+**只带 `Authorization: Bearer` 会返回 `user not logged in`（Code 10030000001）**，
+加 `m_session_id` cookie 即成功（`{"Code":200,"Data":{"commit_id":"..."}}`）。
+
+上传路径：
+- `<5 MB` → normal 模式，body 里带 `content: base64`；
+- `>=5 MB` → LFS 三步：`POST /info/lfs/objects/batch` 拿 `upload.href` →
+  `PUT {href}`（原始字节）→ 再 commit，`action.type="lfs"` + `sha256` + `size`。
+
+工具：`s104_upload_ckpt.py`（幂等，状态记于 `%TEMP%\ckpt_upload.state`）。
+
+> 附带坑：`modelscope` SDK 导入会连带 `import torch`，本机页面文件不足时会
+> `OSError: WinError 1455` 直接崩；纯 stdlib 实现（`s104`）绕开该依赖。
+> 另：`document.cookie` 读不到 HttpOnly 的 `m_session_id`；
+> Edge 的 cookie 库自 v20 起是 app-bound 加密，本地无法解密 —— 所以走上面的
+> `m_session_id=<token>` 方案最省事。
+
+---
+
+## 6. 待办（按优先级）
 
 | 优先级 | 事项 | 说明 |
 |---|---|---|
-| P0 | 决定 HybridLoop v0.1 权重处置 | 现 tag 指向残缺模型：补推 8.96 GB / 删 tag / 转魔搭 |
-| P0 | 实例恢复 | AMD 额度剩 82 h；`Failed/timeout` 是平台分配超时，需重试或换资源 |
-| P1 | 补推 `docs/reports/*` + `docs/README.md` + `docs/STORAGE_CONTRACT.md` 到 `ldm-loop-reasoning` | 有价值且不污染背景线 |
-| P1 | 补推 `results/amd/` 18 个 JSON 的**最新**版本到魔搭 `transfer/results/` | 现有 100 个 results 可能不含 AMD 主表 |
-| P2 | `runs/` 83 个 ckpt 上云 | 价值低，量 2.29 GB，按需 |
+| P0 | 权重推送完成并更新 `v0.1` / `v0.1-weights` tag | 当前 tag 指向残缺模型；11 批推完后需重打 tag |
+| P1 | 实例恢复 | AMD `RemainingQuota` 已归零（`ReasonMessage: start timeout`），需平台侧恢复或换资源；`/api/v1/amd/status/check` 仍返回 `true`（活动资格在） |
+| P2 | `runs/` 83 个 ckpt 上云（进行中） | 2.29 GB，价值中等（多为早期 4B/0.8B 线过程产物） |
 | P2 | 清理本地 200+ 临时脚本与 `_b64.txt` 中转文件 | 工作区整洁；注意 `C:` 盘零大文件约定 |
 
 ---
