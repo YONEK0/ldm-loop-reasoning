@@ -1,0 +1,33 @@
+{
+  "seed": 2027,
+  "task": "MVT-D (shortcut-free)",
+  "splits": {
+    "train.jsonl": {
+      "n": 10000,
+      "hops": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "dev_random.jsonl": {
+      "n": 1000,
+      "hops": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "dev_ood.jsonl": {
+      "n": 400,
+      "hops": [
+        7,
+        8
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "task": "parity (PonderNet protocol)",
+  "seed_base": 2051,
+  "train": "64 slots, k=1..48",
+  "confirm": "96 slots, k=49..96",
+  "audits": {
+    "train": {
+      "n": 12000,
+      "parity_balance": {
+        "0": 6040,
+        "1": 5960
+      },
+      "k_min": 1,
+      "k_max": 48,
+      "k_mean": 24.8,
+      "overlap_vs_train": 0
+    },
+    "dev_random": {
+      "n": 1000,
+      "parity_balance": {
+        "1": 480,
+        "0": 520
+      },
+      "k_min": 1,
+      "k_max": 48,
+      "k_mean": 25.4,
+      "overlap_vs_train": 0
+    },
+    "confirm_depth": {
+      "n": 750,
+      "parity_balance": {
+        "1": 403,
+        "0": 347
+      },
+      "k_min": 49,
+      "k_max": 96,
+      "k_mean": 72.7,
+      "overlap_vs_train": 0
+    }
+  },
+  "sha256": {
+    "train": "0b5098f3c1149c1aa95a01c441b06a0fba170554e589569db260455ae4fe2451",
+    "dev_random": "3046c11926c20258b0aa1f8966a8f806b56d03bbdb3336ee0c8deea901bf852b",
+    "confirm_depth": "e2658fe2ba7e3640d500d271445f7594afe6a242de6e7d89c9d044f8dba3b9cb"
+  }
+}

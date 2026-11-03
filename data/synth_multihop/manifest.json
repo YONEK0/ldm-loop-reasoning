@@ -1,0 +1,194 @@
+{
+  "seed": 2029,
+  "script": "s57_t13_calibrate_task.py",
+  "script_sha256": "acef72e1ab08e1c91716e86f2cd11f1a897223dd6ba7ebd8d51b91e2249c0daa",
+  "entity_pool_size": 300,
+  "paths": {
+    "parent": [
+      "P"
+    ],
+    "grandparent": [
+      "P",
+      "P"
+    ],
+    "great_grandparent": [
+      "P",
+      "P",
+      "P"
+    ],
+    "gg_grandparent": [
+      "P",
+      "P",
+      "P",
+      "P"
+    ],
+    "sibling_in_law": [
+      "M",
+      "S"
+    ],
+    "uncle": [
+      "P",
+      "S"
+    ],
+    "cousin": [
+      "P",
+      "P",
+      "S"
+    ],
+    "great_uncle": [
+      "P",
+      "P",
+      "P",
+      "S"
+    ],
+    "second_cousin": [
+      "P",
+      "P",
+      "P",
+      "P",
+      "S"
+    ],
+    "kin6": [
+      "P",
+      "P",
+      "P",
+      "P",
+      "P",
+      "S"
+    ]
+  },
+  "base_targets": [
+    "grandparent",
+    "sibling_in_law"
+  ],
+  "combo_holdout": [
+    "uncle"
+  ],
+  "depth_holdout": [
+    "cousin",
+    "great_grandparent",
+    "great_uncle",
+    "second_cousin",
+    "kin6"
+  ],
+  "hop_of_target": {
+    "parent": 1,
+    "grandparent": 2,
+    "great_grandparent": 3,
+    "gg_grandparent": 4,
+    "sibling_in_law": 2,
+    "uncle": 2,
+    "cousin": 3,
+    "great_uncle": 4,
+    "second_cousin": 5,
+    "kin6": 6
+  },
+  "splits": {
+    "train": {
+      "n": 480,
+      "sha256": "7b38b49ada47ed62909ff765160d91e7595c1053d649e37fde979113aa11fa1e"
+    },
+    "dev_random": {
+      "n": 240,
+      "sha256": "7b2460565299182d4858214cc3d0880d390c8ba25f70847ee1b38cf8cdc1528a"
+    },
+    "confirm_depth": {
+      "n": 500,
+      "sha256": "b00f7c1cc84e5d16dff14ccf2eb22f2667757ce187041d096269ef34590de544"
+    },
+    "confirm_combo": {
+      "n": 120,
+      "sha256": "955e533c3750270789e6c80ec9607ce71128ab8320ab5269a3e5c7b819efbbfc"
+    },
+    "confirm_length": {
+      "n": 240,
+      "sha256": "958339de5be63949b40ce58173a2aca5c6764cb4d1a399aa21a1c539e5572334"
+    },
+    "pilot": {
+      "n": 160,
+      "sha256": "ab8bc0bd908cc499dd66dbe1cbc41b4e6b175ebb3ae66cf4869e5480ad012935"
+    }
+  },
+  "leakage_audit": {
+    "dev_random": {
+      "n": 240,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 298,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {}
+    },
+    "confirm_depth": {
+      "n": 500,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 300,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {
+        "7": 30,
+        "6": 3,
+        "8": 38,
+        "9": 26,
+        "10": 7
+      }
+    },
+    "confirm_combo": {
+      "n": 120,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 281,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {}
+    },
+    "confirm_length": {
+      "n": 240,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 300,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {
+        "9": 18,
+        "8": 20,
+        "10": 21
+      }
+    },
+    "pilot": {
+      "n": 160,
+      "same_logical_id_overlap": 0,
+      "entity_pool_overlap_count": 293,
+      "same_entity_set_and_answer_overlap": 0,
+      "answer_shift": {
+        "8": 1
+      }
+    }
+  },
+  "uniqueness_check": {
+    "train": {
+      "checked": 480,
+      "bad": 0,
+      "examples": []
+    },
+    "dev_random": {
+      "checked": 240,
+      "bad": 0,
+      "examples": []
+    },
+    "confirm_depth": {
+      "checked": 500,
+      "bad": 0,
+      "examples": []
+    },
+    "confirm_combo": {
+      "checked": 120,
+      "bad": 0,
+      "examples": []
+    },
+    "confirm_length": {
+      "checked": 240,
+      "bad": 0,
+      "examples": []
+    },
+    "pilot": {
+      "checked": 160,
+      "bad": 0,
+      "examples": []
+    }
+  },
+  "note": "纯 CPU 合成任务；答案由确定性 solver 校验；confirm_depth/combo/length 分离深度、组合和长度。"
+}
