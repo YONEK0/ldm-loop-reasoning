@@ -1,0 +1,211 @@
+{
+  "seed": 2033,
+  "script": "s62_ldm_task_gen.py",
+  "script_sha256": "3e2419381fcda7c9cfdb68435c917270a4db27848334abd37c04757d4d210f0a",
+  "task": "edge_choice_decision (non-functional graph)",
+  "entity_pool_size": 300,
+  "paths": {
+    "cousin3": [
+      "P",
+      "P",
+      "S"
+    ],
+    "gu4": [
+      "P",
+      "P",
+      "P",
+      "S"
+    ],
+    "uncle3": [
+      "P",
+      "S",
+      "P"
+    ],
+    "inlaw3": [
+      "M",
+      "P",
+      "S"
+    ],
+    "mix4": [
+      "M",
+      "S",
+      "P",
+      "P"
+    ],
+    "sc5": [
+      "P",
+      "P",
+      "P",
+      "P",
+      "S"
+    ],
+    "kin6": [
+      "P",
+      "P",
+      "P",
+      "P",
+      "P",
+      "S"
+    ],
+    "kin7": [
+      "P",
+      "P",
+      "P",
+      "P",
+      "P",
+      "P",
+      "S"
+    ]
+  },
+  "train_paths": [
+    "cousin3",
+    "gu4"
+  ],
+  "combo_holdout": [
+    "uncle3",
+    "inlaw3",
+    "mix4"
+  ],
+  "depth_holdout": [
+    "sc5",
+    "kin6",
+    "kin7"
+  ],
+  "candidate_policy": {
+    "train/dev/depth/combo": [
+      3,
+      4,
+      5
+    ],
+    "confirm_distractor": [
+      6,
+      7,
+      8
+    ]
+  },
+  "bg_distractor_policy": {
+    "train/dev/depth/combo": [
+      2,
+      3,
+      4
+    ],
+    "confirm_distractor": [
+      8,
+      9,
+      10
+    ]
+  },
+  "splits": {
+    "train": {
+      "n": 24000,
+      "sha256": "8d05c3d2088366919402afb351d98173dbc1c3d9f7a19222520498841e3a6e66"
+    },
+    "dev_random": {
+      "n": 400,
+      "sha256": "eba6f21766e1e3ea63e0fddf89f5705e93de3107e856f0e1280191406e0f129f"
+    },
+    "confirm_depth": {
+      "n": 375,
+      "sha256": "4a3f7d092803759dd8b45d98eae6410fb1ad6519ae09209ef3168c98f7b765ab"
+    },
+    "confirm_combo": {
+      "n": 240,
+      "sha256": "613fb343f2a7307a0aeab85103c2ff9f047fd910ae8266b4880c0423d80e2b16"
+    },
+    "confirm_distractor": {
+      "n": 160,
+      "sha256": "f5e5877a8f3168de0895bd00e0ef88a6c00959ae845e8b8fb9639256c2a3e4a4"
+    },
+    "pilot": {
+      "n": 100,
+      "sha256": "05080e6922708acb516cb895006bf28044b30bf60cb7296b0124e7e48cc82432"
+    }
+  },
+  "uniqueness_check": {
+    "train": {
+      "checked": 24000,
+      "bad_answer": 0,
+      "bad_action": 0,
+      "bad_closure": 0,
+      "examples": []
+    },
+    "dev_random": {
+      "checked": 400,
+      "bad_answer": 0,
+      "bad_action": 0,
+      "bad_closure": 0,
+      "examples": []
+    },
+    "confirm_depth": {
+      "checked": 375,
+      "bad_answer": 0,
+      "bad_action": 0,
+      "bad_closure": 0,
+      "examples": []
+    },
+    "confirm_combo": {
+      "checked": 240,
+      "bad_answer": 0,
+      "bad_action": 0,
+      "bad_closure": 0,
+      "examples": []
+    },
+    "confirm_distractor": {
+      "checked": 160,
+      "bad_answer": 0,
+      "bad_action": 0,
+      "bad_closure": 0,
+      "examples": []
+    },
+    "pilot": {
+      "checked": 100,
+      "bad_answer": 0,
+      "bad_action": 0,
+      "bad_closure": 0,
+      "examples": []
+    }
+  },
+  "leakage_audit": {
+    "dev_random": {
+      "n": 400,
+      "same_logical_id_overlap": 0,
+      "canonical_key_overlap": 0,
+      "identical_fact_set_overlap": 0,
+      "structure_proxy_overlap": 399,
+      "entity_pool_overlap_count": 300
+    },
+    "confirm_depth": {
+      "n": 375,
+      "same_logical_id_overlap": 0,
+      "canonical_key_overlap": 0,
+      "identical_fact_set_overlap": 0,
+      "structure_proxy_overlap": 0,
+      "entity_pool_overlap_count": 300
+    },
+    "confirm_combo": {
+      "n": 240,
+      "same_logical_id_overlap": 0,
+      "canonical_key_overlap": 0,
+      "identical_fact_set_overlap": 0,
+      "structure_proxy_overlap": 0,
+      "entity_pool_overlap_count": 300
+    },
+    "confirm_distractor": {
+      "n": 160,
+      "same_logical_id_overlap": 0,
+      "canonical_key_overlap": 0,
+      "identical_fact_set_overlap": 0,
+      "structure_proxy_overlap": 0,
+      "entity_pool_overlap_count": 300
+    },
+    "pilot": {
+      "n": 100,
+      "same_logical_id_overlap": 0,
+      "canonical_key_overlap": 0,
+      "identical_fact_set_overlap": 0,
+      "structure_proxy_overlap": 40,
+      "entity_pool_overlap_count": 299
+    }
+  },
+  "note": "纯 CPU 合成决策任务；答案唯一 + 动作唯一由确定性 solver 在完整事实集上复检；竞争边断链深度为第二难度轴。"
+}

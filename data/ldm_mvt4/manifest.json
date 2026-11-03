@@ -1,0 +1,84 @@
+{
+  "seed": 2041,
+  "entity_pool": 32,
+  "task": "MVT: pure-P chain, binary candidates, 0 bg, deep-break comp",
+  "train_hops": [
+    2,
+    3
+  ],
+  "depth_extrapolation_hops": [
+    4,
+    5,
+    6
+  ],
+  "comp_depth_rule": "hop-2 (deep break only)",
+  "splits": {
+    "train": {
+      "n": 11900,
+      "sha256": "b46c1a8c8e9d3c8a04bd6f780a2d998cfc068d4c8cf4da16f3520e97ca305329"
+    },
+    "dev_random": {
+      "n": 1050,
+      "sha256": "d521a576d7820e60b61470aa65b51445cd598f8a96ddc6178c82f8431d412ec5"
+    },
+    "confirm_depth": {
+      "n": 750,
+      "sha256": "07e609f95d34424b1e2f67fbc3a5ad97ea1ab0d68c02bb862a460d09b4a3788d"
+    }
+  },
+  "audits": [
+    {
+      "split": "train",
+      "n": 11900,
+      "solver_bad": 0,
+      "train_key_overlap": 11900,
+      "answer_pos": {
+        "0": 5928,
+        "1": 5972
+      },
+      "hop_hist": {
+        "2": 1700,
+        "3": 1700,
+        "4": 1700,
+        "5": 1700,
+        "6": 1700,
+        "7": 1700,
+        "8": 1700
+      }
+    },
+    {
+      "split": "dev_random",
+      "n": 1050,
+      "solver_bad": 0,
+      "train_key_overlap": 0,
+      "answer_pos": {
+        "0": 499,
+        "1": 551
+      },
+      "hop_hist": {
+        "2": 150,
+        "3": 150,
+        "4": 150,
+        "5": 150,
+        "6": 150,
+        "7": 150,
+        "8": 150
+      }
+    },
+    {
+      "split": "confirm_depth",
+      "n": 750,
+      "solver_bad": 0,
+      "train_key_overlap": 0,
+      "answer_pos": {
+        "0": 370,
+        "1": 380
+      },
+      "hop_hist": {
+        "10": 250,
+        "12": 250,
+        "14": 250
+      }
+    }
+  ]
+}
